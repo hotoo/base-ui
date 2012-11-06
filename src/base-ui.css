@@ -375,6 +375,51 @@ a.btn{
     clear:both;
 }
 
+
+/* Accordion
+ -------------------------------------------------- */
+.accordion .trigger{
+    padding:12px;
+    background: -webkit-linear-gradient(top, #fafbfb, #d9dfe3);
+    background:         linear-gradient(top, #fafbfb, #d9dfe3);
+    border-top:1px solid #aabcce;
+    border-bottom:1px solid #aabcce;
+    -webkit-box-shadow: inset 0 0 2px #fcfdfd;
+            box-shadow: inset 0 0 2px #fcfdfd;
+}
+
+
+/* List
+ -------------------------------------------------- */
+/* Remove usual bullet styles from list */
+.list {
+    list-style: none;
+}
+
+/* Pad each list item and add dividers */
+.list li {
+    padding:12px;
+    border-bottom: 1px solid #ddd;
+    background: -webkit-linear-gradient(top, #fff, #f8f8f8);
+    background:         linear-gradient(top, #fff, #f8f8f8);
+}
+
+/* Give top border to first list items */
+.list li:first-child {
+    border-top: 1px solid #ddd;
+}
+
+/* If a list of links, make sure the child <a> takes up full list item tap area (want to avoid selecting child buttons though) */
+.list li > a {
+   position: relative;
+   display: block;
+   padding: inherit;
+   margin: -12px;
+   color: inherit;
+}
+
+
+
 /* Page footer
  -------------------------------------------------- */
 .footer{
