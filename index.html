@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Base UI</title>
+        <link type="text/css" rel="stylesheet" href="src/base-ui.css">
+    </head>
+    <body>
+
+        <div class="ceiling">
+            吊顶，重要信息可<span class="red">标红</span>。
+        </div>
+
+        <header class="header">
+            <a href="#"><img src="src/img/logo.png" alt="支付宝" style="width:81px;"></a>
+            <span>产品名</span>
+        </header>
+
+        <header class="bar-title">
+            <a class="btn-prev" href="#">返回</a>
+            <h1 class="title">页面标题</h1>
+            <a class="btn-next" href="#">前进</a>
+        </header>
+
+        <div class="tabs">
+            <ul class="triggers">
+                <li class="trigger active"><a href="#">触点</a></li>
+                <li class="trigger"><a href="#">触点</a></li>
+            </ul>
+            <div class="panels">
+                <div class="panel"></div>
+                <div class="panel"></div>
+            </div>
+        </div>
+
+        <div class="alert">
+            <h3 class="title"><i class="icon"></i>对话框标题</h3>
+            <div class="content">
+                <form>
+                    <input type="text" name="name" placeholder="输入框" />
+                    <div class="btn-box">
+                        <button class="btn">按钮</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="info primary">
+            <strong>淘宝网 | 商品标题</strong>
+            <div>
+                应付：<strong class="red">00.00</strong> 元 <a href="#">刷新价格</a>
+            </div>
+        </div>
+
+        <div class="info gray">
+            当前账户：fool2fish(fool2fish@email.com)
+        </div>
+
+        <form class="gradient">
+
+            <input type="hidden" name="name" value="value" />
+
+            <label class="title">字段标题，可选</label>
+            <label class="checkbox">
+                <input type="checkbox" name="name" value="value" checked="true"/>
+                多选框选项1
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" name="name" value="value" />
+                多选框选项2
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" name="name" value="value" />
+                多选框选项3
+            </label>
+            <span class="msg">提示信息</span>
+            <span class="msg success">校验通过</span>
+            <span class="msg error">校验失败</span>
+
+            <label class="title">字段标题，可选</label>
+            <label class="radio">
+                <input type="radio" name="name" value="value" checked="true" />
+                单选框选项1
+            </label>
+            <label class="radio">
+                <input type="radio" name="name" value="value" />
+                单选框选项2
+            </label>
+
+            <label>
+                <select name="name">
+                    <option>下拉列表</option>
+                    <option value="value">下拉列表选项</option>
+                </select>
+            </label>
+            
+            <label>
+                <input type="text" name="name" placeholder="输入框" />
+            </label>
+            
+            <div class="align-right">
+                <a href="#">文字链接</a>
+            </div>
+            
+            <hr />
+
+            <div class="btn-box">
+                <button class="btn primary">按钮</button>
+                <button class="btn primary" disabled="disabled">按钮不可用</button>
+                <a class="btn primary" href="#">伪按钮</a>
+            </div>
+            
+            <div class="btn-box">
+                <button class="btn block primary">按钮</button>
+                <button class="btn block primary" disabled="disabled">按钮不可用</button>
+                <a class="btn block primary" href="#">伪按钮</a>
+                <button class="btn block">按钮</button>
+                <button class="btn block" disabled="disabled">按钮不可用</button>
+                <a class="btn block" href="#">伪按钮</a>
+            </div>
+            
+            <div class="btn-box btn-2cols">
+                <button class="btn primary">按钮</button>
+                <button class="btn">按钮</button>
+            </div>
+
+        </form>
+
+        <div class="accordion">
+            <div class="trigger">标题<i class="icon"></i></div>
+            <div class="panel">
+                <ul class="list">
+                    <li><a href="#">链接</a></li>
+                    <li><a href="#">链接</a></li>
+                    <li><a href="#">链接</a></li>
+                </ul>
+            </div>
+            <div class="trigger">标题<i class="icon"></i></div>
+            <div class="panel">
+                <ul class="list">
+                    <li><a href="#">链接</a></li>
+                    <li><a href="#">链接</a></li>
+                    <li><a href="#">链接</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>版权所有 2004-2012 支付宝</p>
+            <div class="links">
+                <a href="#">链接</a>
+                <a href="#">链接</a>
+                <a href="#">链接</a>
+            </div>
+        </footer>
+    </body>
+</html>
