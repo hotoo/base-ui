@@ -4,6 +4,18 @@
         <meta charset="utf-8">
         <title>Base UI</title>
         <link type="text/css" rel="stylesheet" href="src/base-ui.css">
+        <style>
+            body {
+                width: 320px;
+            }
+            
+            .alert{
+                position:fixed;
+                top:10px;
+                right:10px;
+            }
+
+        </style>
     </head>
     <body>
 
@@ -39,7 +51,7 @@
                 <form>
                     <input type="text" name="name" placeholder="输入框" />
                     <div class="btn-box">
-                        <button class="btn">按钮</button>
+                        <button class="btn block">按钮</button>
                     </div>
                 </form>
             </div>
@@ -109,13 +121,33 @@
                 <button class="btn primary" disabled="disabled">按钮不可用</button>
                 <a class="btn primary" href="#">伪按钮</a>
             </div>
+            <div class="btn-box">
+                <button class="btn">按钮</button>
+                <button class="btn" disabled="disabled">按钮不可用</button>
+                <a class="btn" href="#">伪按钮</a>
+            </div>
             
             <div class="btn-box">
                 <button class="btn block primary">按钮</button>
+            </div>
+            
+            <div class="btn-box">
                 <button class="btn block primary" disabled="disabled">按钮不可用</button>
+            </div>
+            
+            <div class="btn-box">
                 <a class="btn block primary" href="#">伪按钮</a>
+            </div>
+            
+            <div class="btn-box">
                 <button class="btn block">按钮</button>
+            </div>
+            
+            <div class="btn-box">
                 <button class="btn block" disabled="disabled">按钮不可用</button>
+            </div>
+            
+            <div class="btn-box">
                 <a class="btn block" href="#">伪按钮</a>
             </div>
             
