@@ -6,6 +6,9 @@ html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, ab
     margin: 0;
     border: 0;
 }
+ul,ol,li{
+    list-style:none;
+}
 /* Prevents iOS text size adjust after orientation change, without disabling (Thanks to @necolas) */
 html {
     -webkit-text-size-adjust: 100%;
@@ -64,9 +67,9 @@ hr{
  -------------------------------------------------- */
 .header{
     padding-top: 6px;
-    border-bottom: 4px solid #1a48a9;
-    background: -webkit-linear-gradient(top, #fdfdfd, #e5e5e5);
-    background:         linear-gradient(top, #fdfdfd, #e5e5e5);
+    border-bottom: 4px solid #1757b9;
+    background: -webkit-linear-gradient(top, #fefefe, #e5e5e5);
+    background:         linear-gradient(top, #fefefe, #e5e5e5);
 }
 .header a, .header span {
     display: inline-table;
@@ -93,8 +96,8 @@ hr{
     color: #fff;
     text-align: center;
     border-top: 1px solid #ccc;
-    background: -webkit-linear-gradient(top, #2668d7, #143987);
-    background: linear-gradient(top, #2668d7, #143987);
+    background: -webkit-linear-gradient(top, #2668d9, #143987);
+    background:         linear-gradient(top, #2668d9, #143987);
     box-shadow: inset 0 1px 1px -1px rgba(255, 255, 255, .8);
 }
 
@@ -124,8 +127,8 @@ hr{
     line-height: 23px;
     color: #fff;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
-    background: -webkit-linear-gradient(top, #2151aa, #051942);
-    background:         linear-gradient(top, #2151aa, #051942);
+    background: -webkit-linear-gradient(top, #1a489d, #041840);
+    background:         linear-gradient(top, #1a489d, #041840);
     border: 1px solid #0e2653;
     -webkit-border-radius:4px;
             border-radius:4px;
@@ -168,16 +171,16 @@ hr{
 }
 .bar-title .btn-prev:before {
     left: -5px;
-    background-image: -webkit-gradient(linear, left bottom, right top, from(#051942), to(#2151aa));
-    background-image:         gradient(linear, left bottom, right top, from(#051942), to(#2151aa));
+    background-image: -webkit-gradient(linear, left bottom, right top, from(#041840), to(#1a489d));
+    background-image:         gradient(linear, left bottom, right top, from(#041840), to(#1a489d));
     border-left: 1.5px solid rgba(255, 255, 255, .25);
     -webkit-transform: rotate(-45deg) skew(-10deg, -10deg);
             transform: rotate(-45deg) skew(-10deg, -10deg);
 }
 .bar-title .btn-next:before {
     right: -5px;
-    background-image: -webkit-gradient(linear, left bottom, right top, from(#2151aa), to(#051942));
-    background-image:         gradient(linear, left bottom, right top, from(#2151aa), to(#051942));
+    background-image: -webkit-gradient(linear, left bottom, right top, from(#1a489d), to(#041840));
+    background-image:         gradient(linear, left bottom, right top, from(#1a489d), to(#041840));
     border-top: 1.5px solid rgba(255, 255, 255, .25);
     -webkit-transform: rotate(135deg) skew(-10deg, -10deg);
             transform: rotate(135deg) skew(-10deg, -10deg);
@@ -209,13 +212,62 @@ hr{
 
 .tabs{
     border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
 }
 
 .tabs .triggers{
-    background: -webkit-linear-gradient(top, #2151aa, #051942);
-    background:         linear-gradient(top, #2151aa, #051942);
+    height:38px;
+    padding:6px 6px 0 6px;
+    background: -webkit-linear-gradient(top, #2668d9, #143987);
+    background:         linear-gradient(top, #2668d9, #143987);
+}
+.tabs .triggers:after{
+    content:'';
+    float:left;
+    width:100%;
+    margin:-1px -6px 0 -6px;
+    padding:0 6px;
+    height:5px;
+    background: -webkit-linear-gradient(top, #dcdfe4, #d7dbe0);
+    background:         linear-gradient(top, #dcdfe4, #d7dbe0);
+    border-top:1px solid #fff;
+    border-bottom:1px solid #ddd;
+    -webkit-box-shadow: inset 0 -1px 1px #fff;
+            box-shadow: inset 0 -1px 1px #fff;
 }
 
+.tabs .trigger{
+    
+    float:left;
+    display:block;
+    width:50%;
+    height:36px;
+    line-height:36px;
+    font-size:16px;
+    color:#fff;
+    text-align:center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background: -webkit-linear-gradient(top, #2a68d1, #113783);
+    background:         linear-gradient(top, #2a68d1, #113783);
+}
+.tabs .trigger a{
+    display: block;
+    width:100%;
+    height:100%;
+    color:inherit;
+}
+.tabs .trigger.active{
+    position:relative;
+    z-index:10;
+    color:#222;
+    border:1px solid #fff;
+    border-bottom:1px solid #d9dce1;
+    border-top-left-radius:4px;
+    border-top-right-radius:4px;
+    background: -webkit-linear-gradient(top, #fff, #d7dbe0);
+    background:         linear-gradient(top, #fff, #d7dbe0);
+}
 
 /* Info
  -------------------------------------------------- */
