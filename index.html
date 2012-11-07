@@ -9,10 +9,15 @@
                 width: 320px;
             }
             
-            .alert{
-                position:fixed;
-                top:10px;
-                right:10px;
+            .dialog{
+                width:280px;
+                top:20px;
+                left:20px;
+            }
+            .mask{
+                left:0;
+                right:0;
+                width:320px;
             }
 
         </style>
@@ -45,17 +50,20 @@
             </div>
         </div>
 
-        <div class="alert">
+        <div class="dialog">
             <h3 class="title"><i class="icon"></i>对话框标题</h3>
             <div class="content">
                 <form>
-                    <input type="text" name="name" placeholder="输入框" />
+                    <label>
+                        <input type="text" name="name" placeholder="输入框" />
+                    </label>
                     <div class="btn-box">
                         <button class="btn block">按钮</button>
                     </div>
                 </form>
             </div>
         </div>
+        <div class="mask"></div>
 
         <div class="info primary">
             <strong>淘宝网 | 商品标题</strong>
@@ -85,9 +93,22 @@
                 <input type="checkbox" name="name" value="value" />
                 多选框选项3
             </label>
-            <span class="msg">提示信息</span>
-            <span class="msg success">校验通过</span>
-            <span class="msg error">校验失败</span>
+            <div class="msg">
+                <i></i>
+                提示
+            </div>
+            <div class="msg msg-success">
+                <i></i>
+                成功
+            </div>
+            <div class="msg msg-error">
+                <i></i>
+                报错
+            </div>
+            <div class="msg msg-info">
+                <i></i>
+                信息
+            </div>
 
             <label class="title">字段标题，可选</label>
             <label class="radio">
