@@ -279,7 +279,7 @@ hr{
 /* Alert and mask
  -------------------------------------------------- */
 .dialog{
-    position:absolute;
+    position:fixed;
     z-index:10001;
     border:1px solid #ccc;
     border-radius:4px;
@@ -303,7 +303,7 @@ hr{
 }
 
 .mask{
-    position:absolute;
+    position:fixed;
     z-index:10000;
     left:0;
     top:0;
@@ -472,6 +472,26 @@ a.btn{
     clear:both;
 }
 
+/* Icon
+ -------------------------------------------------- */
+.icon{
+    display:inline-block;
+    margin-right:2px;
+    width:16px;
+    height:16px;
+    vertical-align:middle;
+    background:url(img/msg.png) 0 -160px;
+}
+.icon-success{
+    background-position-y: -200px
+}
+.icon-error{
+    background-position-y: 0;
+}
+.icon-info{
+    background-position-y:-120px; 
+}
+
 /* Message
  -------------------------------------------------- */
 .msg{
@@ -483,36 +503,22 @@ a.btn{
     border-radius:4px;
 }
 .msg > i{
-    display:inline-block;
     margin-left:-18px;
-    vertical-align:middle;
-    width:16px;
-    height:16px;
-    background:url(img/msg.png) 0 -160px;
 }
 
 .msg-success{
     background:#f0ffe5;
     border:1px solid #4dbf00;
 }
-.msg-success > i{
-    background-position-y: -200px
-}
 
 .msg-error{
     background:#fff2f2;
     border:1px solid #ff8080;
 }
-.msg-error > i{
-    background-position-y: 0;
-}
 
 .msg-info{
     background:#e5f5ff;
     border:1px solid #40b3ff;
-}
-.msg-info > i{
-    background-position-y:-120px; 
 }
 
 /* Accordion
