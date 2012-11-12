@@ -69,6 +69,7 @@
             <strong>淘宝网 | 商品标题</strong>
             <div>
                 应付：<strong class="red">00.00</strong> 元 <a href="#">刷新价格</a>
+                <span class="chevron"></span>
             </div>
         </div>
 
@@ -131,6 +132,14 @@
                 </select>
             </label>
             
+            <label style="margin-right:4em;">
+                <select name="name">
+                    <option>选择银行卡</option>
+                    <option value="value">下拉列表选项</option>
+                </select>
+            </label>
+            <a href="#">添加卡</a>
+            
             <label>
                 <input type="text" name="name" placeholder="输入框" />
             </label>
@@ -184,20 +193,32 @@
         </form>
 
         <div class="accordion">
-            <div class="trigger">标题<span class="chevron"></span></div>
+            <div class="trigger">
+                <a href="#">
+                    标题外链<span class="chevron chevron-primary chevron-right"></span>
+                </a>
+            </div>
             <div class="panel">
                 <ul class="list">
-                    <li><a href="#">链接</a></li>
-                    <li><a href="#">链接</a></li>
-                    <li><a href="#">链接</a></li>
+                    <li><a href="#">链接,普通文字也可以</a></li>
+                    <li><a href="#">链接,普通文字也可以</a></li>
+                    <li><a href="#">链接,普通文字也可以</a></li>
                 </ul>
             </div>
-            <div class="trigger">标题<span class="chevron"></span></div>
+            <div class="trigger trigger-active">文字标题-面板展开<span class="chevron chevron-primary"></span></div>
             <div class="panel">
                 <ul class="list">
-                    <li><a href="#">链接</a></li>
-                    <li><a href="#">链接</a></li>
-                    <li><a href="#">链接</a></li>
+                    <li><a href="#">链接,普通文字也可以</a></li>
+                    <li><a href="#">链接,普通文字也可以</a></li>
+                    <li><a href="#">链接,普通文字也可以</a></li>
+                </ul>
+            </div>
+            <div class="trigger">文字标题-面板收起<span class="chevron chevron-primary"></span></div>
+            <div class="panel" style="display:none;">
+                <ul class="list">
+                    <li><a href="#">链接,普通文字也可以</a></li>
+                    <li><a href="#">链接,普通文字也可以</a></li>
+                    <li><a href="#">链接,普通文字也可以</a></li>
                 </ul>
             </div>
         </div>

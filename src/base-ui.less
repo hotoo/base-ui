@@ -371,6 +371,11 @@ hr{
     .padding;
     border-bottom:1px solid #ddd;
     background:#f2f2f2;
+    
+    .chevron{
+       float:right;
+       margin-top:3px;
+    }
 }
 
 .info-primary{
@@ -565,6 +570,62 @@ a.btn{
     border:1px solid #40b3ff;
 }
 
+/* Chevron
+ -------------------------------------------------- */
+.chevron{
+    position:relative;
+    display:inline-block;
+    width:13px;
+    height:13px;
+    overflow:hidden;
+}
+.chevron:before,
+.chevron:after{
+    content:'';
+    display:block;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-top:-2px;
+    width:2px;
+    height:6px;
+    background:#7d8893;
+}
+.chevron:before{
+    margin-left:-3px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+.chevron:after{
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+.chevron-primary{
+    width:19px;
+    height:19px;
+    background:#8192ab;
+    border-radius:10px;
+}
+.chevron-primary:before,
+.chevron-primary:after{
+    background:#fff;
+}
+
+.chevron-right:before{
+    margin-left:0px;
+    margin-top:-5px;
+}
+
+.chevron-top:before{
+    margin-left:0px;
+    margin-top:-3px;
+}
+.chevron-top:after{
+    margin-left:-3px;
+    margin-top:-3px;
+}
+
 /* Accordion
  -------------------------------------------------- */
 .accordion .trigger{
@@ -573,6 +634,26 @@ a.btn{
     border-bottom:1px solid #aabcce;
     .linear-gradient(#fafbfb, #d9dfe3);
     .box-shadow(inset 0 0 2px #fcfdfd);
+}
+.accordion .trigger > a{
+    position: relative;
+    display: block;
+    padding: inherit;
+    margin: -12px;
+    color: inherit;
+}
+.accordion .trigger .chevron{
+    float:right;
+    margin-top:2px;
+}
+
+.accordion .trigger-active .chevron:before{
+    margin-left:0px;
+    margin-top:-3px;
+}
+.accordion .trigger-active .chevron:after{
+    margin-left:-3px;
+    margin-top:-3px;
 }
 
 
