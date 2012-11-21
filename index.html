@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Base UI</title>
-         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link type="text/less" rel="stylesheet" href="src/base-ui.less">
         <script src="assets/less-1.3.0.min.js" type="text/javascript"></script>
         <script>
@@ -36,13 +36,9 @@
             }
             
             .dialog{
-                position:relative;
+                
                 width:280px;
-                margin:10px 20px;
-            }
-            .mask{
-                position:relative;
-                height:20px;
+                top:80px;
             }
 
         </style>
@@ -185,7 +181,7 @@
             <hr />
 
             <div class="btn-box">
-                <button class="btn btn-primary">按钮</button>
+                <button id="test" class="btn btn-primary">按钮</button>
                 <button class="btn btn-primary" disabled="disabled">按钮不可用</button>
                 <a class="btn btn-primary" href="#">伪按钮</a>
             </div>
