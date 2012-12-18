@@ -14,7 +14,9 @@
     },
     "license": "MIT",
     "output": {
-        "base-ui.css": ["base-ui.css"]
+        "base-ui.css": ["base-ui.css"],
+        "img/fields.png": ["img/fields.png"],
+        "img/msg.png": ["img/msg.png"]
     },
     "tag":"mobile"
 }
