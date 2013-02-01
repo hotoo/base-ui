@@ -1,10 +1,10 @@
 {
     "name": "base-ui",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "root": "handy",
     "description": "base-ui for alipay",
     "homepage": "http://handyjs.github.com/base-ui",
-    "author": "fool2fish",
+    "author": "fool2fish, swain",
     "repository": {
         "type": "git",
         "url": "https://github.com/handyjs/base-ui"
@@ -14,9 +14,6 @@
     },
     "license": "MIT",
     "output": {
-        "base-ui.css": ["base-ui.css"],
-        "img/fields.png": ["img/fields.png"],
-        "img/msg.png": ["img/msg.png"]
     },
     "tag":"mobile"
 }
