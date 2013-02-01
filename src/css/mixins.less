@@ -1,0 +1,25 @@
+.background-gradient(@start:#fff, @end:#000) {
+  background:@end;
+  background-image:-webkit-gradient(linear, left top, left bottom, from(@start), to(@end)); /* Saf4+, Chrome */
+  background-image:-webkit-linear-gradient(@start, @end); /* Chrome 10+, Saf5.1+ */
+  background-image:-moz-linear-gradient(@start, @end); /* FF3.6 */
+  background-image:-ms-linear-gradient(@start, @end); /* IE10 */
+  background-image:-o-linear-gradient(@start, @end); /* Opera 11.10+ */
+  background-image:linear-gradient(@start, @end);
+}
+
+.box-shadow(@shadow, @inset) {
+  box-shadow:@shadow, @inset;
+  -webkit-box-shadow:@shadow, @inset;
+  -moz-box-shadow:@shadow, @inset;
+  -ms-box-shadow:@shadow, @inset;
+  -o-box-shadow:@shadow, @inset;
+}
+
+.border-radius(@radius:0) {
+  border-radius:@radius;
+  -webkit-border-radius:@radius;
+  -moz-border-radius:@radius;
+  -ms-border-radius:@radius;
+  -o-border-radius:@radius;
+}
