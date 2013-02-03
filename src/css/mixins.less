@@ -23,3 +23,15 @@
   -ms-border-radius:@radius;
   -o-border-radius:@radius;
 }
+
+.opacity(@alpha) {
+  filter:Alpha(Opacity = (@alpha*100));
+  opacity:@alpha;
+}
+
+.box-sizing(@box) {
+  -webkit-box-sizing:@box;
+  -moz-box-sizing:@box;
+  -ms-box-sizing:@box;
+  box-sizing:@box;
+}

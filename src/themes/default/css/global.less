@@ -7,6 +7,11 @@ a {
   text-decoration:none;
 }
 
+[data-role="page"] {
+  position:absolute;
+  width:100%;
+}
+
 /*icons*/
 .ui-icon {
   display:block;
@@ -21,7 +26,7 @@ a {
   background-position:0 0;
 }
 
-.icon-reverse:hover {
+.icon-reverse:active, .icon-reverse.touch {
   background-position:0 -25px;
 }
 
@@ -31,37 +36,8 @@ a {
   background-position:-50px 0;
 }
 
-.ui-collapsible-expand .icon-arrow {
-  background-position:-50px -25px;
-}
-
 .icon-check {
-  width:19px;
-  height:19px;
-  border:2px solid #b2b2b2;
-  background-position:-72px 4px;
-  .border-radius(5px);
+  width:13px;
+  height:10px;
+  background-position:-75px 0;
 }
-
-.ui-checkbox:focus .icon-check {
-  border-color:#f60;
-  background-position:-72px -71px;
-}
-
-.ui-checkbox-selected .icon-check {
-  border-color:#3bb000;
-  background-color:#3bb000;
-  background-position:-72px -21px;
-}
-
-.ui-checkbox-selected:focus .icon-check {
-  border-color:#f60;
-  background-color:#f60;
-  background-position:-72px -21px;
-}
-
-.ui-checkbox-disabled .icon-check {
-  border-color:#ccc;
-  background-position:-72px -46px;
-}
-
