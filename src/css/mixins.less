@@ -29,9 +29,29 @@
   opacity:@alpha;
 }
 
+.display-box() {
+  display:-webkit-box;
+  display:-moz-box;
+  display:box;
+}
+
+.box-orient(@direction) {
+  -webkit-box-orient:@direction;
+  -moz-box-orient:@direction;
+  box-orient:@direction;
+}
+
+.box-flex(@scale) {
+  -webkit-box-flex:@scale;
+  -moz-box-flex:@scale;
+  box-flex:@scale;
+}
+
 .box-sizing(@box) {
   -webkit-box-sizing:@box;
   -moz-box-sizing:@box;
   -ms-box-sizing:@box;
   box-sizing:@box;
 }
+
+
