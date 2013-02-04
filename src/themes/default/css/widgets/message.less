@@ -1,0 +1,34 @@
+.ui-message {
+  position:relative;
+  margin:8px 0;
+  padding:8px 8px 8px 38px;
+  line-height:24px;
+}
+
+.ui-message-icon {
+  position:absolute;
+  top:8px;
+  left:8px;
+  z-index:1;
+  width:24px;
+  height:24px;
+  .border-radius(12px);
+}
+
+.ui-message-error .ui-message-icon {
+  background-color:#ff3a0c;
+}
+
+.ui-message-icon span {
+  display:block;
+  position:absolute;
+  top:5px;
+  left:5px;
+  z-index:1;
+  width:14px;
+  height:14px;
+}
+
+.ui-message-error .ui-message-icon span {
+  background-position:-75px -100px;
+}
