@@ -15,20 +15,32 @@
   .border-radius(12px);
 }
 
+.ui-message-icon span {
+  display:block;
+  position:absolute;
+  z-index:1;
+}
+
 .ui-message-error .ui-message-icon {
   background-color:#ff3a0c;
 }
 
-.ui-message-icon span {
-  display:block;
-  position:absolute;
+.ui-message-error .ui-message-icon span {
+  width:14px;
+  height:14px;;
   top:5px;
   left:5px;
-  z-index:1;
-  width:14px;
-  height:14px;
+  background-position:-75px -100px;
 }
 
-.ui-message-error .ui-message-icon span {
-  background-position:-75px -100px;
+.ui-message-success .ui-message-icon {
+  background-color:#3bb000;
+}
+
+.ui-message-success .ui-message-icon span {
+  width:18px;
+  height:14px;
+  top:5px;
+  left:3px;
+  background-position:-75px -125px;
 }
