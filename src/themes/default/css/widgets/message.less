@@ -2,7 +2,6 @@
   position:relative;
   margin:8px 0;
   padding:8px 8px 8px 38px;
-  line-height:24px;
 }
 
 .ui-message-icon {
@@ -21,26 +20,13 @@
   z-index:1;
 }
 
-.ui-message-error .ui-message-icon {
-  background-color:#ff3a0c;
+.ui-message-error {
+  background:url(../img/icon-message-error.png) no-repeat 8px center;
+  background-size:25px auto;
+
 }
 
-.ui-message-error .ui-message-icon span {
-  width:14px;
-  height:14px;;
-  top:5px;
-  left:5px;
-  background-position:-75px -100px;
-}
-
-.ui-message-success .ui-message-icon {
-  background-color:#3bb000;
-}
-
-.ui-message-success .ui-message-icon span {
-  width:18px;
-  height:14px;
-  top:5px;
-  left:3px;
-  background-position:-75px -125px;
+.ui-message-success {
+  background:url(../img/icon-message-success.png) no-repeat 8px center;
+  background-size:25px auto;
 }

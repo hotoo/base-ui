@@ -1,4 +1,4 @@
-.background-gradient(@start:#fff, @end:#000) {
+.background(@start:#fff, @end:#000) when(iscolor(@start)) {
   background:@end;
   background-image:-webkit-gradient(linear, left top, left bottom, from(@start), to(@end)); /* Saf4+, Chrome */
   background-image:-webkit-linear-gradient(@start, @end); /* Chrome 10+, Saf5.1+ */
@@ -6,6 +6,16 @@
   background-image:-ms-linear-gradient(@start, @end); /* IE10 */
   background-image:-o-linear-gradient(@start, @end); /* Opera 11.10+ */
   background-image:linear-gradient(@start, @end);
+}
+
+.background(@url, @start:#fff, @end:#000) when(isurl(@url)) {
+  background:@end;
+  background-image:@url, -webkit-gradient(linear, left top, left bottom, from(@start), to(@end)); /* Saf4+, Chrome */
+  background-image:@url, -webkit-linear-gradient(@start, @end); /* Chrome 10+, Saf5.1+ */
+  background-image:@url, -moz-linear-gradient(@start, @end); /* FF3.6 */
+  background-image:@url, -ms-linear-gradient(@start, @end); /* IE10 */
+  background-image:@url, -o-linear-gradient(@start, @end); /* Opera 11.10+ */
+  background-image:@url, linear-gradient(@start, @end);
 }
 
 .box-shadow(@shadow, @inset) {
@@ -32,18 +42,24 @@
 .display-box() {
   display:-webkit-box;
   display:-moz-box;
+  display:-ms-box;
+  display:-o-box;
   display:box;
 }
 
 .box-orient(@direction) {
   -webkit-box-orient:@direction;
   -moz-box-orient:@direction;
+  -ms-box-orient:@direction;
+  -o-box-orient:@direction;
   box-orient:@direction;
 }
 
 .box-flex(@scale) {
   -webkit-box-flex:@scale;
   -moz-box-flex:@scale;
+  -ms-box-flex:@scale;
+  -o-box-flex:@scale;
   box-flex:@scale;
 }
 
@@ -51,7 +67,16 @@
   -webkit-box-sizing:@box;
   -moz-box-sizing:@box;
   -ms-box-sizing:@box;
+  -o-box-sizing:@box;
   box-sizing:@box;
+}
+
+.transform(@value) {
+  -webkit-transform:@value;
+  -moz-transform:@value;
+  -ms-transform:@value;
+  -o-transform:@value;
+  transform:@value;
 }
 
 
