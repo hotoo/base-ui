@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-  <title>收银台</title>
+  <title>录入卡信息</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
   <meta name="format-detection" content="telephone=no">
@@ -12,7 +12,7 @@
   <!--添加到桌面快捷时的图片路径。使用apple-touch-icon属性为“增加高光光亮的图标”；使用apple-touch-icon-precomposed属性为“设计原图图标”-->
   <!--link rel="apple-touch-icon-precomposed" href="resources/images/apple-touch-icon.png"-->
   <link rel="stylesheet/less" href="../../src/themes/default/css/aio.less" type="text/css">
-  <link rel="stylesheet/less" href="cashier.less" type="text/css">
+  <link rel="stylesheet/less" href="signincard.less" type="text/css">
 </head>
 
 <body>
@@ -22,49 +22,33 @@
     <a title="返回" href="#" class="ui-icon icon-reverse">返回</a>
   </div>
   <div data-role="content" class="ui-content">
-    <div class="product ui-caption ui-collapsible ui-collapsible-handle" data-role="collapsible">
-      <p>平海路西湖影院2D电湖电影票1张</p>
-      <p class="ui-collapsible-content" style="display:none">来自淘宝网</p>
-      <p>应付总价：<span class="price">20.50</span>元</p>
-      <span class="ui-icon icon-arrow"></span>
-    </div>
     <form data-role="form" class="ui-form" action="#" method="post" autocomplete="off">
       <fieldset>
-        <h3>支付宝账户：sensenmu@yahoo.com.cn</h3>
-
-        <div class="ui-checkbox ui-checkbox-checked">
-          <label>使用余额付款：396.00</label>
-          <span class="ui-icon icon-check"></span>
-          <input type="checkbox" checked/>
-        </div>
-        <div class="ui-checkbox">
-          <label>可用红包：38.00</label>
-          <span class="ui-icon icon-check"></span>
-          <input type="checkbox"/>
-        </div>
-        <div class="ui-checkbox ui-checkbox-disabled">
-          <label>可用集分宝：3000个（30.00元）</label>
-          <span class="ui-icon icon-check"></span>
-          <input type="checkbox" disabled/>
-        </div>
-        <div class="ui-checkbox ui-checkbox-naked">
-          <label>银行卡付款</label>
-          <span class="ui-icon icon-check"></span>
-          <input type="checkbox"/>
-        </div>
-        <div class="ui-select">
-          <span class="ui-select-text">中国银行储蓄卡**4823</span>
-          <select>
-            <option value="boc" selected>中国银行储蓄卡**4823</option>
-            <option value="cmb">招商银行储蓄卡**6969</option>
-          </select>
-          <span class="ui-icon icon-arrow"></span>
+        <div>
+          <p class="black">银行信息：招商银行</p>
+          <p class="black">银行卡号：4392 **** **** 5679</p>
+          <p class="black">付款金额：xx.00元</p>
         </div>
         <div class="ui-field">
-          <input type="password" placeholder="支付宝支付密码"/>
+          <input type="text" placeholder="银行开户名"/>
         </div>
+        <div class="ui-field">
+          <input type="text" placeholder="身份证号"/>
+        </div>
+        <div class="ui-field">
+          <input type="tel" placeholder="银行预留手机号"/>
+        </div>
+        <div class="ui-checkbox">
+          <label>查看快捷支付协议</label>
+          <span class="ui-icon icon-check"></span>
+          <input type="checkbox"/>
+        </div>
+        <p class="smaller">提示：</p>
+        <p class="smaller">1、单笔限额xx.00元，每日限额xx.00元，每月限额xx.00元。</p>
+        <p class="smaller">2、中国银行客服电话：95588。</p>
+
         <div class="ui-button ui-button-submit">
-          <button type="submit">确认付款</button>
+          <button type="submit">确定</button>
         </div>
       </fieldset>
     </form>
@@ -80,7 +64,7 @@
       '$': 'gallery/zepto/1.0.0/zepto',
     }
   });
-  seajs.use('./cashier');
+  seajs.use('./signincard');
 </script>
 </body>
 </html>
