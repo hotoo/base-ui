@@ -2,6 +2,7 @@
   position:relative;
   margin:8px 0;
   padding:8px 8px 8px 38px;
+  color:#333;
 }
 
 .ui-message-icon {
@@ -20,13 +21,28 @@
   z-index:1;
 }
 
-.ui-message-error {
-  background:url(../img/icon-message-error.png) no-repeat 8px center;
-  background-size:25px auto;
-
-}
-
 .ui-message-success {
   background:url(../img/icon-message-success.png) no-repeat 8px center;
   background-size:25px auto;
+}
+
+.ui-message-error {
+  background:url(../img/icon-message-error.png) no-repeat 8px center;
+  background-size:25px auto;
+}
+
+.ui-message-form {
+  border:1px solid #bfbfbf;
+  background-repeat:no-repeat !important;
+  background-position:8px center !important;
+  background-size:25px auto !important;
+  .border-radius(8px);
+}
+
+.ui-message-form.ui-message-success {
+  .background(url(../img/icon-message-success.png),#ffe,#ffffe1);
+}
+
+.ui-message-form.ui-message-error {
+  .background(url(../img/icon-message-error.png),#ffe,#ffffe1);
 }
