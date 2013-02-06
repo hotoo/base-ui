@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-  <title>录入卡信息</title>
+  <title>银行卡支付</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
   <meta name="format-detection" content="telephone=no">
@@ -12,6 +12,7 @@
   <!--添加到桌面快捷时的图片路径。使用apple-touch-icon属性为“增加高光光亮的图标”；使用apple-touch-icon-precomposed属性为“设计原图图标”-->
   <!--link rel="apple-touch-icon-precomposed" href="resources/images/apple-touch-icon.png"-->
   <link rel="stylesheet/less" href="../../src/themes/default/css/aio.less" type="text/css">
+  <link rel="stylesheet/less" href="cardpayment.less" type="text/css">
 </head>
 
 <body>
@@ -21,38 +22,27 @@
     <a title="返回" href="#" class="ui-icon icon-reverse">返回</a>
   </div>
   <div data-role="content" class="ui-content">
+    <div class="product ui-caption ui-collapsible ui-collapsible-handle" data-role="collapsible">
+      <p>平海路西湖影院2D电湖电影票1张</p>
+      <p class="ui-collapsible-content" style="display:none">来自淘宝网</p>
+      <p>应付总价：<span class="price">20.50</span>元</p>
+      <span class="ui-icon icon-arrow"></span>
+    </div>
+
     <form data-role="form" class="ui-form" action="#" method="post" autocomplete="off">
       <fieldset>
-        <p class="black">银行信息：招商银行</p>
-        <p class="black">银行卡号：4392 **** **** 5679</p>
-        <p class="black">付款金额：xx.00元</p>
-
-        <div class="ui-field ui-field-success">
-          <input type="text" placeholder="银行开户名"/>
-
-          <div class="ui-field-icon"><span class="ui-icon"></span></div>
+        <div class="ui-message ui-message-form ui-message-error">
+          <p>该卡已签约快捷支付（含卡通），请输入其他银行卡号。</p>
         </div>
-        <div class="ui-field ui-field-error">
-          <input type="text" placeholder="身份证号"/>
 
-          <div class="ui-field-message">testtesttesttest</div>
-
-          <div class="ui-field-icon"><span class="ui-icon"></span></div>
-        </div>
         <div class="ui-field">
-          <input type="tel" placeholder="银行预留手机号"/>
+          <label>请输入您的银行卡号</label>
+          <input type="password" placeholder="银行卡号"/>
         </div>
-        <div class="ui-checkbox">
-          <label>查看快捷支付协议</label>
-          <span class="ui-icon icon-check"></span>
-          <input type="checkbox"/>
-        </div>
-        <p class="smaller">提示：</p>
-        <p class="smaller">1、单笔限额xx.00元，每日限额xx.00元，每月限额xx.00元。</p>
-        <p class="smaller">2、中国银行客服电话：95588。</p>
+        <p>按提示完成订单支付流程。</p>
 
         <div class="ui-button ui-button-submit">
-          <button type="submit">确定</button>
+          <button type="submit">下一步</button>
         </div>
       </fieldset>
     </form>
@@ -68,7 +58,7 @@
       '$': 'gallery/zepto/1.0.0/zepto',
     }
   });
-  seajs.use('./signincard');
+  seajs.use('./cardpayment');
 </script>
 </body>
 </html>
