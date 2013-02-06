@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <title>登录</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <!--添加到桌面快捷时的图片路径。使用apple-touch-icon属性为“增加高光光亮的图标”；使用apple-touch-icon-precomposed属性为“设计原图图标”-->
+  <!--link rel="apple-touch-icon-precomposed" href="resources/images/apple-touch-icon.png"-->
+  <link rel="stylesheet/less" href="../../src/themes/default/css/aio.less" type="text/css">
+  <link rel="stylesheet/less" href="login.less" type="text/css">
+</head>
+
+<body>
+<div data-role="page" class="ui-page">
+  <div data-role="header" class="ui-header">
+    <h1><img alt="Alipay" src="../../src/themes/default/img/logo-header.png" width="70" height="24"/></h1>
+  </div>
+  <div data-role="content" class="ui-content">
+    <form data-role="form" class="ui-form" action="#" method="post" autocomplete="off">
+      <fieldset>
+        <div class="ui-field">
+          <label>支付宝会员</label>
+          <input type="text" placeholder="支付宝账户"/>
+        </div>
+        <p>账户为手机号码或email地址。</p>
+
+        <div class="ui-field">
+          <input type="password" placeholder="支付宝支付密码"/>
+        </div>
+        <div class="ui-button ui-button-submit">
+          <button type="submit">下一步</button>
+        </div>
+      </fieldset>
+    </form>
+    <h3>其他操作</h3>
+
+    <form data-role="form" class="ui-form" action="#" method="post" autocomplete="off">
+      <fieldset>
+        <p class="center">没有账户？有手机号码一样能付！</p>
+
+        <div class="ui-button ui-button-normal">
+          <button type="submit">马上体验</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <div data-role="footer" class="ui-footer">版权所有 &copy; 2004-2013 支付宝</div>
+</div>
+
+<script src="../../assets/less.js"></script>
+</body>
+</html>
