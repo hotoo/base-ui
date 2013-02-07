@@ -3,10 +3,10 @@
 }
 
 .ui-button button {
-  padding:8px 0;
+  padding:0 8px;
   width:100%;
   text-align:center;
-  font-size:1.2em;
+  font-size:1.8em;
   .border-radius(3px);
 }
 
@@ -29,5 +29,12 @@
 }
 
 .ui-button-submit button:active {
-  .background(#f86b04,#ff7800)
+  .background(#f86b04,#ff7800);
+}
+
+.ui-button-disabled button {
+  border-color:#c5c5c5 !important;
+  background:#d1d1d1 !important;
+  color:#fff !important;
+  .box-shadow(0 0 0, inset 0 0 1px rgba(255, 255, 255, .2));
 }
