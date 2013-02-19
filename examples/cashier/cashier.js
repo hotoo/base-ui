@@ -3,4 +3,5 @@ define(function(require, exports, module) {
   require('../../src/js/widgets/collapsible');
   require('../../src/js/widgets/checkbox');
   require('../../src/js/widgets/select');
+  require('../../src/themes/default/js/widgets/shortcut');
 });

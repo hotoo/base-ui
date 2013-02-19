@@ -1,0 +1,79 @@
+#shortcut {
+  left:8px;
+  bottom:8px;
+  z-index:12;
+  width:29px;
+  height:29px;
+  background-position:0 -50px;
+  background-color:transparent;
+}
+
+#shortcut.active {
+  background-position:0 -100px;
+}
+
+#shortcut-panel {
+  left:50%;
+  top:50%;
+  z-index:10;
+  padding:8px;
+  width:159px;
+  height:159px;
+  margin-left:-88px;
+  margin-top:-88px;
+  background-color:#000;
+  color:#fff;
+  .border-radius(10px);
+  .opacity(0);
+  .transform(scale(0));
+}
+
+#shortcut-panel li {
+  display:block;
+  width:60px;
+  height:50px;
+  text-align:center;
+}
+
+#shortcut-panel li span {
+  display:block;
+  margin:0 auto;
+  width:25px;
+  height:25px;
+}
+
+#shortcut-panel .passback {
+  margin:4px auto;
+  clear:both;
+}
+
+#shortcut-panel .passback span {
+  background-position:-50px -100px;
+}
+
+#shortcut-panel .payfor {
+  float:left;
+  margin-left:4px;
+}
+
+#shortcut-panel .payfor span {
+  background-position:-50px -125px;
+}
+
+#shortcut-panel .refresh {
+  float:right;
+  margin-right:4px;
+}
+
+#shortcut-panel .refresh span {
+  background-position:-75px -125px;
+}
+
+#shortcut-panel .topback {
+  margin:4px auto;
+  clear:both;
+}
+
+#shortcut-panel .topback span {
+  background-position:-75px -150px;
+}
