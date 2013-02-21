@@ -13,10 +13,9 @@
   color:#333;
 }
 
-/*.ui-select:focus {
-  border-color:#ffa05d;
-  .background(#ffe4ca,#fff3e7);
-}*/
+.ui-select-disabled .ui-select-text {
+  color:#c7c7c7;
+}
 
 .ui-select select {
   position:absolute;
@@ -39,4 +38,8 @@
   top:12px;
   right:12px;
   left:auto;
+}
+
+.ui-select-disabled .icon-arrow {
+  .opacity(.7);
 }
