@@ -1,16 +1,14 @@
 define(function (require, exports, module) {
   var $ = require('$');
   $(document).on({
-    'tap': function () {
-      if ($(this).hasClass('ui-checkbox-disabled')) return;
-      if ($(this).hasClass('ui-checkbox-checked')) {
-        $(this).removeClass('ui-checkbox-checked')
-        $('input', this).prop('checked', false);
+    'click': function () {
+      if ($(this).prop('disabled')) return;
+      var container = $(this).closest('.ui-checkbox');
+      if ($(this).prop('checked')) {
+        container.addClass('ui-checkbox-checked');
       } else {
-        $(this).addClass('ui-checkbox-checked')
-        $('input', this).prop('checked', true);
-
+        container.removeClass('ui-checkbox-checked');
       }
     }
-  }, '.ui-checkbox');
+  }, '.ui-checkbox input');
 });
