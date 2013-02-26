@@ -37,7 +37,7 @@ define(function (require, exports, module) {
 
   return {
     init: function () {
-      $('body').on('click', 'a[data-transition]', function (e) {
+      $(document).on('click', 'a[data-transition]', function (e) {
         var href = Path.convertUrlToDataUrl(this.href);
 
         var page = $('[data-url="' + href + '"]');
@@ -49,13 +49,15 @@ define(function (require, exports, module) {
 
         return false;
       });
-      $('body').on('submit', 'form[data-transition]', function (e) {
-        var href = Path.convertUrlToDataUrl(this.action);
-        $('[data-url="' + href + '"]').remove();
-        pageLoad(href, $(this).serialize());
-        return false;
+      $(document).on('submit', 'form[data-transition]', function (e) {
+        if (!this.onsubmit || this.onsubmit()) {
+          var href = Path.convertUrlToDataUrl(this.action);
+          $('[data-url="' + href + '"]').remove();
+          pageLoad(href, $(this).serialize());
+          return false;
+        }
       });
-      $('body').on('click', 'a[data-rel=back]', function () {
+      $(document).on('click', 'a[data-rel=back]', function () {
         var href = Path.convertUrlToDataUrl(this.href);
         var page = $('[data-url="' + href + '"]');
         if (page.length) {
