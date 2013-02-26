@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta charset="utf-8">
 
   <title>收银台</title>
 
@@ -16,7 +16,7 @@
 </head>
 
 <body>
-<div data-role="page" class="ui-page">
+<div data-role="page" class="ui-page ui-page-active">
   <div data-role="header" class="ui-header">
     <h1><img alt="Alipay" src="../../src/themes/default/img/logo-header.png" width="70" height="24"/></h1>
     <a title="返回" href="#" class="ui-icon icon-reverse">返回</a>
@@ -28,7 +28,7 @@
       <p>应付总价：<span class="price">20.50</span>元</p>
       <span class="ui-icon icon-arrow"></span>
     </div>
-    <form data-role="form" class="ui-form" action="#" method="post" autocomplete="off">
+    <form data-role="form" class="ui-form" action="#" method="post" autocomplete="off" onsubmit="return false">
       <fieldset>
         <h3>支付宝账户：sensenmu@yahoo.com.cn</h3>
 
@@ -62,8 +62,14 @@
           </div>
         </div>
         <div class="ui-button ui-button-submit">
-          <button type="submit">确认付款</button>
+          <button id="button-xbox" type="submit">确认付款</button>
         </div>
+        <div id="J-button-count" class="ui-captcha-button ui-button-morange ui-button">
+
+          <button type="button" class="ui-button-text">重获验证码</button>
+
+        </div>
+
       </fieldset>
     </form>
     <div id="shortcut" class="fixed ui-icon"></div>
@@ -83,6 +89,9 @@
   seajs.config({
     alias: {
       '$': 'gallery/zepto/1.0.0/zepto',
+      '$-debug': 'gallery/zepto/1.0.0/zepto-debug',
+      'button-count': 'alipay/button-count/1.2.0/button-count',
+      'xbox': 'alipay/xbox/0.9.8/xbox'
     }
   });
   seajs.use('./cashier');

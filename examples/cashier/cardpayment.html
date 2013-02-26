@@ -12,11 +12,12 @@
   <!--添加到桌面快捷时的图片路径。使用apple-touch-icon属性为“增加高光光亮的图标”；使用apple-touch-icon-precomposed属性为“设计原图图标”-->
   <!--link rel="apple-touch-icon-precomposed" href="resources/images/apple-touch-icon.png"-->
   <link rel="stylesheet/less" href="../../src/themes/default/css/aio.less" type="text/css">
-  <link rel="stylesheet/less" href="cardpayment.less" type="text/css">
+  <link rel="stylesheet" href="../../src/css/widgets/page-transitions.css" type="text/css">
 </head>
 
 <body>
 <div data-role="page" class="ui-page">
+  <link rel="stylesheet" href="cardpayment.css" type="text/css">
   <div data-role="header" class="ui-header">
     <h1><img alt="Alipay" src="../../src/themes/default/img/logo-header.png" width="70" height="24"/></h1>
     <a title="返回" href="#" class="ui-icon icon-reverse">返回</a>
@@ -29,7 +30,7 @@
       <span class="ui-icon icon-arrow"></span>
     </div>
 
-    <form data-role="form" class="ui-form" action="#" method="post" autocomplete="off">
+    <form data-role="form" data-transition="slide" class="ui-form" action="./cardpayment-next.html" method="post" autocomplete="off">
       <fieldset>
         <div class="ui-message ui-message-form ui-message-error">
           <p>该卡已签约快捷支付（含卡通），请输入其他银行卡号。</p>
@@ -37,8 +38,10 @@
 
         <div class="ui-field">
           <label>请输入您的银行卡号</label>
+
           <div class="ui-field-input">
-            <input type="password" placeholder="银行卡号"/>
+            <input type="password" placeholder="银行卡号" name="cardno"/>
+
             <div class="ui-field-icon"><span class="ui-icon"></span></div>
           </div>
           <div class="ui-field-message">testtesttesttest</div>
