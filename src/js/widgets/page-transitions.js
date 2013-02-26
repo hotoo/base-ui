@@ -3,6 +3,7 @@ define(function (require, exports, module) {
   var Path = require('./path');
 
   function pageLoad(href, data, reverse) {
+    if (!href) return;
     if (typeof data === 'boolean') {
       reverse = data;
       data = null;
@@ -18,6 +19,9 @@ define(function (require, exports, module) {
           page;
         all.get(0).innerHTML = html;
         page = all.find('[data-role=page]').first().removeClass('ui-page-active').attr('data-url', href);
+        if (newPageTitle) {
+          page.data('title', newPageTitle);
+        }
         $('body').append(page);
         transition(page, reverse);
       }
@@ -32,6 +36,7 @@ define(function (require, exports, module) {
     to.one('webkitAnimationEnd animationend',function () {
       to.removeClass(tr + ' in');
     }).addClass(tr + ' in ui-page-active');
+    document.title = to.data('title') || document.title;
     window.history.replaceState("", "", to.data('url'));
   }
 
@@ -68,7 +73,9 @@ define(function (require, exports, module) {
         return false;
       });
 
-      $('[data-role=page]').addClass('ui-page-active').attr('data-url', Path.convertUrlToDataUrl(location.href));
+      $('[data-role=page]').addClass('ui-page-active')
+        .attr('data-url', Path.convertUrlToDataUrl(location.href))
+        .data('title', document.title);
     }
   }
 });
