@@ -28,13 +28,13 @@ define(function (require, exports, module) {
     setup: function () {
       this.get('trigger').attr('autocomplete', 'off')
         .on('blur.autocomplete', $.proxy(this._blurEvent, this))
-        .on('keyup.autocomplete', $.proxy(this._keyupEvent, this));
+        .on('input.autocomplete', $.proxy(this._inputEvent, this));
       this.get('parentNode').append(this.element);
     },
     _blurEvent: function () {
 
     },
-    _keyupEvent: function () {
+    _inputEvent: function () {
       var value = this.get('trigger').val();
       if (this.valueCache === value) return;
       this.valueCache = value;
