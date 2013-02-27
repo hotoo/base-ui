@@ -12,7 +12,7 @@
   <!--添加到桌面快捷时的图片路径。使用apple-touch-icon属性为“增加高光光亮的图标”；使用apple-touch-icon-precomposed属性为“设计原图图标”-->
   <!--link rel="apple-touch-icon-precomposed" href="resources/images/apple-touch-icon.png"-->
   <link rel="stylesheet/less" href="../../src/themes/default/css/aio.less" type="text/css">
-  <link rel="stylesheet" href="cashier.css" type="text/css">
+  <link rel="stylesheet" href="cashier-assign.css" type="text/css">
 </head>
 
 <body>
@@ -32,20 +32,8 @@
       <fieldset>
         <h3 class="account">支付宝账户：sensenmu@yahoo.com.cn</h3>
 
-        <div class="ui-checkbox ui-checkbox-checked">
-          <label><input type="checkbox" checked/>使用余额付款：396.00</label>
-          <span class="ui-icon icon-check"></span>
-        </div>
-        <div class="ui-checkbox">
-          <label><input type="checkbox"/>可用红包：38.00</label>
-          <span class="ui-icon icon-check"></span>
-        </div>
-        <div class="ui-checkbox ui-checkbox-disabled">
-          <label><input type="checkbox" disabled/>可用集分宝：3000个（30.00元）</label>
-          <span class="ui-icon icon-check"></span>
-        </div>
         <div class="ui-checkbox ui-checkbox-naked">
-          <label><input type="checkbox"/>银行卡付款</label>
+          <label><input type="checkbox"/>使用银行卡付款：367.00元</label>
           <span class="ui-icon icon-check"></span>
         </div>
         <div class="ui-select ui-select-disabled">
@@ -56,29 +44,11 @@
           </select>
           <span class="ui-icon icon-arrow"></span>
         </div>
-        <div class="ui-field">
-          <div class="ui-field-input">
-            <input type="password" placeholder="支付宝支付密码"/>
-          </div>
-        </div>
         <div class="ui-button ui-button-submit">
           <button id="button-xbox" type="submit">确认付款</button>
         </div>
-        <div id="J-button-count" class="ui-captcha-button ui-button-morange ui-button">
-
-          <button type="button" class="ui-button-text">重获验证码</button>
-
-        </div>
-
       </fieldset>
     </form>
-    <div id="shortcut" class="fixed ui-icon"></div>
-    <div id="shortcut-panel" class="fixed" style="display:none">
-      <li class="passback"><span class="ui-icon"></span>找回密码</li>
-      <li class="payfor"><span class="ui-icon"></span>找人代付</li>
-      <li class="refresh"><span class="ui-icon"></span>刷新订单</li>
-      <li class="topback"><span class="ui-icon"></span>返回顶部</li>
-    </div>
   </div>
   <div data-role="footer" class="ui-footer">版权所有 &copy; 2004-2013 支付宝</div>
 </div>
@@ -91,7 +61,7 @@
       '$': 'gallery/zepto/1.0.0/zepto'
     }
   });
-  seajs.use('./cashier');
+  seajs.use('./cashier-assign');
 </script>
 </body>
 </html>

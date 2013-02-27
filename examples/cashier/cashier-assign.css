@@ -1,0 +1,23 @@
+.product {
+  position:relative;
+  padding:8px 4px 4px;
+}
+
+.product .price {
+  font-size:1.2em;
+  color:#f60;
+}
+
+.product .icon-arrow {
+  position:absolute;
+  z-index:1;
+  top:auto;
+  right:18px;
+  bottom:5px;
+  left:auto;
+}
+
+.account {
+  color:#333;
+}
+
