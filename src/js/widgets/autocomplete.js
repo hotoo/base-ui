@@ -76,9 +76,8 @@ define(function (require, exports, module) {
         var key = this.get('dataKey');
         var value = key ? item[key] : item;
         this.get('trigger').val(value);
-        this.hide();
+        setTimeout($.proxy(this, 'hide'), 360);
       }
-      this.touchState = 'end';
     },
     show: function () {
       this.element.show();
