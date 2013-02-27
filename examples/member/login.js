@@ -22,13 +22,12 @@ define(function (require, exports, module) {
   new AutoComplete({
     trigger: '#account',
     parentNode: '#account-list',
-    dataSource: function (value, done) {
+    dataSource: function (value) {
       if (value) {
         var v = value.split('@');
-        done(dataMaker(v[0], v[1]));
-      } else {
-        done();
+        return dataMaker(v[0], v[1]);
       }
+      return [];
     }
   });
 });
