@@ -1,7 +1,7 @@
 define(function (require, exports, module) {
   var $ = require('$');
   $(document).on({
-    'tap': function () {
+    'click': function () {
       var container = $(this).closest('.ui-collapsible');
       if (container.hasClass('ui-collapsible-expand')) {
         container.removeClass('ui-collapsible-expand');

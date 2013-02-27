@@ -2,7 +2,7 @@ define(function (require, exports, module) {
   var $ = require('$');
   var shortcut = $('#shortcut');
   var shortcutPanel = $('#shortcut-panel');
-  shortcut.on('tap', function (e) {
+  shortcut.on('click', function (e) {
     e.stopPropagation();
     if ($(this).hasClass('active')) {
       deactiveHandler();
@@ -11,7 +11,7 @@ define(function (require, exports, module) {
     }
   });
 
-  shortcutPanel.on('tap', function (e) {
+  shortcutPanel.on('click', function (e) {
     e.stopPropagation();
   });
   function deactiveHandler() {
@@ -23,7 +23,7 @@ define(function (require, exports, module) {
         $(this).hide().removeClass('active');
       }
     });
-    $(document).off('tap', deactiveHandler);
+    $(document).off('click', deactiveHandler);
   }
 
   function activeHandler() {
@@ -35,6 +35,6 @@ define(function (require, exports, module) {
         $(this).addClass('active');
       }
     });
-    $(document).on('tap', deactiveHandler);
+    $(document).on('click', deactiveHandler);
   }
 });
