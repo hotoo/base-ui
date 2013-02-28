@@ -1,16 +1,22 @@
-.ui-autocomplete li {
-  position:relative;
-  margin:5px 0;
-  padding:0 8px;
-  height:32px;
-  line-height:32px;
-  border:1px solid #bfbfbf;
+.ui-autocomplete {
+  border:solid 1px #bfbfbf;
   background-color:#fff;
-  color:#333;
+  overflow:hidden;
   .border-radius(6px);
 }
 
+.ui-autocomplete li {
+  padding:0 8px;
+  height:32px;
+  line-height:32px;
+  border-top:1px solid #bfbfbf;
+  color:#333;
+}
+
+.ui-autocomplete li:first-child {
+  border-top:0 none;
+}
+
 .ui-autocomplete li:active {
-  border-color:#ff9a51;
   .background(#ffe5cb,#fff3e7);
 }
