@@ -32,7 +32,7 @@ define(function (require, exports, module) {
       this.get('parentNode').append(this.element);
     },
     _blurEvent: function () {
-
+      this.hide();
     },
     _inputEvent: function () {
       var value = this.get('trigger').val();
