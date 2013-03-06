@@ -17,18 +17,26 @@ define(function (require, exports, module) {
   function deactiveHandler() {
     if (!shortcutPanel.hasClass('active')) return;
     shortcut.removeClass('active');
-    shortcutPanel.one('webkitAnimationEnd animationend',function () {
-      $(this).removeClass('active scale out');
-    }).addClass('scale out');
+    if ($.browser.msie && $.browser.version < 10) {
+      shortcutPanel.removeClass('active scale');
+    } else {
+      shortcutPanel.one('webkitAnimationEnd animationend',function () {
+        $(this).removeClass('active scale out');
+      }).addClass('scale out');
+    }
     $(document).off('click', deactiveHandler);
   }
 
   function activeHandler() {
     if (shortcutPanel.hasClass('active')) return;
     shortcut.addClass('active');
-    shortcutPanel.one('webkitAnimationEnd animationend',function () {
-      $(this).addClass('active').removeClass('in');
-    }).addClass('scale in');
+    if ($.browser.msie && $.browser.version < 10) {
+      shortcutPanel.addClass('active scale');
+    } else {
+      shortcutPanel.one('webkitAnimationEnd animationend',function () {
+        $(this).addClass('active').removeClass('in');
+      }).addClass('scale in');
+    }
 
     $(document).on('click', deactiveHandler);
   }

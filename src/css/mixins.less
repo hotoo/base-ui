@@ -34,11 +34,6 @@
   -o-border-radius:@radius;
 }
 
-.opacity(@alpha) {
-  filter:Alpha(Opacity = (@alpha*100));
-  opacity:@alpha;
-}
-
 .display-box() {
   display:-webkit-box;
   display:-moz-box;
@@ -84,6 +79,10 @@
   -webkit-animation-timing-function:@timingFunction;
   -webkit-animation-duration:@duration;
   -webkit-animation-name:@name;
+  -ms-animation-fill-mode:@fillMode;
+  -ms-animation-timing-function:@timingFunction;
+  -ms-animation-duration:@duration;
+  -ms-animation-name:@name;
   animation-fill-mode:@fillMode;
   animation-timing-function:@timingFunction;
   animation-duration:@duration;

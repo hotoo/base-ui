@@ -101,6 +101,15 @@
   }
 }
 
+@-ms-keyframes shortcutscaleout {
+  from {
+    -ms-transform:scale(1);
+  }
+  to {
+    -ms-transform:scale(0);
+  }
+}
+
 @keyframes shortcutscalein {
   from {
     transform:scale(0);
@@ -119,9 +128,18 @@
   }
 }
 
+@-ms-keyframes shortcutscalein {
+  from {
+    -ms-transform:scale(0);
+  }
+  to {
+    -ms-transform:scale(1);
+  }
+}
+
 #shortcut-panel.scale {
   display:block;
-  .opacity(.8);
+  opacity:.8;
 }
 
 #shortcut-panel.out {

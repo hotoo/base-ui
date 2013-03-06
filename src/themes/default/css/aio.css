@@ -606,8 +606,8 @@ form {
   z-index: 1;
   width: 100%;
   height: 100%;
-  filter: Alpha(0);
   opacity: 0;
+  visibility: hidden\0;
 }
 .ui-checkbox-checked .icon-check {
   border-color: #3bb000;
@@ -664,8 +664,7 @@ form {
   left: auto;
 }
 .ui-select-disabled .icon-arrow {
-  filter: Alpha(70);
-  opacity: 0.7;
+  opacity: .7;
 }
 .ui-button {
   margin: 8px 0;
@@ -948,6 +947,14 @@ form {
     -webkit-transform: scale(0);
   }
 }
+@-ms-keyframes shortcutscaleout {
+  from {
+    -ms-transform: scale(1);
+  }
+  to {
+    -ms-transform: scale(0);
+  }
+}
 @keyframes shortcutscalein {
   from {
     transform: scale(0);
@@ -964,10 +971,17 @@ form {
     -webkit-transform: scale(1);
   }
 }
+@-ms-keyframes shortcutscalein {
+  from {
+    -ms-transform: scale(0);
+  }
+  to {
+    -ms-transform: scale(1);
+  }
+}
 #shortcut-panel.scale {
   display: block;
-  filter: Alpha(80);
-  opacity: 0.8;
+  opacity: .8;
 }
 #shortcut-panel.out {
   -webkit-transform: scale(1);
@@ -979,6 +993,10 @@ form {
   -webkit-animation-timing-function: ease-out;
   -webkit-animation-duration: 200ms;
   -webkit-animation-name: shortcutscaleout;
+  -ms-animation-fill-mode: both;
+  -ms-animation-timing-function: ease-out;
+  -ms-animation-duration: 200ms;
+  -ms-animation-name: shortcutscaleout;
   animation-fill-mode: both;
   animation-timing-function: ease-out;
   animation-duration: 200ms;
@@ -994,6 +1012,10 @@ form {
   -webkit-animation-timing-function: ease-in;
   -webkit-animation-duration: 200ms;
   -webkit-animation-name: shortcutscalein;
+  -ms-animation-fill-mode: both;
+  -ms-animation-timing-function: ease-in;
+  -ms-animation-duration: 200ms;
+  -ms-animation-name: shortcutscalein;
   animation-fill-mode: both;
   animation-timing-function: ease-in;
   animation-duration: 200ms;
