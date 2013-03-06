@@ -17,24 +17,19 @@ define(function (require, exports, module) {
   function deactiveHandler() {
     if (!shortcutPanel.hasClass('active')) return;
     shortcut.removeClass('active');
-    shortcutPanel.animate({opacity: 0, scale: 0}, {
-      duration: 200,
-      complete: function () {
-        $(this).hide().removeClass('active');
-      }
-    });
+    shortcutPanel.one('webkitAnimationEnd animationend',function () {
+      $(this).removeClass('active scale out');
+    }).addClass('scale out');
     $(document).off('click', deactiveHandler);
   }
 
   function activeHandler() {
     if (shortcutPanel.hasClass('active')) return;
     shortcut.addClass('active');
-    shortcutPanel.show().animate({opacity: .8, scale: 1}, {
-      duration: 200,
-      complete: function () {
-        $(this).addClass('active');
-      }
-    });
+    shortcutPanel.one('webkitAnimationEnd animationend',function () {
+      $(this).addClass('active').removeClass('in');
+    }).addClass('scale in');
+
     $(document).on('click', deactiveHandler);
   }
 });

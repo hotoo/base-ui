@@ -42,7 +42,7 @@
 .display-box() {
   display:-webkit-box;
   display:-moz-box;
-  display:-ms-box;
+  display:-ms-flexbox;
   display:-o-box;
   display:box;
 }
@@ -58,7 +58,7 @@
 .box-flex(@scale) {
   -webkit-box-flex:@scale;
   -moz-box-flex:@scale;
-  -ms-box-flex:@scale;
+  -ms-flex:@scale;
   -o-box-flex:@scale;
   box-flex:@scale;
 }
@@ -77,6 +77,17 @@
   -ms-transform:@value;
   -o-transform:@value;
   transform:@value;
+}
+
+.animation(@fillMode, @timingFunction, @duration, @name) {
+  -webkit-animation-fill-mode:@fillMode;
+  -webkit-animation-timing-function:@timingFunction;
+  -webkit-animation-duration:@duration;
+  -webkit-animation-name:@name;
+  animation-fill-mode:@fillMode;
+  animation-timing-function:@timingFunction;
+  animation-duration:@duration;
+  animation-name:@name;
 }
 
 

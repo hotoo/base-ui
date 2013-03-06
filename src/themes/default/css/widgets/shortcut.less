@@ -13,6 +13,7 @@
 }
 
 #shortcut-panel {
+  display:none;
   left:50%;
   top:50%;
   z-index:10;
@@ -24,8 +25,6 @@
   background-color:#000;
   color:#fff;
   .border-radius(10px);
-  .opacity(0);
-  .transform(scale(0));
 }
 
 #shortcut-panel li {
@@ -81,4 +80,56 @@
 
 #shortcut-panel .about span {
   background-position:-75px -150px;
+}
+
+/*transform scale*/
+@keyframes shortcutscaleout {
+  from {
+    transform:scale(1);
+  }
+  to {
+    transform:scale(0);
+  }
+}
+
+@-webkit-keyframes shortcutscaleout {
+  from {
+    -webkit-transform:scale(1);
+  }
+  to {
+    -webkit-transform:scale(0);
+  }
+}
+
+@keyframes shortcutscalein {
+  from {
+    transform:scale(0);
+  }
+  to {
+    transform:scale(1);
+  }
+}
+
+@-webkit-keyframes shortcutscalein {
+  from {
+    -webkit-transform:scale(0);
+  }
+  to {
+    -webkit-transform:scale(1);
+  }
+}
+
+#shortcut-panel.scale {
+  display:block;
+  .opacity(.8);
+}
+
+#shortcut-panel.out {
+  .transform(scale(1));
+  .animation(both, ease-out, 200ms, shortcutscaleout);
+}
+
+#shortcut-panel.in {
+  .transform(scale(0));
+  .animation(both, ease-in, 200ms, shortcutscalein);
 }
