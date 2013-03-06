@@ -2,7 +2,7 @@ define(function (require, exports, module) {
   var $ = require('$');
   var shortcut = $('#shortcut');
   var shortcutPanel = $('#shortcut-panel');
-  shortcut.on('click', function (e) {
+  shortcut.on('touchend', function (e) {
     e.stopPropagation();
     if ($(this).hasClass('active')) {
       deactiveHandler();
@@ -10,8 +10,7 @@ define(function (require, exports, module) {
       activeHandler();
     }
   });
-
-  shortcutPanel.on('click', function (e) {
+  shortcutPanel.on('touchend', function (e) {
     e.stopPropagation();
   });
   function deactiveHandler() {
@@ -24,7 +23,7 @@ define(function (require, exports, module) {
         $(this).removeClass('active scale out');
       }).addClass('scale out');
     }
-    $(document).off('click', deactiveHandler);
+    $(document).off('touchend', deactiveHandler);
   }
 
   function activeHandler() {
@@ -38,6 +37,6 @@ define(function (require, exports, module) {
       }).addClass('scale in');
     }
 
-    $(document).on('click', deactiveHandler);
+    $(document).on('touchend', deactiveHandler);
   }
 });
