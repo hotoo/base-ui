@@ -144,7 +144,7 @@ form {
 /*icons*/
 .ui-icon {
   display: block;
-  background: url(https://i.alipayobjects.com/e/201302/2J5opznV3N.png) no-repeat;
+  background: url(../img/sprite.png) no-repeat;
   background-size: 100px auto;
 }
 .icon-reverse {
@@ -896,11 +896,17 @@ form {
   display: block;
   color: #fff;
 }
+#shortcut-panel li.ui-disabled a {
+  color: #808080;
+}
 #shortcut-panel li span {
   display: block;
   margin: 0 auto;
   width: 25px;
   height: 25px;
+}
+#shortcut-panel li.ui-disabled span {
+  opacity: .35;
 }
 #shortcut-panel .passback {
   margin: 4px auto;

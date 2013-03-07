@@ -2,7 +2,9 @@ define(function (require, exports, module) {
   var $ = require('$');
   var shortcut = $('#shortcut');
   var shortcutPanel = $('#shortcut-panel');
-  shortcut.on('touchend', function (e) {
+  var oldIE = $.browser.msie && $.browser.version;
+  var tap = oldIE ? 'click' : tap;
+  shortcut.on(tap, function (e) {
     e.stopPropagation();
     if ($(this).hasClass('active')) {
       deactiveHandler();
@@ -10,26 +12,26 @@ define(function (require, exports, module) {
       activeHandler();
     }
   });
-  shortcutPanel.on('touchend', function (e) {
+  shortcutPanel.on(tap, function (e) {
     e.stopPropagation();
   });
   function deactiveHandler() {
     if (!shortcutPanel.hasClass('active')) return;
     shortcut.removeClass('active');
-    if ($.browser.msie && $.browser.version < 10) {
+    if (oldIE) {
       shortcutPanel.removeClass('active scale');
     } else {
       shortcutPanel.one('webkitAnimationEnd animationend',function () {
         $(this).removeClass('active scale out');
       }).addClass('scale out');
     }
-    $(document).off('touchend', deactiveHandler);
+    $(document).off(tap, deactiveHandler);
   }
 
   function activeHandler() {
     if (shortcutPanel.hasClass('active')) return;
     shortcut.addClass('active');
-    if ($.browser.msie && $.browser.version < 10) {
+    if (oldIE) {
       shortcutPanel.addClass('active scale');
     } else {
       shortcutPanel.one('webkitAnimationEnd animationend',function () {
@@ -37,6 +39,6 @@ define(function (require, exports, module) {
       }).addClass('scale in');
     }
 
-    $(document).on('touchend', deactiveHandler);
+    $(document).on(tap, deactiveHandler);
   }
 });
