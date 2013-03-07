@@ -10,7 +10,6 @@ define(function (require, exports, module) {
       if (suffix) {
         if (value.indexOf(suffix) === 0) {
           data.push([prefix, value].join('@'));
-          return false;
         }
       } else {
         data.push([prefix, value].join('@'));

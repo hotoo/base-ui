@@ -1,6 +1,11 @@
 define(function (require, exports, module) {
   var $ = require('$');
+  var Detect = require('./detect');
   var Path = require('./path');
+
+  var configs = {};
+  var isInit = false;
+  var oldIE = !!(Detect.browser.ie && Detect.browser.version < 10);
 
   function pageLoad(href, data, reverse) {
     if (!href) return;
@@ -24,6 +29,7 @@ define(function (require, exports, module) {
         }
         $('body').append(page);
         transition(page, reverse);
+        configs.onPageload && configs.onPageload(page);
       }
     });
   }
@@ -33,6 +39,7 @@ define(function (require, exports, module) {
     $('.ui-page-active').one('webkitAnimationEnd animationend',function () {
       $(this).removeClass(tr + ' out ui-page-active');
     }).addClass(tr + ' out');
+
     to.one('webkitAnimationEnd animationend',function () {
       to.removeClass(tr + ' in');
     }).addClass(tr + ' in ui-page-active');
@@ -41,7 +48,12 @@ define(function (require, exports, module) {
   }
 
   return {
-    init: function () {
+    init: function (options) {
+      //不支持Windows Phone 7.x设备，直接跳转
+      if (oldIE) return;
+      if (isInit) return;
+      isInit = true;
+      $.extend(configs, options);
       $(document).on('click', 'a[data-transition]', function (e) {
         var href = Path.convertUrlToDataUrl(this.href);
 
