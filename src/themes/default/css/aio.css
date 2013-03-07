@@ -891,6 +891,7 @@ form {
   width: 60px;
   height: 50px;
   text-align: center;
+  color: #808080;
 }
 #shortcut-panel li a {
   display: block;
