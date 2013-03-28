@@ -1,0 +1,43 @@
+/* ui-poptip */
+
+.ui-poptip {
+    position: relative;
+    margin-top: 3px;
+    padding: 2px 5px;
+    background-color: #2277bb;
+    color: #fff;
+    .border-radius(5px);
+}
+
+[class*="ui-poptip-arrow-"]:after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 6px;
+    height: 6px;
+    background-color: #2277bb;
+    .transform(rotate(45deg));
+}
+
+.ui-poptip-arrow-1:after{ top: -3px; right: 15px; }
+.ui-poptip-arrow-2:after{ top: 8px; right: -3px; }
+.ui-poptip-arrow-5:after{ bottom: -3px; right: 15px; }
+.ui-poptip-arrow-7:after{ bottom: -3px; left: 15px; }
+.ui-poptip-arrow-10:after{ top: 8px; left: -3px; }
+.ui-poptip-arrow-11:after{ top: -3px; left: 15px; }
+
+
+.ui-poptip-red{
+    background-color: #ff3a0c;
+    &:after{
+        background-color: #ff3a0c;
+    }
+}
+
+.ui-poptip-green{
+    background-color: #3bb000;
+    &:after{
+        background-color: #3bb000;
+    }
+}
