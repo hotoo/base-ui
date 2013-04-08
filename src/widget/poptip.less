@@ -1,0 +1,56 @@
+/* ui-poptip 
+ * arrow的方向：
+ *
+ *       01    02    03
+ *    +------------------+
+ * 12 |                  | 04
+ *    |                  |
+ * 11 |                  | 05
+ *    |                  |
+ * 10 |                  | 06
+ *    +------------------+
+ *       09    08    07
+ */
+
+
+.ui-poptip {
+    position: relative;
+    margin-top: 3px;
+    padding: 2px 5px;
+    background-color: @blue;
+    color: @white;
+    .border-radius(5px);
+}
+
+[class*="ui-poptip-arrow-"]:after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 6px;
+    height: 6px;
+    background-color: @blue;
+    .transform(rotate(45deg));
+}
+
+.ui-poptip-arrow-1:after{ top: -3px; right: 15px; }
+.ui-poptip-arrow-3:after{ top: 8px; right: -3px; }
+.ui-poptip-arrow-5:after{ bottom: -3px; right: 15px; }
+.ui-poptip-arrow-7:after{ bottom: -3px; left: 15px; }
+.ui-poptip-arrow-9:after{ top: 8px; left: -3px; }
+.ui-poptip-arrow-11:after{ top: -3px; left: 15px; }
+
+
+.ui-poptip-red{
+    background-color: @red;
+    &:after{
+        background-color: @red;
+    }
+}
+
+.ui-poptip-green{
+    background-color: @green;
+    &:after{
+        background-color: @green;
+    }
+}

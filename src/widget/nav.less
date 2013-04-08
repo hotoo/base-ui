@@ -1,0 +1,41 @@
+/* ui-header */
+
+.ui-header {
+    position: relative;
+    padding: 2px 0;
+    border-top: 1px solid #3483c2;
+    border-bottom: 1px solid #2e7dbc;
+    .box-shadow(inset 0px 1px 0px #6aade3);
+    #gradient > .vertical(#3482c1, #2d7cbb);
+}
+
+.ui-header h1 {
+    margin: 5px 30% 3px;
+    line-height: 1em;
+    text-align: center;
+}
+
+.ui-header {
+    .ui-button-back, .ui-button-detail {
+        position: absolute;
+        top: 8px;
+        padding: 2px 5px;
+        border: 1px solid #0e5fa0;
+        .border-radius(3px);
+        .box-shadow(insert 1px 0 0 #fff);
+        #gradient > .vertical(#3180bf, #206faf);
+        color: #fff;
+    }
+
+    .ui-button-back:ative, .ui-button-detail:active {
+        #gradient > .vertical(#206ead, #2f7ebc)
+    }
+
+    .ui-button-back {
+        left: 8px;
+    }
+
+    .ui-button-detail {
+        right: 8px;
+    }
+}

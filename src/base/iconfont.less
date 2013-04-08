@@ -1,0 +1,85 @@
+/* icon- 字体图标 */
+
+@font-face {
+    font-family: "handy";
+    src: url("../static/handy.eot"); /* IE9*/
+    src: url("../static/handy.woff") format("woff"), /* chrome 6+、firefox 3.6+、Safari5.1+、Opera 11+ */
+         url("../static/handy.ttf")  format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+         url("../static/handy.svg#handy") format("svg"); /*  iOS 4.1- */
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    position: relative;
+    width: auto;
+    height: auto;
+    line-height: normal;
+    vertical-align: baseline;
+    font-family: "handy";
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    font-size: @iconfontSizeSmall;
+    -webkit-font-smoothing: antialiased;
+    color: @iconfontColor;
+}
+
+.icon-check:before { content: '\2713'; }
+.icon-success:before { content: '\2714'; }
+.icon-error:before { content: '\2716'; }
+.icon-info:before { content: '\e705'; }
+.icon-angle-left:before { content: '\f104'; }
+.icon-angle-right:before { content: '\f105'; }
+.icon-angle-up:before { content: '\f106'; }
+.icon-angle-down:before { content: '\f107'; }
+.icon-circle:before { content: '\f111'; }
+
+/* 设置字体中间的镂空为白底 */
+.icon-info:after,
+.icon-success:after,
+.icon-error:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '\f111';
+    color: @white;
+    z-index: -1;
+}
+
+
+/* 基于icon扩展，定义size和color */
+
+/* -- big -- */
+.icon-info-big,
+.icon-success-big,
+.icon-error-big {
+    font-size: @iconfontSizeBig;
+}
+.icon-info-big { color: @blue; }
+.icon-success-big { color: @green; }
+.icon-error-big { color: @red; }
+
+.icon-info-big:after,
+.icon-success-big:after,
+.icon-error-big:after {
+    font-size: @iconfontSizeBig * 0.9;
+}
+
+/* -- small -- */
+.icon-info-small,
+.icon-success-small,
+.icon-error-small {
+    font-size: @iconfontSizeSmall;
+}
+
+.icon-info-small{ color: @blue; }
+.icon-success-small { color: @green; }
+.icon-error-small { color: @red; }
+
+.icon-info-small:after,
+.icon-success-small:after,
+.icon-error-small:after {
+    font-size: @iconfontSizeSmall*0.9;
+}

@@ -1,0 +1,40 @@
+/* ui-button */
+
+.ui-button {
+    .inline-block();
+    width: 100%;
+    padding: 0 8px;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 2;
+    .border-radius(3px);
+}
+
+.ui-button-normal {
+    border: 1px solid @btnNormalBorder;
+    background-color: @btnNormalBackground;
+    color: @gray;
+}
+
+.ui-button-orange {
+    border: 1px solid @btnOrangeBorder;
+    .box-shadow (inset 0 0 1px #fff);
+    #gradient > .vertical(@btnOrangeBackgroundStart, @btnOrangeBackgroundEnd);
+    color: @white;
+}
+
+.ui-button-disabled {
+    border-color: @btnDisableborder;
+    background: @btnDisableBackground;
+    color: @white;
+    .box-shadow(inset 0 0 1px rgba(255, 255, 255, .2));
+}
+
+.ui-button-normal:active {
+    border-color: @btnOrangeBorderHighlight;
+    #gradient > .vertical(@btnNormalBackgroundHighlightStart, @btnNormalBackgroundHighlightEnd);
+}
+
+.ui-button-orange:active {
+    #gradient > .vertical(@btnOrangeBackgroundHighlightStart, @btnOrangeBackgroundHighlightEnd);
+}
