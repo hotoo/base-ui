@@ -6,13 +6,15 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         watch: {
             less: {
-                files: ['src/*.less'],
+                files: ['src/*.less', 'src/**/*.less'],
                 tasks: 'lessTask'
             }
         },
         less: {
             production: {
                 files: {
+                    'dist/reset.css': [ 'src/base/reset.less' ],
+                    'dist/flex.css': [ 'src/base/flex.less' ],
                     'dist/app.css': [ 'src/app.less' ],
                     'dist/wap.css': [ 'src/wap.less' ]
                 }

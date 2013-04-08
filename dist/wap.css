@@ -24,10 +24,39 @@
   display: -moz-box;
   display: box;
 }
+/* ====================================== 
+   global vars 
+   尺寸的单位默认为 rem，但是 less 不支持带单位运算，
+   因此需要计算的变量不带单位。
+   =========================================================== */
+/* -------- Typography ------- */
+/* -------- Color ------- */
+/* -------- Iconfont ------- */
+/* -------- Iconimg ------- */
+/* -------- Button ------- */
+/* -------- Forms ------- */
 /*
  * Reset CSS
  * Adapted from http://github.com/necolas/normalize.css
  */
+/* ====================================== 
+   global vars 
+   尺寸的单位默认为 rem，但是 less 不支持带单位运算，
+   因此需要计算的变量不带单位。
+   =========================================================== */
+/* -------- Typography ------- */
+/* -------- Color ------- */
+/* -------- Iconfont ------- */
+/* -------- Iconimg ------- */
+/* -------- Button ------- */
+/* -------- Forms ------- */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  /* 2 */
+
+  box-sizing: border-box;
+}
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -68,6 +97,7 @@ audio:not([controls]) {
    Base
    ========================================================================== */
 html {
+  font-size: 62.5%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
@@ -130,18 +160,16 @@ a:hover {
 }
 /* ==========================================================================
    Typography
+   rem: http://snook.ca/archives/html_and_css/font-size-with-rem
    ========================================================================== */
 body,
 button,
 input,
 select,
 textarea {
-  font: 14px/1.5 tahoma, arial, "Hiragino Sans GB", "Microsoft Yahei", \5b8b\4f53;
-}
-input,
-select,
-textarea {
-  font-size: 100%;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-famliy: tahoma, arial, "Hiragino Sans GB", "Microsoft Yahei";
 }
 /**
  * Address styling not present in IE 8/9, Safari 5, and Chrome.
@@ -403,6 +431,40 @@ ul,
 ol {
   list-style: none;
 }
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+html {
+  -ms-touch-action: none;
+}
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  /*overflow:hidden;  this is important to prevent the whole page to bounce 但是在Android 2.x 没有滚动条，没法scrollTop(0,0) */
+
+}
+.content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  -moz-box-flex: 1;
+  position: relative;
+  overflow: hidden;
+  /*-webkit-touch-callout:none; 点击链接呼出扩展操作*/
+
+  -webkit-text-size-adjust: none;
+  /*使Chrome使用小于12px的字体，但是双指放大网页，字体不会对应放大*/
+
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  text-size-adjust: none;
+}
 /**
  * icon- 替换字体图标
  */
@@ -482,8 +544,8 @@ ol {
 .ui-list li [class^="icon-"],
 .ui-list li [class*=" icon-"],
 .ui-select .icon-angle-down {
-  width: 12px;
-  height: 12px;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 /* ui-header */
 .ui-header {
@@ -592,13 +654,12 @@ ol {
   position: relative;
   padding: 8px 8px 8px 38px;
 }
-.ui-tipbox-icon {
+.ui-tipbox .ui-tipbox-icon {
   position: absolute;
-  width: 25px;
-  height: 25px;
+  width: 2.5rem;
+  height: 2.5rem;
   top: 6px;
   left: 6px;
-  font-size: 30px;
 }
 /* ui-tiptext */
 .ui-tiptext {
@@ -608,19 +669,30 @@ ol {
   display: inline-block;
   *display: inline;
   *zoom: 1;
-  width: 18px;
-  height: 18px;
+  width: 2rem;
+  height: 2rem;
   margin-right: 5px;
   vertical-align: bottom;
-  font-size: 22px;
 }
-/* ui-poptip */
+/* ui-poptip 
+ * arrow的方向：
+ *
+ *       01    02    03
+ *    +------------------+
+ * 12 |                  | 04
+ *    |                  |
+ * 11 |                  | 05
+ *    |                  |
+ * 10 |                  | 06
+ *    +------------------+
+ *       09    08    07
+ */
 .ui-poptip {
   position: relative;
   margin-top: 3px;
   padding: 2px 5px;
   background-color: #2277bb;
-  color: #fff;
+  color: #ffffff;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -643,7 +715,7 @@ ol {
   top: -3px;
   right: 15px;
 }
-.ui-poptip-arrow-2:after {
+.ui-poptip-arrow-3:after {
   top: 8px;
   right: -3px;
 }
@@ -655,7 +727,7 @@ ol {
   bottom: -3px;
   left: 15px;
 }
-.ui-poptip-arrow-10:after {
+.ui-poptip-arrow-9:after {
   top: 8px;
   left: -3px;
 }
@@ -718,11 +790,11 @@ ol {
 }
 .ui-button-normal {
   border: 1px solid #bfbfbf;
-  background-color: #fff;
-  color: #333;
+  background-color: #ffffff;
+  color: #333333;
 }
 .ui-button-orange {
-  border: 1px solid #f60;
+  border: 1px solid #ff6600;
   -webkit-box-shadow: inset 0 0 1px #ffffff;
   -moz-box-shadow: inset 0 0 1px #ffffff;
   -ms-box-shadow: inset 0 0 1px #ffffff;
@@ -741,12 +813,12 @@ ol {
   /* IE10 */
 
   background-image: linear-gradient(#ff8000, #fe7800);
-  color: #fff;
+  color: #ffffff;
 }
 .ui-button-disabled {
   border-color: #c5c5c5;
   background: #d1d1d1;
-  color: #fff;
+  color: #ffffff;
   -webkit-box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.2);
   -moz-box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.2);
   -ms-box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.2);
@@ -790,6 +862,7 @@ ol {
   position: relative;
   margin: 5px 0;
   *zoom: 1;
+  color: #333333;
 }
 .ui-form-item:before,
 .ui-form-item:after {
@@ -803,17 +876,8 @@ ol {
 .ui-form-item label {
   display: block;
 }
-.ui-form-item-error .ui-input,
-.ui-form-item-error .ui-checkbox,
-.ui-form-item-error .ui-select {
-  border-color: #ff3a0c;
-}
 /* ui-input */
 .ui-input {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
   padding: 8px 32px 8px 8px;
   width: 100%;
   border: 1px solid #bfbfbf;
@@ -835,6 +899,7 @@ ol {
   -moz-box-shadow: inset 0 0 0;
   -ms-box-shadow: inset 0 0 0;
   box-shadow: inset 0 0 0;
+  border-color: #ff3a0c;
 }
 .ui-input-disabled {
   -webkit-box-shadow: inset 0 0 0;
@@ -867,14 +932,6 @@ ol {
   float: right;
 }
 /* checkbox & radio */
-.ui-checkbox label,
-.ui-radio label {
-  color: #333;
-}
-.ui-checkbox-disabled label,
-.ui-radio-disabled label {
-  color: #c7c7c7;
-}
 .ui-checkbox input,
 .ui-radio input {
   position: absolute;
@@ -888,7 +945,7 @@ ol {
   position: relative;
   margin: 5px 0;
   padding: 8px 32px 8px 8px;
-  height: 16px;
+  height: 32px;
   line-height: 16px;
   border: 1px solid #bfbfbf;
   background-color: #fff;
@@ -897,13 +954,13 @@ ol {
   -ms-border-radius: 6px;
   border-radius: 6px;
 }
-.ui-checkbox .icon-success {
+.ui-checkbox .icon-check {
   position: absolute;
   top: 5px;
   right: 8px;
   z-index: 1;
-  width: 18px;
-  height: 18px;
+  width: 2rem;
+  height: 2rem;
   border: 2px solid #b2b2b2;
   color: #b2b2b2;
   -webkit-border-radius: 4px;
@@ -912,22 +969,22 @@ ol {
   border-radius: 4px;
   font-size: 18px;
 }
-.ui-checkbox-checked .icon-success {
-  color: #fff;
+.ui-checkbox-checked .icon-check {
+  color: #ffffff;
   border-color: #3bb000;
   background-color: #3bb000;
 }
-.ui-checkbox-disabled .icon-success {
-  color: #fff;
-  border-color: #ccc;
-  background-color: #ccc;
+.ui-checkbox-disabled label {
+  color: #c7c7c7;
+}
+.ui-checkbox-disabled .icon-check {
+  color: #ffffff;
+  border-color: #cccccc;
+  background-color: #cccccc;
 }
 .ui-checkbox-naked {
-  border: 0;
+  border: none;
   background-color: transparent;
-}
-.ui-checkbox-naked label {
-  color: #808080;
 }
 .ui-checkbox-naked .ui-icon-check {
   right: 9px;
@@ -937,7 +994,7 @@ ol {
   position: relative;
   margin: 5px 0;
   padding: 8px 32px 8px 8px;
-  height: 16px;
+  height: 32px;
   line-height: 16px;
 }
 .ui-radio .ui-icon-radio {
@@ -945,75 +1002,45 @@ ol {
   top: 5px;
   right: 8px;
   z-index: 1;
-  width: 18px;
-  height: 18px;
-  border: 3px solid #b2b2b2;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  border-radius: 50px;
-}
-.ui-radio .ui-icon-radio:after {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 4px;
-  height: 4px;
-  border: 2px solid #fff;
-  background-color: #fff;
+  width: 2rem;
+  height: 2rem;
+  border: .3rem solid #b2b2b2;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
   border-radius: 50px;
 }
 .ui-radio-checked .ui-icon-radio {
+  border-width: .6rem;
   border-color: #3bb000;
 }
-.ui-radio-checked .ui-icon-radio:after {
-  border-color: #3bb000;
-  background-color: #3bb000;
+.ui-radio-disabled label {
+  color: #c7c7c7;
 }
 .ui-radio-disabled .ui-icon-radio {
-  border-color: #ccc;
+  border-color: #cccccc;
 }
 .ui-radio-checked-disabled .ui-icon-radio {
-  border-color: #ccc;
-}
-.ui-radio-checked-disabled .ui-icon-radio:after {
-  border-color: #ccc;
-  background-color: #ccc;
-}
-.ui-form-item-error .ui-icon-radio {
-  border-color: #ff3a0c;
+  border-width: .6rem;
+  border-color: #cccccc;
 }
 /* select */
 .ui-select {
   position: relative;
-  padding: 8px;
-  height: 16px;
+}
+.ui-select select {
+  width: 100%;
+  height: 32px;
   line-height: 16px;
+  padding: 8px;
   border: 1px solid #bfbfbf;
   background-color: #fff;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   border-radius: 6px;
-}
-.ui-select label {
-  color: #333;
-}
-.ui-select select {
-  position: absolute;
   cursor: pointer;
   -webkit-appearance: none;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  filter: alpha(opacity=0*100);
-  z-index: 1;
 }
 .ui-select .icon-angle-down {
   position: absolute;
@@ -1022,20 +1049,16 @@ ol {
   font-size: 20px;
 }
 .ui-select-disabled label {
-  color: #c7c7c7;
-}
-.ui-select-disabled select {
-  display: none !important;
+  color: #cccccc;
 }
 .ui-select-disabled .icon-arrow {
-  opacity: 0.7;
-  filter: alpha(opacity=0.7*100);
+  color: #cccccc;
 }
 /* loading */
 #loading {
   padding: 10px;
-  width: 180px;
-  height: 95px;
+  width: 200px;
+  height: 115px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
