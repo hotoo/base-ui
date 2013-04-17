@@ -14,7 +14,7 @@ module.exports = function(grunt) {
             production: {
                 files: {
                     'dist/reset.css': [ 'src/base/reset.less' ],
-                    'dist/flex.css': [ 'src/base/flex.less' ],
+                    'dist/flexbox.css': [ 'src/base/flexbox.less' ],
                     'dist/app.css': [ 'src/app.less' ],
                     'dist/wap.css': [ 'src/wap.less' ]
                 }

@@ -1,0 +1,15 @@
+/* Flexible Box Layout Module */
+.flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.flexbox-item {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
