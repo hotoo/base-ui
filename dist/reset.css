@@ -16,8 +16,6 @@
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  /* 2 */
-
   box-sizing: border-box;
 }
 /* ==========================================================================
@@ -61,8 +59,7 @@ audio:not([controls]) {
    ========================================================================== */
 html {
   font-size: 62.5%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+  -ms-touch-action: none;
 }
 /**
  * Remove default margin.

@@ -53,8 +53,6 @@
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  /* 2 */
-
   box-sizing: border-box;
 }
 /* ==========================================================================
@@ -98,8 +96,7 @@ audio:not([controls]) {
    ========================================================================== */
 html {
   font-size: 62.5%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+  -ms-touch-action: none;
 }
 /**
  * Remove default margin.
@@ -431,39 +428,20 @@ ul,
 ol {
   list-style: none;
 }
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
-html {
-  -ms-touch-action: none;
-}
-body {
+/* Flexible Box Layout Module */
+.flexbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: -moz-box;
-  -ms-flex-direction: column;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  /*overflow:hidden;  this is important to prevent the whole page to bounce 但是在Android 2.x 没有滚动条，没法scrollTop(0,0) */
-
+  display: -webkit-flex;
+  display: flex;
 }
-.content {
+.flexbox-item {
   -webkit-box-flex: 1;
-  -ms-flex: 1;
   -moz-box-flex: 1;
-  position: relative;
-  overflow: hidden;
-  /*-webkit-touch-callout:none; 点击链接呼出扩展操作*/
-
-  -webkit-text-size-adjust: none;
-  /*使Chrome使用小于12px的字体，但是双指放大网页，字体不会对应放大*/
-
-  -moz-text-size-adjust: none;
-  -ms-text-size-adjust: none;
-  -o-text-size-adjust: none;
-  text-size-adjust: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 /* icon- 字体图标 */
 @font-face {
