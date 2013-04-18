@@ -212,10 +212,18 @@ a {
 }
 
 /* responsive */
-@media (max-width: 980px) {
+@media (max-width: 768px) {
     #document-wrapper {
         float: none;
-        position: static!important;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    #sidenav {
+        text-align: center;
+    }
+    .handy-module-code {
+        display: none;
     }
     #module-wrapper {
         margin-left: 0;
