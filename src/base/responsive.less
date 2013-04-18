@@ -1,39 +1,72 @@
 /* ==========================================================================
-    iPhone: 320*480
-    iPad: 768*1024
+   responsive 
    ========================================================================== */
 
-// 20em (320px)
-@media only screen and (min-width:20em) {
+/* Smartphones */
+@media only screen
+and (min-width : 320px)
+and (max-width : 480px) {
 
 }
 
-// 30em (480px)
-@media only screen and (min-width:30em) {
+/* device pixel ratio 可以根据不同的像素比加载不同质量的图片 */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), 
+only screen and (min-device-pixel-ratio: 2) {
 
 }
 
-// 37.5em (600px)
-@media only screen and (min-width:37.5em) {
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
 
 }
 
-// 48em (768px)
-@media only screen and (min-width:48em) {
+@media only screen and (-webkit-min-device-pixel-ratio : 1),
+only screen and (min-device-pixel-ratio: 1) {
 
 }
 
-// 56.25em (900px)
-@media only screen and (min-width:56.25em) {
+
+/* iPads */
+@media only screen and (device-width: 768px){
+
+}
+/* iPads (landscape) */
+@media only screen
+and (device-width: 768px)
+and (orientation: landscape) {
+
+}
+/* iPads (portrait) */
+@media only screen
+and (device-width: 768px)
+and (orientation: portrait) {
 
 }
 
-// 68.75em (1100px)
-@media only screen and (min-width:68.75em) {
+/* iPhone 4 */
+@media only screen 
+and (device-width: 320px) 
+and (-webkit-device-pixel-ratio: 2){
 
 }
 
-// 81.25em (1300px)
-@media only screen and (min-width:81.25em) {
+/* iPhone 4 (Landscape) */
+@media only screen 
+and (device-width: 320px) 
+and (-webkit-device-pixel-ratio: 2)
+and (orientation : Landscape) {
+
+}
+
+/* iPhone 4 (Portrait) */
+@media only screen 
+and (device-width: 320px) 
+and (-webkit-device-pixel-ratio: 2)
+and (orientation : portrait) {
+
+}
+
+/* iPhone 5 */
+@media only screen and (device-aspect-ratio: 40/71) {
 
 }
