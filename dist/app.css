@@ -497,6 +497,12 @@ ol {
   content: '\f111';
 }
 /* 设置字体中间的镂空为白底 */
+.icon-info:before,
+.icon-success:before,
+.icon-error:before {
+  position: relative;
+  z-index: 1;
+}
 .icon-info:after,
 .icon-success:after,
 .icon-error:after {
@@ -505,48 +511,35 @@ ol {
   left: 0;
   content: '\f111';
   color: #ffffff;
-  z-index: -1;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
 }
 /* 基于icon扩展，定义size和color */
+.icon-info-big,
+.icon-info-small {
+  color: #2277bb;
+}
+.icon-success-big,
+.icon-success-small {
+  color: #3bb000;
+}
+.icon-error-big,
+.icon-error-small {
+  color: #ff3a0c;
+}
 /* -- big -- */
 .icon-info-big,
 .icon-success-big,
 .icon-error-big {
   font-size: 3rem;
 }
-.icon-info-big {
-  color: #2277bb;
-}
-.icon-success-big {
-  color: #3bb000;
-}
-.icon-error-big {
-  color: #ff3a0c;
-}
-.icon-info-big:after,
-.icon-success-big:after,
-.icon-error-big:after {
-  font-size: 2.7rem;
-}
 /* -- small -- */
 .icon-info-small,
 .icon-success-small,
 .icon-error-small {
   font-size: 2.2rem;
-}
-.icon-info-small {
-  color: #2277bb;
-}
-.icon-success-small {
-  color: #3bb000;
-}
-.icon-error-small {
-  color: #ff3a0c;
-}
-.icon-info-small:after,
-.icon-success-small:after,
-.icon-error-small:after {
-  font-size: 1.9800000000000002rem;
 }
 /* ui-header */
 .ui-header {
@@ -864,6 +857,9 @@ ol {
   margin: 5px 0;
   *zoom: 1;
   color: #333333;
+  overflow-x: hidden;
+  /* 防止在IOS Safari下 旋转屏幕导致出现横向滚动条 */
+
 }
 .ui-form-item:before,
 .ui-form-item:after {
@@ -1054,27 +1050,4 @@ ol {
 }
 .ui-select-disabled .icon-arrow {
   color: #cccccc;
-}
-/* loading */
-#loading {
-  padding: 10px;
-  width: 200px;
-  height: 115px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 0 10px #000000;
-  -moz-box-shadow: 0 0 10px #000000;
-  -ms-box-shadow: 0 0 10px #000000;
-  box-shadow: 0 0 10px #000000;
-  background-color: #fff;
-  text-align: center;
-}
-#loading img {
-  display: block;
-  margin: 0 auto;
-}
-#loading p {
-  margin: 5px 0;
 }

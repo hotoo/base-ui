@@ -841,6 +841,9 @@ ol {
   margin: 5px 0;
   *zoom: 1;
   color: #333333;
+  overflow-x: hidden;
+  /* 防止在IOS Safari下 旋转屏幕导致出现横向滚动条 */
+
 }
 .ui-form-item:before,
 .ui-form-item:after {
@@ -1031,27 +1034,4 @@ ol {
 }
 .ui-select-disabled .icon-arrow {
   color: #cccccc;
-}
-/* loading */
-#loading {
-  padding: 10px;
-  width: 200px;
-  height: 115px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 0 10px #000000;
-  -moz-box-shadow: 0 0 10px #000000;
-  -ms-box-shadow: 0 0 10px #000000;
-  box-shadow: 0 0 10px #000000;
-  background-color: #fff;
-  text-align: center;
-}
-#loading img {
-  display: block;
-  margin: 0 auto;
-}
-#loading p {
-  margin: 5px 0;
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="assets/css/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="_templates/handy/static/css/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../dist/app.css" />
 
     <link rel="stylesheet" href="assets/css/normalize.css" />
@@ -78,7 +78,7 @@
 <body>
     <div id="body-wrapper">
         <div id="title-wrapper">
-            <h1 id="title" class="inline"><a href="http://handyjs.github.io/">Handy</a></h1>
+            <h1 id="title" class="inline"><a href="./">Handy</a></h1>
             <p id="description"></p>
         </div>
 <div id="main-wrapper">
@@ -120,7 +120,7 @@
                 li = $('<li><a href="#'+ id +'">'+ name +'</a></li>');
             li.appendTo('#sidenav');
 
-            var module = $('<div class="handy-module"><h2></h2></div>');
+            var module = $('<div class="handy-module"><h2><a href="#"></a></h2></div>');
             module.attr('id', id)
                 .appendTo('.handy-modules');
             $.ajax({
@@ -128,8 +128,9 @@
                 dataType: 'html',
                 success: function(content) {
                     content = $(content);
-
-                    module.find('h2').html(content.find('h2').html());
+                    var name = content.find('h2').html();
+                    module.find('h2 > a').html(name)
+                        .attr('href', 'components/'+ name +'.html');
                     content.find('.handy-module-demo').each(function(i, item){
                         item = $(item);
 

@@ -213,21 +213,13 @@ a {
 
 /* responsive */
 @media (max-width: 768px) {
-    #document-wrapper {
-        float: none;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-    }
-    #sidenav {
-        text-align: center;
-    }
+    #document-wrapper,
     .handy-module-code {
         display: none;
     }
     #module-wrapper {
         margin-left: 0;
-        border-top: 1px dashed #999;
         margin-top: 20px;
+        width: 100%;
     }
 }
