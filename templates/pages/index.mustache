@@ -37,7 +37,7 @@
                 li = $('<li><a href="#'+ id +'">'+ name +'</a></li>');
             li.appendTo('#sidenav');
 
-            var module = $('<div class="handy-module"><h2></h2></div>');
+            var module = $('<div class="handy-module"><h2><a href="#"></a></h2></div>');
             module.attr('id', id)
                 .appendTo('.handy-modules');
             $.ajax({
@@ -45,8 +45,9 @@
                 dataType: 'html',
                 success: function(content) {
                     content = $(content);
-
-                    module.find('h2').html(content.find('h2').html());
+                    var name = content.find('h2').html();
+                    module.find('h2 > a').html(name)
+                        .attr('href', 'components/'+ name +'.html');
                     content.find('.handy-module-demo').each(function(i, item){
                         item = $(item);
 
