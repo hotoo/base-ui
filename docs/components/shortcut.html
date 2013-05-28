@@ -18,31 +18,32 @@
 </head>
 <body>
     <div id="body-wrapper">
+<style type="text/css">
+#shortcut{
+    position: static;
+}
+#shortcut-panel{
+    display: block;
+    position: static;
+    margin: 0;
+}
+</style>
 <div class="handy-module">
-    <h2>List</h2>
+    <h2>Shortcut</h2>
     <div class="handy-module-demo">
         <div class="handy-module-dom">
-<h3>类别1</h3>
-<ul data-role="list" class="ui-list">
-    <li>
-        <button type="button">列表1<span class="ui-icon icon-arrow-horizontal"></span></button>
-    </li>
-    <li>
-        <button type="button">列表2<span class="ui-icon icon-arrow-horizontal"></span></button>
-    </li>
-</ul>
-<h3>类别1</h3>
-<ul data-role="list" class="ui-list">
-    <li>
-        <a href="#">换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行<span class="ui-icon icon-arrow-horizontal"></span></a>
-    </li>
-    <li>
-        <a href="#">列表2<span class="ui-icon icon-arrow-horizontal"></span></a>
-    </li>
-</ul>
+<div id="shortcut" class="ui-icon"></div>
+<div id="shortcut" class="ui-icon active"></div>
+<div id="shortcut-panel" class="scale active">
+  <li class="passback"><a href="#"><span class="ui-icon"></span>找回密码</a></li>
+  <li class="payfor"><a href="#"><span class="ui-icon"></span>找人代付</a></li>
+  <li class="clear ui-disabled"><span class="ui-icon"></span>清除账户</li>
+  <li class="about"><a href="./about.html" data-transition="slide"><span class="ui-icon"></span>产品签名</a></li>
+</div>
         </div>
     </div>
 </div>
+
     </div>
 </body>
 </html>

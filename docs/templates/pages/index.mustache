@@ -1,3 +1,17 @@
+<style type="text/css">
+#shortcut{
+    position: static;
+}
+#shortcut-panel{
+    display: block;
+    position: static;
+    margin: 0;
+}
+#loading{
+    position: static;
+    margin: 0;
+}
+</style>
 <div id="main-wrapper">
     <div class="main-block" id="document-wrapper">
         <ul id="sidenav"></ul>
@@ -30,8 +44,7 @@
     seajs.use(['$', 'fixed'], function($, Fixed) {
         Fixed('#document-wrapper');
 
-        var handyComponents = ['button', 'form', 'header', 'icons', 'list', 'loading', 'poptip', 'tipbox', 'tiptext']; 
-        
+        var handyComponents = ['header', 'button', 'form', 'message', 'list', 'loading', 'shortcut', 'flexbox']; 
         $.each(handyComponents, function(i, name){
             var id = 'handy-module-' + name,
                 li = $('<li><a href="#'+ id +'">'+ name +'</a></li>');
@@ -52,7 +65,7 @@
                         item = $(item);
 
                         var demo = $($('#handy-module-demo').html()),
-                            subtitle = item.find('h3').html(),
+                            subtitle = item.find('.handy-module-subtitle').html(),
                             html = item.find('.handy-module-dom').html();
 
                         demo.find('.handy-module-subtitle').html(subtitle);
