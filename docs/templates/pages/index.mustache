@@ -11,6 +11,11 @@
     position: static;
     margin: 0;
 }
+.demo {
+  padding:1rem;
+  color:#fff;
+  background-color:#6C97C2;
+}
 </style>
 <div id="main-wrapper">
     <div class="main-block" id="document-wrapper">
@@ -44,7 +49,7 @@
     seajs.use(['$', 'fixed'], function($, Fixed) {
         Fixed('#document-wrapper');
 
-        var handyComponents = ['header', 'button', 'form', 'message', 'list', 'loading', 'shortcut', 'flexbox']; 
+        var handyComponents = ['header', 'button', 'form', 'message', 'list', 'loading', 'shortcut', 'layouts']; 
         $.each(handyComponents, function(i, name){
             var id = 'handy-module-' + name,
                 li = $('<li><a href="#'+ id +'">'+ name +'</a></li>');
@@ -60,7 +65,7 @@
                     content = $(content);
                     var name = content.find('h2').html();
                     module.find('h2 > a').html(name)
-                        .attr('href', 'components/'+ name +'.html');
+                        .attr('href', 'components/'+ name.toLowerCase() +'.html');
                     content.find('.handy-module-demo').each(function(i, item){
                         item = $(item);
 

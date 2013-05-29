@@ -18,52 +18,46 @@
 </head>
 <body>
     <div id="body-wrapper">
+<style type="text/css">
+.demo {
+  padding:3em;
+  background-color:#6C97C2;
+}
+</style>
 <div class="handy-module">
     <h2>Flexbox</h2>
     <div class="handy-module-demo">
         <h3 class="handy-module-subtitle">不均等分</h3>
         <div class="handy-module-dom">
-<div class="ui-captcha">
-    <div class="ui-captcha-box">
-        <div class="ui-field">
-            <div class="ui-field-input">
-                <input type="text" maxlength="4" placeholder="短信验证码">
-            </div>
-        </div>
-        <div class="ui-captcha-button ui-button ui-button-disabled">
-            <button type="button" disabled="">重获验证码</button>
-        </div>
-    </div>
+<div class="ui-grid">
+  <div class="ui-grid-item one-third"><div class="demo"></div></div>
+  <div class="ui-grid-item tow-thirds"><div class="demo"></div></div>
+</div>
+<div class="ui-grid">
+  <div class="ui-grid-item one-quarter"><div class="demo"></div></div>
+  <div class="ui-grid-item third-quarters"><div class="demo"></div></div>
 </div>
         </div>
     </div>
     <div class="handy-module-demo">
         <h3 class="handy-module-subtitle">均等分</h3>
         <div class="handy-module-dom">
-<div class="ui-button-box">
-    <div class="ui-button ui-button-normal">
-        <button type="button">Button</button>
+<div class="ui-flexbox">
+    <div class="ui-field-input ui-flexbox-item">
+        <input type="text" maxlength="4" placeholder="短信验证码">
     </div>
-    <div class="ui-button ui-button-disabled">
-        <button type="button" disabled="">Button</button>
+    <div class="ui-field-input ui-flexbox-item">
+        <input type="text" maxlength="4" placeholder="短信验证码">
+    </div>
+    <div class="ui-field-input ui-flexbox-item">
+        <input type="text" maxlength="4" placeholder="短信验证码">
     </div>
 </div>
-<div class="ui-button-box">
-    <div class="ui-button ui-button-normal">
-        <button type="button">Button</button>
-    </div>
-    <div class="ui-button ui-button-disabled">
-        <button type="button" disabled="">Button</button>
-    </div>
-    <div class="ui-button ui-button-disabled">
-        <button type="button" disabled="">Button</button>
-    </div>
-    <div class="ui-button ui-button-disabled">
-        <button type="button" disabled="">Button</button>
-    </div>
-    <div class="ui-button ui-button-disabled">
-        <button type="button" disabled="">Button</button>
-    </div>
+<div class="ui-flexbox">
+    <div class="ui-flexbox-item"><div class="demo"></div></div>
+    <div class="ui-flexbox-item"><div class="demo"></div></div>
+    <div class="ui-flexbox-item"><div class="demo"></div></div>
+    <div class="ui-flexbox-item"><div class="demo"></div></div>
 </div>
         </div>
     </div>
