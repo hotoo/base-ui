@@ -1,7 +1,5 @@
 /** handy/base/1.0.0/css/reset.css **/
-*,
-*:before,
-*:after {
+* {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -180,47 +178,9 @@ form {
   border-bottom: solid 4px #a6a6a6;
   border-right: solid 4px #a6a6a6;
 }
-.ui-flexbox {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: box;
-  margin-left: -8px;
-}
-.ui-flexbox .ui-flexbox-item {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -ms-flex: 1;
-  box-flex: 1;
-  margin: 4px 0 4px 8px;
-}
-.ui-grid {
-  margin-left: -8px;
-  overflow: hidden;
-}
-.ui-grid-item {
-  float: left;
-  display: inline-block;
-  width: 100%;
-  padding: 4px 0 4px 8px;
-  vertical-align: top;
-}
-/* width */
-.one-quarter {
-  width: 25%;
-}
-.one-half,
-.two-quarters {
-  width: 50%;
-}
-.third-quarters {
-  width: 75%;
-}
-.one-third {
-  width: 33.333%;
-}
-.tow-thirds {
-  width: 66.666%;
+.icon-check {
+  width: 32px;
+  height: 32px;
 }
 .ui-notice {
   padding: 4px;
@@ -494,6 +454,10 @@ form {
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
 }
+.ui-field-disabled lable,
+.ui-field-disabled input {
+  border-color: #d9d9d9;
+}
 .ui-field-input label {
   color: #333;
 }
@@ -507,14 +471,9 @@ form {
 .ui-field-input input:hover {
   border-color: #fa0;
 }
-.ui-field-disabled label,
-.ui-field-disabled input {
-  border-color: #d9d9d9;
-}
-.ui-field-input:after {
+.ui-field-icon {
   display: none;
   position: absolute;
-  content: "\0020";
   z-index: 1;
   right: 8px;
   top: 9px;
@@ -526,13 +485,9 @@ form {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
 }
-.ui-field-success .ui-field-input:after {
+.ui-field-success .ui-field-icon {
   display: block;
   background-position: 0 0;
-}
-.ui-field-error .ui-field-input:after {
-  display: block;
-  background-position: -30px 0;
 }
 .ui-field-error input {
   border-color: #ff3a0c;
@@ -541,10 +496,18 @@ form {
   -moz-box-shadow: inset 0 0 0;
   -ms-box-shadow: inset 0 0 0;
 }
+.ui-field-error .ui-field-icon {
+  display: block;
+  background-position: -30px 0;
+}
 .ui-field-message {
   font-size: .875em;
 }
 .ui-field-error .ui-field-message {
+  display: none;
+}
+.ui-field-error-message {
+  display: none;
   float: right;
   position: relative;
   margin-top: 3px;
@@ -557,7 +520,10 @@ form {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
 }
-.ui-field-error .ui-field-message:after {
+.ui-field-error .ui-field-error-message {
+  display: block;
+}
+.ui-field-error .ui-field-error-message:after {
   content: "";
   display: block;
   position: absolute;
@@ -573,12 +539,9 @@ form {
   transform: rotate(45deg);
 }
 .ui-checkbox {
-  display: block;
   position: relative;
-  padding: 0 48px 0 8px;
-  width: 100%;
+  margin: 5px 0;
   height: 44px;
-  color: #333;
   line-height: 42px;
   border: 1px solid #bfbfbf;
   background-color: #fff;
@@ -588,32 +551,38 @@ form {
   -ms-border-radius: 6px;
 }
 .ui-checkbox-disabled {
-  color: #c7c7c7;
   border-color: #d9d9d9;
+}
+.ui-checkbox label {
+  display: block;
+  padding: 0 32px 0 8px;
+  width: 100%;
+  height: 100%;
+  color: #333;
 }
 .ui-checkbox-naked {
   height: 32px;
-  padding: 0 30px 0px 0;
-  line-height: 32px;
-  color: #808080;
   border: 0;
   background-color: transparent;
 }
 .ui-checkbox-mini {
   height: 24px;
+  border: 0;
+  background-color: transparent;
+}
+.ui-checkbox-naked label {
+  padding: 0 30px 0px 0;
+  line-height: 32px;
+  color: #808080;
+}
+.ui-checkbox-mini label {
   padding: 0 0 0 21px;
   line-height: 24px;
   font-size: .9em;
   color: #808080;
-  border: 0;
-  background-color: transparent;
 }
-.ui-checkbox-simple {
-  height: 24px;
-  padding: 0 0 0 30px;
-  line-height: 24px;
-  border: 0;
-  background-color: transparent;
+.ui-checkbox-disabled label {
+  color: #c7c7c7;
 }
 .ui-checkbox .icon-check {
   position: absolute;
@@ -643,9 +612,6 @@ form {
   height: 22px;
   background-position: 0 -780px;
 }
-.ui-checkbox-disabled .icon-check {
-  background-position: 0 -240px;
-}
 .ui-checkbox input {
   position: absolute;
   top: 0;
@@ -658,19 +624,45 @@ form {
   opacity: 0;
   visibility: hidden\0;
 }
+.ui-checkbox-simple {
+  height: 22px;
+  line-height: 22px;
+  border: 0;
+  background-color: transparent;
+}
+.ui-checkbox-simple label {
+  position: relative;
+  float: left;
+  margin-right: 8px;
+  padding: 0;
+  width: 22px;
+  height: 22px;
+}
+.ui-checkbox-simple .ui-checkbox-label {
+  float: left;
+  line-height: 22px;
+}
+.ui-checkbox-simple input {
+  position: static;
+  width: 22px;
+  height: 22px;
+}
 .ui-checkbox-simple a {
   text-decoration: underline;
 }
-.ui-checkbox input:checked + .icon-check {
+.ui-checkbox-checked .icon-check {
   background-position: 0 -200px;
 }
-.ui-checkbox-mini input:checked + .icon-check {
+.ui-checkbox-checked.ui-checkbox-mini .icon-check {
   background-position: 0 -760px;
 }
-.ui-checkbox-simple input:checked + .icon-check {
+.ui-checkbox-checked.ui-checkbox-simple .icon-check {
   background-position: 0 -820px;
 }
-.ui-select {
+.ui-checkbox-disabled .icon-check {
+  background-position: 0 -240px;
+}
+.ui-select-input {
   position: relative;
   padding: 0 8px;
   height: 44px;
@@ -682,7 +674,7 @@ form {
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
 }
-.ui-field-error .ui-select {
+.ui-field-error .ui-select-input {
   border-color: #ff3a0c;
 }
 .ui-select-text {
@@ -699,33 +691,49 @@ form {
   top: 0;
   width: 100%;
   height: 100%;
-  filter: alpha(opacity=0);
+  filter: Alpha(Opacity=0);
   opacity: 0;
   z-index: 1;
 }
 .ui-select-disabled select {
   display: none !important;
 }
-.ui-select:after {
-  width: 16px;
-  height: 16px;
-  border-bottom: solid 4px #a6a6a6;
-  border-right: solid 4px #a6a6a6;
+.ui-select .icon-arrow {
   position: absolute;
-  content: "\0020";
   top: 10px;
   right: 15px;
+  left: auto;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
-  background: none;
 }
-.ui-select-disabled:after {
+.ui-select-disabled .icon-arrow {
   opacity: .7;
+}
+.ui-button-box {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: box;
+}
+.ui-button-box .ui-button {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  box-flex: 1;
+  margin: 4px;
+}
+.ui-button-box .ui-button:first-child {
+  margin-left: 0;
+}
+.ui-button-box .ui-button:last-child {
+  margin-right: 0;
 }
 .ui-button {
   margin: 4px 0;
+}
+.ui-button button {
   padding: 2px 8px;
   width: 100%;
   text-align: center;
@@ -736,7 +744,7 @@ form {
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
 }
-.ui-button-normal {
+.ui-button-normal button {
   border: 1px solid #bfd2e5;
   color: #369;
   background: #dae4f0;
@@ -754,8 +762,8 @@ form {
 
   background-image: linear-gradient(#f2f8ff, #dae4f0);
 }
-.ui-button-normal:active,
-.ui-button-normal:hover {
+.ui-button-normal button:active,
+.ui-button-normal button:hover {
   box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.4);
@@ -775,7 +783,7 @@ form {
 
   background-image: linear-gradient(#dae4f0, #f2f8ff);
 }
-.ui-button-submit {
+.ui-button-submit button {
   border: solid 1px #d95c0f;
   color: #fff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
@@ -798,8 +806,8 @@ form {
 
   background-image: linear-gradient(#ff8844, #ef7524);
 }
-.ui-button-submit:active,
-.ui-button-submit:hover {
+.ui-button-submit button:active,
+.ui-button-submit button:hover {
   box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.4);
@@ -819,7 +827,7 @@ form {
 
   background-image: linear-gradient(#ef7524, #ff8844);
 }
-.ui-button-disabled {
+.ui-button-disabled button {
   border: 1px solid #aaa !important;
   background: #ccc !important;
   color: #999 !important;
@@ -856,8 +864,12 @@ form {
 .ui-captcha-button button {
   height: 44px;
 }
-.ui-captcha .ui-field-input {
-  margin-right: 5px;
+.ui-captcha .ui-field {
+  margin: 0 5px 0 0;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  box-flex: 1;
 }
 .ui-captcha .ui-field input {
   padding: 10px 8px 8px;
