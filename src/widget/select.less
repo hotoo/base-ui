@@ -6,35 +6,25 @@
   border:1px solid #bfbfbf;
   background-color:#fff;
   .border-radius(6px);
+  overflow:hidden;
 }
 
 .ui-field-error .ui-select {
   border-color:#ff3a0c;
 }
 
-.ui-select-text {
-  color:#333;
-}
-
-.ui-select-disabled .ui-select-text {
-  color:#c7c7c7;
-}
-
 .ui-select select {
-  position:absolute;
   cursor:pointer;
   -webkit-appearance:none;
-  left:0;
-  top:0;
-  width:100%;
+  width:110%;
   height:100%;
-  filter:alpha(opacity=0);
-  opacity:0;
-  z-index:1;
+  color:#333;
+  border:none;
+  background:transparent;
 }
 
 .ui-select-disabled select {
-  display:none !important;
+  color:#c7c7c7;
 }
 
 .ui-select:after {

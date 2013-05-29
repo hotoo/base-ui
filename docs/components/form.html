@@ -63,6 +63,33 @@
         </div>
     </div>
     <div class="handy-module-demo">
+        <h3 class="handy-module-subtitle">Input-验证失败</h3>
+        <div class="handy-module-dom">
+<div class="ui-field">
+    <div class="ui-flexbox">
+      <div class="ui-flexbox-item ui-field-input">
+          <input type="text" placeholder="身份证号">
+      </div>
+      <div class="ui-flexbox-item ui-field-input">
+          <input type="text" placeholder="身份证号">
+      </div>
+    </div>
+    <div class="ui-field-message">default message</div>
+</div>
+<div class="ui-field ui-field-error">
+    <div class="ui-flexbox">
+      <div class="ui-flexbox-item ui-field-input">
+          <input type="text" placeholder="身份证号">
+      </div>
+      <div class="ui-flexbox-item ui-field-input">
+          <input type="text" placeholder="身份证号">
+      </div>
+    </div>
+    <div class="ui-field-message">default message</div>
+</div>
+        </div>
+    </div>
+    <div class="handy-module-demo">
         <h3 class="handy-module-subtitle">Checbox-选中</h3>
         <div class="handy-module-dom">
 <label class="ui-checkbox">表单项复选框——选中<input type="checkbox" checked="checked" /><span class="ui-icon icon-check"></span></label>
@@ -81,9 +108,18 @@
         </div>
     </div>
     <div class="handy-module-demo">
-        <h3 class="handy-module-subtitle">Checbox-无框模式</h3>
+        <h3 class="handy-module-subtitle">Checbox-出错</h3>
         <div class="handy-module-dom">
-<label class="ui-checkbox ui-checkbox-naked"><input type="checkbox"/>表单项复选框——无框模式<span class="ui-icon icon-check"></span></label>
+<div class="ui-field ui-field-error">
+  <label class="ui-checkbox"><input type="checkbox"/>表单项复选框——出错<span class="ui-icon icon-check"></span></label>
+  <div class="ui-field-message">error message</div>
+</div>
+        </div>
+    </div>
+    <div class="handy-module-demo">
+        <h3 class="handy-module-subtitle">Checbox-无框</h3>
+        <div class="handy-module-dom">
+<label class="ui-checkbox ui-checkbox-naked"><input type="checkbox"/>表单项复选框——无框<span class="ui-icon icon-check"></span></label>
         </div>
     </div>
     <div class="handy-module-demo">
@@ -103,9 +139,8 @@
         <div class="handy-module-dom">
 <div class="ui-field">
     <div class="ui-select">
-        <span class="ui-select-text">下拉列表1</span>
         <select>
-            <option value="">下拉列表1</option>
+            <option value="">下拉列表1<span>test</span></option>
             <option value="">下拉列表2</option>
         </select>
     </div>
@@ -117,8 +152,7 @@
         <div class="handy-module-dom">
 <div class="ui-field">
     <div class="ui-select ui-select-disabled">
-        <span class="ui-select-text">下拉列表1</span>
-        <select>
+        <select disabled="disabled">
             <option value="">下拉列表1</option>
             <option value="">下拉列表2</option>
         </select>
@@ -131,7 +165,6 @@
         <div class="handy-module-dom">
 <div class="ui-field ui-field-error">
     <div class="ui-select">
-        <span class="ui-select-text">下拉列表1</span>
         <select>
             <option value="">下拉列表1</option>
             <option value="">下拉列表2</option>
