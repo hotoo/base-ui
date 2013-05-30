@@ -54,8 +54,21 @@
   z-index:1;
   width:32px;
   height:32px;
-  background:url(https://i.alipayobjects.com/e/201305/LrOoqZxBd.png) no-repeat;
-  background-position:0 -280px;
+  border:2px solid #b2b2b2;
+  .border-radius(4px);
+}
+
+.ui-checkbox .icon-check:after{
+  position:absolute;
+  top:3px;
+  right:8px;
+  z-index:999;
+  width:10px;
+  height:17px;
+  border:solid 4px #b2b2b2;
+  border-width:0 4px 4px 0;
+  content:"\0020";
+  .transform(rotate(45deg));
 }
 
 .ui-checkbox-naked .icon-check {
@@ -68,7 +81,16 @@
   left:0;
   width:16px;
   height:16px;
-  background-position:0 -740px;
+  border-width:2px;
+  .border-radius(2px);
+}
+
+.ui-checkbox-mini .icon-check:after{
+  top:0px;
+  right:3px;
+  width:7px;
+  height:10px;
+  border-width:0 2px 2px 0; 
 }
 
 .ui-checkbox-simple .icon-check {
@@ -76,11 +98,21 @@
   left:0;
   width:22px;
   height:22px;
-  background-position:0 -780px;
+  border-width:2px;
+  .border-radius(2px);
 }
 
-.ui-checkbox-disabled .icon-check {
-  background-position:0 -240px;
+.ui-checkbox-simple .icon-check:after{
+  top:0px;
+  right:5px;
+  width:9px;
+  height:15px;
+  border-width:0 3px 3px 0; 
+}
+
+.ui-checkbox-disabled .icon-check,
+.ui-checkbox-disabled .icon-check:after {
+  border-color:#e6e6e6;
 }
 
 .ui-checkbox input {
@@ -101,14 +133,18 @@
 }
 
 .ui-checkbox input:checked + .icon-check {
-  background-position:0 -200px;
+  border-color:#3bb000;
+  background-color:#3bb000;
 }
 
-.ui-checkbox-mini input:checked + .icon-check {
-  background-position:0 -760px;
+.ui-checkbox input:checked + .icon-check:after {
+  border-color:#fff;
 }
 
-.ui-checkbox-simple input:checked + .icon-check {
-  background-position:0 -820px;
+.ui-checkbox-mini input:checked + .icon-check,
+.ui-checkbox-mini input:checked + .icon-check:after,
+.ui-checkbox-simple input:checked + .icon-check,
+.ui-checkbox-simple input:checked + .icon-check:after {
+  border-color:#3bb000;
+  background:none
 }
-

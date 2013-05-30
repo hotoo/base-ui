@@ -625,8 +625,26 @@ form {
   z-index: 1;
   width: 32px;
   height: 32px;
-  background: url(https://i.alipayobjects.com/e/201305/LrOoqZxBd.png) no-repeat;
-  background-position: 0 -280px;
+  border: 2px solid #b2b2b2;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+}
+.ui-checkbox .icon-check:after {
+  position: absolute;
+  top: 3px;
+  right: 8px;
+  z-index: 999;
+  width: 10px;
+  height: 17px;
+  border: solid 4px #b2b2b2;
+  border-width: 0 4px 4px 0;
+  content: "\0020";
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 .ui-checkbox-naked .icon-check {
   top: 0;
@@ -637,17 +655,40 @@ form {
   left: 0;
   width: 16px;
   height: 16px;
-  background-position: 0 -740px;
+  border-width: 2px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+}
+.ui-checkbox-mini .icon-check:after {
+  top: 0px;
+  right: 3px;
+  width: 7px;
+  height: 10px;
+  border-width: 0 2px 2px 0;
 }
 .ui-checkbox-simple .icon-check {
   top: 0;
   left: 0;
   width: 22px;
   height: 22px;
-  background-position: 0 -780px;
+  border-width: 2px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
 }
-.ui-checkbox-disabled .icon-check {
-  background-position: 0 -240px;
+.ui-checkbox-simple .icon-check:after {
+  top: 0px;
+  right: 5px;
+  width: 9px;
+  height: 15px;
+  border-width: 0 3px 3px 0;
+}
+.ui-checkbox-disabled .icon-check,
+.ui-checkbox-disabled .icon-check:after {
+  border-color: #e6e6e6;
 }
 .ui-checkbox input {
   position: absolute;
@@ -665,13 +706,18 @@ form {
   text-decoration: underline;
 }
 .ui-checkbox input:checked + .icon-check {
-  background-position: 0 -200px;
+  border-color: #3bb000;
+  background-color: #3bb000;
 }
-.ui-checkbox-mini input:checked + .icon-check {
-  background-position: 0 -760px;
+.ui-checkbox input:checked + .icon-check:after {
+  border-color: #fff;
 }
-.ui-checkbox-simple input:checked + .icon-check {
-  background-position: 0 -820px;
+.ui-checkbox-mini input:checked + .icon-check,
+.ui-checkbox-mini input:checked + .icon-check:after,
+.ui-checkbox-simple input:checked + .icon-check,
+.ui-checkbox-simple input:checked + .icon-check:after {
+  border-color: #3bb000;
+  background: none;
 }
 .ui-select {
   position: relative;
@@ -887,7 +933,7 @@ a.ui-button-disabled {
   z-index: 12;
   width: 46px;
   height: 46px;
-  background: url(https://i.alipayobjects.com/e/201305/LrOoqZxBd.png) no-repeat;
+  background: url(../../images/sprite-simple.png) no-repeat;
   background-color: transparent;
 }
 #shortcut.active {
@@ -936,7 +982,7 @@ a.ui-button-disabled {
   margin: 0 auto;
   width: 44px;
   height: 44px;
-  background: url(https://i.alipayobjects.com/e/201305/LrOoqZxBd.png) no-repeat;
+  background: url(../../images/sprite-simple.png) no-repeat;
 }
 #shortcut-panel li.ui-disabled span {
   opacity: .5;
@@ -946,35 +992,35 @@ a.ui-button-disabled {
   clear: both;
 }
 #shortcut-panel .passback span {
-  background-position: 4px -480px;
+  background-position: 4px -150px;
 }
 #shortcut-panel .payfor {
   float: left;
   margin-left: 4px;
 }
 #shortcut-panel .payfor span {
-  background-position: 0 -534px;
+  background-position: 0 -204px;
 }
 #shortcut-panel .refresh {
   float: right;
   margin-right: 4px;
 }
 #shortcut-panel .refresh span {
-  background-position: 3px -576px;
+  background-position: 3px -246px;
 }
 #shortcut-panel .clear {
   float: right;
   margin-right: 4px;
 }
 #shortcut-panel .clear span {
-  background-position: 4px -678px;
+  background-position: 4px -348px;
 }
 #shortcut-panel .about {
   margin: 4px auto;
   clear: both;
 }
 #shortcut-panel .about span {
-  background-position: 4px -616px;
+  background-position: 4px -286px;
 }
 #shortcut-panel.scale {
   -webkit-transform: scale(1);
