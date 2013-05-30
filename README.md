@@ -5,7 +5,7 @@ ___
 
 ## 1.7.0
 
-[http://handyjs.github.io/base-ui/1.7.0/](http://handyjs.github.io/base-ui/1.7.0/)
+[http://handyjs.github.io/base-ui/](http://handyjs.github.io/base-ui/)
 
 ## 1.6.0
 
