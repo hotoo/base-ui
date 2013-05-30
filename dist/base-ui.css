@@ -180,6 +180,7 @@ form {
   border-bottom: solid 4px #a6a6a6;
   border-right: solid 4px #a6a6a6;
 }
+/* onload 之后 body 将加上ui-loaded，需要在onload之后加载的图片请定义在.ui-loaded之后 */
 .ui-flexbox {
   display: -webkit-box;
   display: -moz-box;
@@ -256,7 +257,11 @@ form {
 }
 .ui-header img,
 .ui-header .icon-reverse {
-  background: url(https://i.alipayobjects.com/e/201305/LtBFRh1b3.png) no-repeat;
+  background-repeat: no-repeat;
+}
+.ui-loaded .ui-header img,
+.ui-loaded .ui-header .icon-reverse {
+  background-image: url(https://i.alipayobjects.com/e/201305/LtBFRh1b3.png);
 }
 .ui-header .icon-reverse {
   position: absolute;
@@ -297,22 +302,61 @@ form {
   margin: 8px 0;
   padding: 8px 8px 8px 45px;
   color: #333;
-  background-repeat: no-repeat;
-  background-position: 8px center;
-  background-size: 32px auto;
 }
 .ui-message.smaller {
   padding-left: 36px;
   background-size: 24px auto;
 }
-.ui-message-info {
-  background-image: url(https://i.alipayobjects.com/e/201304/5E5J4ui8D.png);
+.ui-message-icon,
+.ui-message-icon:after {
+  position: absolute;
+  width: 32px;
+  height: 32px;
 }
-.ui-message-error {
-  background-image: url(https://i.alipayobjects.com/e/201304/5E6gOrv1J.png);
+.ui-message-icon {
+  top: 50%;
+  left: 8px;
+  z-index: 1;
+  margin-top: -16px;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
 }
-.ui-message-success {
-  background-image: url(https://i.alipayobjects.com/e/201304/5E00C7sgP.png);
+.ui-message-icon:after {
+  top: 0;
+  left: 0;
+  z-index: 999;
+  content: "\0020";
+  background-repeat: no-repeat;
+  background-size: 32px auto;
+}
+.ui-loaded .ui-message-icon:after {
+  background-image: url("https://i.alipayobjects.com/e/201305/QCUjp21On.png");
+}
+.ui-message-info .ui-message-icon {
+  background-color: #2277bb;
+}
+.ui-message-info .ui-message-icon:after {
+  background-position: 0 -96px;
+}
+.ui-message-warn .ui-message-icon {
+  background-color: #ff8634;
+}
+.ui-message-warn .ui-message-icon:after {
+  background-position: 0 -64px;
+}
+.ui-message-success .ui-message-icon {
+  background-color: #3bb000;
+}
+.ui-message-success .ui-message-icon:after {
+  background-position: 0 -32px;
+}
+.ui-message-error .ui-message-icon {
+  background-color: #ff3a0c;
+}
+.ui-message-error .ui-message-icon:after {
+  background-position: 0 0;
 }
 .ui-message-form {
   border: 1px solid #bfbfbf;
@@ -475,6 +519,63 @@ form {
 .ui-field label {
   display: block;
 }
+.ui-field-message {
+  font-size: .875em;
+}
+.ui-field-warn .ui-field-message,
+.ui-field-error .ui-field-message {
+  float: right;
+  position: relative;
+  margin-top: 3px;
+  padding: 2px 5px 1px;
+  color: #fff;
+  font-size: .875em;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+}
+.ui-field-warn .ui-field-message:after,
+.ui-field-error .ui-field-message:after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 4px;
+  height: 4px;
+  top: -2px;
+  right: 19px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.ui-field-warn .ui-field-message,
+.ui-field-warn .ui-field-message:after {
+  background-color: #ff8634;
+}
+.ui-field-error .ui-field-message,
+.ui-field-error .ui-field-message:after {
+  background-color: #ff3a0c;
+}
+.ui-field-warn input,
+.ui-field-warn .ui-select,
+.ui-field-warn .ui-checkbox {
+  border-color: #ff8634;
+  box-shadow: inset 0 0 0;
+  -webkit-box-shadow: inset 0 0 0;
+  -moz-box-shadow: inset 0 0 0;
+  -ms-box-shadow: inset 0 0 0;
+}
+.ui-field-error input,
+.ui-field-error .ui-select,
+.ui-field-error .ui-checkbox {
+  border-color: #ff3a0c;
+  box-shadow: inset 0 0 0;
+  -webkit-box-shadow: inset 0 0 0;
+  -moz-box-shadow: inset 0 0 0;
+  -ms-box-shadow: inset 0 0 0;
+}
 .ui-field-input {
   position: relative;
   overflow-x: hidden;
@@ -511,66 +612,63 @@ form {
 .ui-field-disabled input {
   border-color: #d9d9d9;
 }
+.ui-field-input:before,
 .ui-field-input:after {
   display: none;
   position: absolute;
-  content: "\0020";
-  z-index: 1;
-  right: 8px;
-  top: 9px;
   width: 26px;
   height: 26px;
-  background: url(https://i.alipayobjects.com/e/201305/NP3XaCSj7.png) no-repeat;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
+  content: "\0020";
+}
+.ui-field-input:before {
+  top: 9px;
+  right: 8px;
+  z-index: 1;
+  border-radius: 13px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+}
+.ui-field-input:after {
+  top: 7px;
+  right: 11px;
+  z-index: 999;
+  background-repeat: no-repeat;
+  background-size: 32px auto;
+  -webkit-transform: scale(0.8, 0.8);
+  -moz-transform: scale(0.8, 0.8);
+  -ms-transform: scale(0.8, 0.8);
+  transform: scale(0.8, 0.8);
+}
+.ui-loaded .ui-field-input:after {
+  background-image: url("https://i.alipayobjects.com/e/201305/QCUjp21On.png");
+}
+.ui-field-success .ui-field-input:before,
+.ui-field-success .ui-field-input:after,
+.ui-field-error .ui-field-input:before,
+.ui-field-error .ui-field-input:after,
+.ui-field-warn .ui-field-input:before,
+.ui-field-warn .ui-field-input:after {
+  display: block;
+}
+.ui-field-success .ui-field-input:before {
+  background-color: #3bb000;
 }
 .ui-field-success .ui-field-input:after {
-  display: block;
-  background-position: 0 0;
+  right: 9px;
+  background-position: -2px -32px;
+}
+.ui-field-error .ui-field-input:before {
+  background-color: #ff3a0c;
 }
 .ui-field-error .ui-field-input:after {
-  display: block;
-  background-position: -30px 0;
+  background-position: 0 0;
 }
-.ui-field-error input {
-  border-color: #ff3a0c;
-  box-shadow: inset 0 0 0;
-  -webkit-box-shadow: inset 0 0 0;
-  -moz-box-shadow: inset 0 0 0;
-  -ms-box-shadow: inset 0 0 0;
+.ui-field-warn .ui-field-input:before {
+  background-color: #ff8634;
 }
-.ui-field-message {
-  font-size: .875em;
-}
-.ui-field-error .ui-field-message {
-  float: right;
-  position: relative;
-  margin-top: 3px;
-  padding: 2px 5px 1px;
-  background-color: #ff3a0c;
-  color: #fff;
-  font-size: .875em;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-}
-.ui-field-error .ui-field-message:after {
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: 1;
-  width: 4px;
-  height: 4px;
-  top: -2px;
-  right: 19px;
-  background-color: #ff3a0c;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+.ui-field-warn .ui-field-input:after {
+  background-position: 0 -64px;
 }
 .ui-checkbox {
   display: block;
@@ -586,9 +684,6 @@ form {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
-}
-.ui-field-error .ui-checkbox {
-  border-color: #ff3a0c;
 }
 .ui-checkbox-disabled {
   color: #c7c7c7;
@@ -731,9 +826,6 @@ form {
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   overflow: hidden;
-}
-.ui-field-error .ui-select {
-  border-color: #ff3a0c;
 }
 .ui-select select {
   cursor: pointer;
@@ -933,8 +1025,11 @@ a.ui-button-disabled {
   z-index: 12;
   width: 46px;
   height: 46px;
-  background: url(../../images/sprite-simple.png) no-repeat;
+  background-repeat: no-repeat;
   background-color: transparent;
+}
+.ui-loaded #shortcut {
+  background-image: url("https://i.alipayobjects.com/e/201305/QCUyInkiL.png");
 }
 #shortcut.active {
   background-position: 0 -60px;
@@ -982,7 +1077,10 @@ a.ui-button-disabled {
   margin: 0 auto;
   width: 44px;
   height: 44px;
-  background: url(../../images/sprite-simple.png) no-repeat;
+  background-repeat: no-repeat;
+}
+.ui-loaded #shortcut-panel li span {
+  background-image: url("https://i.alipayobjects.com/e/201305/QCUyInkiL.png");
 }
 #shortcut-panel li.ui-disabled span {
   opacity: .5;

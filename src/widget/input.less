@@ -1,0 +1,93 @@
+.ui-field-input {
+  position:relative;
+  overflow-x:hidden; /*防止在IOS Safari下 旋转屏幕导致出现横向滚动条*/
+}
+
+.ui-field-input label, .ui-field-input input {
+  padding:9px 32px 8px 8px;
+  width:100%;
+  height:44px;
+  line-height:1.2;
+  border:1px solid #bfbfbf;
+  background-color:#fff;
+  .border-radius(6px);
+}
+
+.ui-field-input label {
+  color:#333;
+}
+
+.ui-field-input input {
+  .box-shadow(inset 0px 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+.ui-field-input input:active, .ui-field-input input:hover {
+  border-color:#fa0;
+}
+
+.ui-field-disabled label, .ui-field-disabled input {
+  border-color:#d9d9d9;
+}
+
+.ui-field-input:before, 
+.ui-field-input:after{
+  display:none;
+  position:absolute;
+  width:26px;
+  height:26px;
+  content:"\0020";
+}
+
+.ui-field-input:before{
+  top:9px;
+  right:8px;
+  z-index:1;
+  .border-radius(13px);
+}
+
+.ui-field-input:after{
+  top:7px;
+  right:11px;
+  z-index:999;
+  background-repeat:no-repeat;
+  background-size:32px auto;
+  .transform(scale(0.8, 0.8)); 
+}
+
+.ui-loaded .ui-field-input:after{
+  background-image:url("https://i.alipayobjects.com/e/201305/QCUjp21On.png");
+}
+
+.ui-field-success .ui-field-input:before,
+.ui-field-success .ui-field-input:after,
+.ui-field-error .ui-field-input:before,
+.ui-field-error .ui-field-input:after,
+.ui-field-warn .ui-field-input:before,
+.ui-field-warn .ui-field-input:after{
+  display:block;
+}
+
+.ui-field-success .ui-field-input:before{
+  background-color:#3bb000;
+}
+
+.ui-field-success .ui-field-input:after{
+  right:9px;
+  background-position:-2px -32px;
+}
+
+.ui-field-error .ui-field-input:before{
+  background-color:#ff3a0c;
+}
+
+.ui-field-error .ui-field-input:after{
+  background-position:0 0;
+}
+
+.ui-field-warn .ui-field-input:before{
+  background-color:#ff8634;
+}
+
+.ui-field-warn .ui-field-input:after{
+  background-position:0 -64px;
+}

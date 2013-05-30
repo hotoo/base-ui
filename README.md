@@ -1,6 +1,20 @@
 # base-ui
 
-支付宝移动端样式解决方案。还未成型，一切皆有可能。
+支付宝移动端样式解决方案
 ___
 
-Demo: [http://handyjs.github.io/base-ui/](http://handyjs.github.io/base-ui/)
+## Features
+
+* 更简洁的 Dom 结构
+* 更少的图片
+* 更易扩展
+
+## Browsers
+
+* iOS 4.0+
+* Android 2.2+
+* Window Phone 7+
+
+## Demo
+
+[http://handyjs.github.io/base-ui/](http://handyjs.github.io/base-ui/)
