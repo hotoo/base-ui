@@ -3,102 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="_templates/handy/static/css/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="assets/css/normalize.css" />
-    <link rel="stylesheet" href="assets/css/solarized.css" />
-    <link rel="stylesheet" href="assets/css/site.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/google-code-prettify/prettify.css" />
-    <link rel="stylesheet" href="assets/css/tomorrow.css" />
-    <link rel="stylesheet" href="dist/base-ui.css" />
-    <title>Handy UI</title>
-    <style type="text/css">
-        pre.prettyprint {
-            margin: 6px 0;
-            overflow: auto;
-            padding: 6px 10px;
-            white-space: pre;
-        }
-        #sidenav {
-            margin: 0 40px 20px 20px;
-            padding: 0;
-            border-radius: 5px;
-            background-color: #fff; 
-        }
-        #sidenav li a {
-            display: block;
-            padding: 10px 0 10px 20px;
-            border-bottom: 1px solid #eee;
-            font-size: 16px;
-        }
-        #sidenav li:first-child a{
-            border-radius: 5px 5px 0 0;
-        }
-        #sidenav li:last-child a{
-            border-radius: 0 0 5px 5px; 
-            border-bottom: none;
-        }
-        #sidenav li a:hover,
-        #sidenav li.active a {
-            text-decoration: none;
-            color: #fff;
-            background-color: #6C97C2;
-        }
-        .handy-module {
-            margin: 10px 0 20px; 
-        }
-        .handy-module-demo {
-            position: relative;
-            margin: 10px 0 20px;
-            padding: 40px 20px 20px;
-            overflow: hidden;
-            border: 1px solid #eee;
-            background-color: #fff;
-        }
-        .handy-module-subtitle {
-            position: absolute;
-            top: 0;
-            left: 0;
-            border-radius: 3px;
-            margin: 0;
-            color: #777;
-            font-size: 12px;
-            background: #F8F8F8;
-            border-bottom: 1px solid #ddd;
-            border-right: 1px solid #ddd;
-            display: block;
-            font-size: 12px;
-            width: 150px;
-            padding: 5px 10px;
-            opacity: 0.8;
-        }
-    </style>
+    <title>Baseui</title>
+    <link rel="icon" href="./static/css/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./static/css/normalize.css" />
+    <link rel="stylesheet" href="./static/css/solarized.css" />
+    <link rel="stylesheet" href="./static/css/site.css" />
+    <link rel="stylesheet" href="./static/css/style.css" />
+    <link rel="stylesheet" href="./static/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="./static/css/tomorrow.css" />
+    <link rel="stylesheet" href="./static/css/base-ui.css" />
+     
+    
+<style type="text/css">
+  pre.prettyprint {
+      margin: 6px 0;
+      overflow: auto;
+      padding: 6px 10px;
+      white-space: pre;
+  }
+  #sidenav {
+      margin: 0 40px 20px 20px;
+      padding: 0;
+      border-radius: 5px;
+      background-color: #fff; 
+  }
+  #sidenav li a {
+      display: block;
+      padding: 10px 0 10px 20px;
+      border-bottom: 1px solid #eee;
+      font-size: 16px;
+  }
+  #sidenav li:first-child a{
+      border-radius: 5px 5px 0 0;
+  }
+  #sidenav li:last-child a{
+      border-radius: 0 0 5px 5px; 
+      border-bottom: none;
+  }
+  #sidenav li a:hover,
+  #sidenav li.active a {
+      text-decoration: none;
+      color: #fff;
+      background-color: #6C97C2;
+  }
+  .handy-module {
+      margin: 10px 0 20px; 
+  }
+  .handy-module-demo {
+      position: relative;
+      margin: 10px 0 20px;
+      padding: 40px 20px 20px;
+      overflow: hidden;
+      border: 1px solid #eee;
+      background-color: #fff;
+  }
+  .handy-module-subtitle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 3px;
+      margin: 0;
+      color: #777;
+      font-size: 12px;
+      background: #F8F8F8;
+      border-bottom: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+      display: block;
+      font-size: 12px;
+      width: 150px;
+      padding: 5px 10px;
+      opacity: 0.8;
+  }
+
+  #shortcut{
+      position: static;
+  }
+  #shortcut-panel{
+      display: block;
+      position: static;
+      margin: 0;
+  }
+  #loading{
+      position: static;
+      margin: 0;
+  }
+  .demo {
+    padding:1rem;
+    color:#fff;
+    background-color:#6C97C2;
+  }
+
+</style>
+
 </head>
 <body>
-    <div id="body-wrapper">
-        <div id="title-wrapper">
-            <h1 id="title" class="inline"><a href="./">Handy</a></h1>
-            <p id="description"></p>
-        </div>
-<style type="text/css">
-#shortcut{
-    position: static;
-}
-#shortcut-panel{
-    display: block;
-    position: static;
-    margin: 0;
-}
-#loading{
-    position: static;
-    margin: 0;
-}
-.demo {
-  padding:1rem;
-  color:#fff;
-  background-color:#6C97C2;
-}
-</style>
+<div id="body-wrapper">
+
+<div id="title-wrapper">
+    <h1 id="title" class="inline"><a href="./">Handy</a></h1>
+    <p id="description"></p>
+</div>
 <div id="main-wrapper">
     <div class="main-block" id="document-wrapper">
         <ul id="sidenav"></ul>
@@ -107,16 +111,25 @@
         <div class="handy-modules"></div>
     </div>
 </div>
+<div id="footer-wrapper">
+  <footer>
+    <p class="powered">
+        <a href="http://aralejs.org">Arale</a> •
+        <a href="http://aliceui.org">Alice</a> •
+        <a href="http://seajs.org">SeaJS</a> •
+        <a href="https://github.com/spmjs/spm">spm</a> •
+    </p>
+  </footer>
+</div>
 
 <script type="text/template" id="handy-module-demo">
     <div class="handy-module-demo">
         <h3 class="handy-module-subtitle">Default</h3>
-        <a class="handy-module-sourcecode" href="#" style="display:none">查看源码</a>
         <div class="handy-module-dom"></div>
         <pre class="handy-module-code prettyprint"></pre>
     </div>
 </script>
-<script type="text/javascript" src="assets/google-code-prettify/prettify.js"></script>
+<script type="text/javascript" src="./static/google-code-prettify/prettify.js"></script>
 <script type="text/javascript" src="http://static.alipayobjects.com/seajs/1.3.1/sea.js"></script>
 <script type="text/javascript">
 (function(){
@@ -141,19 +154,19 @@
             module.attr('id', id)
                 .appendTo('.handy-modules');
             $.ajax({
-                url: 'components/' + name + '.html',
+                url: 'docs/' + name + '.html',
                 dataType: 'html',
                 success: function(content) {
                     content = $(content);
-                    var name = content.find('h2').html();
+                    var name = content.find('.handy-module-title').html();
                     module.find('h2 > a').html(name)
-                        .attr('href', 'components/'+ name.toLowerCase() +'.html');
-                    content.find('.handy-module-demo').each(function(i, item){
+                        .attr('href', 'docs/'+ name.toLowerCase() +'.html');
+                    content.find('.nico-insert-code').each(function(i, item){
                         item = $(item);
 
                         var demo = $($('#handy-module-demo').html()),
-                            subtitle = item.find('.handy-module-subtitle').html(),
-                            html = item.find('.handy-module-dom').html();
+                            subtitle = item.prev().html(),
+                            html = item.html();
 
                         demo.find('.handy-module-subtitle').html(subtitle);
                         demo.find('.handy-module-dom').html(html);
@@ -198,17 +211,7 @@
     })
 })();
 </script>
-    </div>
-    <div id="footer-wrapper">
-        <footer>
-            <p class="powered">
-                <a href="http://aralejs.org">Arale</a> •
-                <a href="http://aliceui.org">Alice</a> •
-                <a href="http://seajs.org">SeaJS</a> •
-                <a href="https://github.com/spmjs/spm">spm</a> •
-            </p>
-        </footer>
-    </div>
+</div>
 <script type="text/javascript">
 window.onload = function(){
   document.body.className = "ui-loaded";
