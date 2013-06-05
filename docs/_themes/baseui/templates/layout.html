@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{%- block title %}{{theme.name|title}}{% endblock -%}</title>
+    {%- block assets %}
+    <link rel="icon" href="{{static_url('css/favicon.ico')}}" type="image/x-icon" />
+    <link rel="stylesheet" href="{{static_url('css/normalize.css')}}" />
+    <link rel="stylesheet" href="{{static_url('css/solarized.css')}}" />
+    <link rel="stylesheet" href="{{static_url('css/site.css')}}" />
+    <link rel="stylesheet" href="{{static_url('css/style.css')}}" />
+    <link rel="stylesheet" href="{{static_url('google-code-prettify/prettify.css')}}" />
+    <link rel="stylesheet" href="{{static_url('css/tomorrow.css')}}" />
+    <link rel="stylesheet" href="{{static_url('css/base-ui.css')}}" />
+    {%- endblock %} 
+    {%- block afterstyle %}{%- endblock %}
+</head>
+<body>
+<div id="body-wrapper">
+{%- block content %}{%- endblock %}
+</div>
+<script type="text/javascript">
+window.onload = function(){
+  document.body.className = "ui-loaded";
+}
+</script>
+</body>
+</html>

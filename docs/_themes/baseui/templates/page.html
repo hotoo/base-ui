@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{%- block afterstyle %}
+<style type="text/css">
+.handy-module{
+  margin: 20px 0 50px;
+}
+.handy-module-content{
+  padding: 20px 0 50px;
+}
+.handy-module-content h3{
+  margin: 40px 0 20px;
+}
+.highlight{
+  display:none;
+}
+</style>
+{%- endblock %}
+{% block content %}
+<article class="handy-module">
+  <h1 class="handy-module-title">{{post.title}}</h1>
+  <div class="handy-module-content">
+  {{ post.html }}
+  </div>
+</article>
+{% endblock %}

@@ -1,0 +1,177 @@
+# Form 
+
+---
+### Input
+
+````html
+<div class="ui-field">
+    <div class="ui-field-input">
+        <input type="text" placeholder="电话" value="" />
+    </div>
+    <div class="ui-field-message">提示信息</div>
+</div>
+````
+
+### Input-不可用
+
+````html
+<div class="ui-field ui-field-disabled">
+    <div class="ui-field-input">
+        <input type="text" placeholder="电话" value="" disabled="disabled" />
+    </div>
+</div>
+````
+
+### Input-验证成功
+
+````html
+<div class="ui-field ui-field-success">
+    <div class="ui-field-input">
+        <input type="text" placeholder="银行开户名" />
+    </div>
+</div>
+
+````
+
+### Input-警告
+
+````html
+<div class="ui-field ui-field-warn">
+    <div class="ui-field-input">
+        <input type="text" placeholder="银行开户名" />
+    </div>
+    <div class="ui-field-message">warn message</div>
+</div>
+````
+
+### Input-验证失败
+
+````html
+<div class="ui-field ui-field-error">
+    <div class="ui-field-input">
+        <input type="text" placeholder="身份证号" />
+    </div>
+    <div class="ui-field-message">error message</div>
+</div>
+````
+
+### Checbox-选中
+
+````html
+<div class="ui-field">
+    <div class="ui-flexbox">
+      <div class="ui-flexbox-item ui-field-input">
+          <input type="text" placeholder="姓" />
+      </div>
+      <div class="ui-flexbox-item ui-field-input">
+          <input type="text" placeholder="名" />
+      </div>
+    </div>
+    <div class="ui-field-message">default message</div>
+</div>
+<div class="ui-field ui-field-error">
+    <div class="ui-flexbox">
+      <div class="ui-flexbox-item ui-field-input">
+          <input type="text" placeholder="姓" />
+      </div>
+      <div class="ui-flexbox-item ui-field-input">
+          <input type="text" placeholder="名" />
+      </div>
+    </div>
+    <div class="ui-field-message">default message</div>
+</div>
+````
+
+### Input-验证失败
+
+````html
+<label class="ui-checkbox">表单项复选框——选中<input type="checkbox" checked="checked" /><span class="ui-icon icon-check"></span></label>
+````
+
+### Checbox-未选中
+
+````html
+<label class="ui-checkbox">表单项复选框——选中<input type="checkbox" /><span class="ui-icon icon-check"></span></label>
+````
+
+### Checbox-不可用
+
+````html
+<label class="ui-checkbox ui-checkbox-disabled">表单项复选框——不可用<input type="checkbox" disabled="disabled" /><span class="ui-icon icon-check"></span></label>
+````
+
+### Checbox-警告
+
+````html
+<div class="ui-field ui-field-warn">
+  <label class="ui-checkbox"><input type="checkbox"/>表单项复选框——出错<span class="ui-icon icon-check"></span></label>
+  <div class="ui-field-message">warn message</div>
+</div>
+````
+
+### Checbox-出错
+
+````html
+<div class="ui-field ui-field-warn">
+  <label class="ui-checkbox"><input type="checkbox"/>表单项复选框——出错<span class="ui-icon icon-check"></span></label>
+  <div class="ui-field-message">warn message</div>
+</div>
+````
+
+### Checbox-无框
+
+````html
+<label class="ui-checkbox ui-checkbox-naked"><input type="checkbox"/>表单项复选框——无框<span class="ui-icon icon-check"></span></label>
+````
+
+### Checkbox-mini
+
+````html
+<label class="ui-checkbox ui-checkbox-mini"><input type="checkbox"><span class="ui-icon icon-check"></span>当日累积消费≤200元可免输密码</label>
+````
+
+### Checkbox-simple
+
+````html
+<label class="ui-checkbox ui-checkbox-simple"><input type="checkbox"><span class="ui-icon icon-check"></span>同意《信用支付服务合同》</label>
+````
+
+### Select
+
+````html
+<div class="ui-field">
+    <div class="ui-select">
+        <select>
+            <option value="">下拉列表1</option>
+            <option value="">下拉列表2</option>
+        </select>
+    </div>
+</div>
+````
+
+### Select-不可用
+
+````html
+<div class="ui-field">
+    <div class="ui-select ui-select-disabled">
+        <select disabled="disabled">
+            <option value="">下拉列表1</option>
+            <option value="">下拉列表2</option>
+        </select>
+    </div>
+</div>
+````
+
+### Select-出错
+
+````html
+<div class="ui-field ui-field-error">
+    <div class="ui-select">
+        <select>
+            <option value="">下拉列表1</option>
+            <option value="">下拉列表2</option>
+        </select>
+    </div>
+    <div class="ui-field-message">error message</div>
+</div>
+````

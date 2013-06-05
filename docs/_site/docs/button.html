@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Baseui</title>
+    <link rel="icon" href="../static/css/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../static/css/normalize.css" />
+    <link rel="stylesheet" href="../static/css/solarized.css" />
+    <link rel="stylesheet" href="../static/css/site.css" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="../static/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="../static/css/tomorrow.css" />
+    <link rel="stylesheet" href="../static/css/base-ui.css" />
+    
+<style type="text/css">
+.handy-module{
+  margin: 20px 0 50px;
+}
+.handy-module-content{
+  padding: 20px 0 50px;
+}
+.handy-module-content h3{
+  margin: 40px 0 20px;
+}
+.highlight{
+  display:none;
+}
+</style>
+
+</head>
+<body>
+<div id="body-wrapper">
+
+<article class="handy-module">
+  <h1 class="handy-module-title">Button</h1>
+  <div class="handy-module-content">
+  <h3 id="默认">默认</h3><div class="nico-insert-code"><button class="ui-button ui-button-normal" type="button">默认按钮</button>
+<input type="buttont" class="ui-button ui-button-normal" value="默认按钮" />
+<a href="#" class="ui-button ui-button-normal">默认按钮</a></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-normal"</span> <span class="attribute">type</span>=<span class="value">"button"</span>&gt;</span>默认按钮<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+<span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"buttont"</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-normal"</span> <span class="attribute">value</span>=<span class="value">"默认按钮"</span> /&gt;</span>
+<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-normal"</span>&gt;</span>默认按钮<span class="tag">&lt;/<span class="title">a</span>&gt;</span></code></pre></div><h3 id="橙色">橙色</h3><div class="nico-insert-code"><button class="ui-button ui-button-submit" type="button">橙色按钮</button>
+<input type="submit" class="ui-button ui-button-submit" value="默认按钮" />
+<a href="#" class="ui-button ui-button-submit">默认按钮</a></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-submit"</span> <span class="attribute">type</span>=<span class="value">"button"</span>&gt;</span>橙色按钮<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+<span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-submit"</span> <span class="attribute">value</span>=<span class="value">"默认按钮"</span> /&gt;</span>
+<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-submit"</span>&gt;</span>默认按钮<span class="tag">&lt;/<span class="title">a</span>&gt;</span></code></pre></div><h3 id="不可用">不可用</h3><div class="nico-insert-code"><button class="ui-button ui-button-disabled" disabled="disabled" type="button">不可用按钮</button>
+<input type="submit" class="ui-button ui-button-disabled" disabled="disabled" value="默认按钮" />
+<a href="javascript:void(0)" class="ui-button ui-button-disabled">不可用按钮</a></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-disabled"</span> <span class="attribute">disabled</span>=<span class="value">"disabled"</span> <span class="attribute">type</span>=<span class="value">"button"</span>&gt;</span>不可用按钮<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+<span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-disabled"</span> <span class="attribute">disabled</span>=<span class="value">"disabled"</span> <span class="attribute">value</span>=<span class="value">"默认按钮"</span> /&gt;</span>
+<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:void(0)"</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-disabled"</span>&gt;</span>不可用按钮<span class="tag">&lt;/<span class="title">a</span>&gt;</span></code></pre></div>
+  </div>
+</article>
+
+</div>
+<script type="text/javascript">
+window.onload = function(){
+  document.body.className = "ui-loaded";
+}
+</script>
+</body>
+</html>

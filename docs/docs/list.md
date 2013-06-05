@@ -1,0 +1,24 @@
+# List
+
+---
+
+````html
+<h3>类别1</h3>
+<ul data-role="list" class="ui-list">
+    <li>
+        <button type="button">列表1<span class="ui-icon icon-arrow-horizontal"></span></button>
+    </li>
+    <li>
+        <button type="button">列表2<span class="ui-icon icon-arrow-horizontal"></span></button>
+    </li>
+</ul>
+<h3>类别1</h3>
+<ul data-role="list" class="ui-list">
+    <li>
+        <a href="#">换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行换行<span class="ui-icon icon-arrow-horizontal"></span></a>
+    </li>
+    <li>
+        <a href="#">列表2<span class="ui-icon icon-arrow-horizontal"></span></a>
+    </li>
+</ul>
+````
