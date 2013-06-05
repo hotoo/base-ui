@@ -558,23 +558,15 @@ form {
 .ui-field-error .ui-field-message:after {
   background-color: #ff3a0c;
 }
-.ui-field-warn input,
+.ui-field-warn .ui-field-input input,
 .ui-field-warn .ui-select,
 .ui-field-warn .ui-checkbox {
   border-color: #ff8634;
-  box-shadow: inset 0 0 0;
-  -webkit-box-shadow: inset 0 0 0;
-  -moz-box-shadow: inset 0 0 0;
-  -ms-box-shadow: inset 0 0 0;
 }
-.ui-field-error input,
+.ui-field-error .ui-field-input input,
 .ui-field-error .ui-select,
 .ui-field-error .ui-checkbox {
   border-color: #ff3a0c;
-  box-shadow: inset 0 0 0;
-  -webkit-box-shadow: inset 0 0 0;
-  -moz-box-shadow: inset 0 0 0;
-  -ms-box-shadow: inset 0 0 0;
 }
 .ui-field-input {
   position: relative;
@@ -830,7 +822,7 @@ form {
 .ui-select select {
   cursor: pointer;
   -webkit-appearance: none;
-  width: 110%;
+  width: 120%;
   height: 100%;
   color: #333;
   border: none;

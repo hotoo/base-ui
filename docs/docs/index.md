@@ -1,0 +1,5 @@
+# Handy
+
+- template: index.html
+
+---------

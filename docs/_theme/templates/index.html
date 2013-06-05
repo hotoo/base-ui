@@ -90,7 +90,13 @@
 </div>
 <div id="main-wrapper">
     <div class="main-block" id="document-wrapper">
-        <ul id="sidenav"></ul>
+        <ul id="sidenav">
+        {% for item in resource.pages %}
+        {% if not item.meta.template %}
+        <li><a href="#handy-module-{{item.title|lower}}">{{item.title|lower}}</a></li>
+        {% endif %}
+        {% endfor %}
+        </ul>
     </div>
     <div class="main-block" id="module-wrapper">
         <div class="handy-modules"></div>
@@ -129,23 +135,22 @@
     seajs.use(['$', 'fixed'], function($, Fixed) {
         Fixed('#document-wrapper');
 
-        var handyComponents = ['header', 'button', 'form', 'message', 'list', 'loading', 'shortcut', 'layouts']; 
-        $.each(handyComponents, function(i, name){
-            var id = 'handy-module-' + name,
-                li = $('<li><a href="#'+ id +'">'+ name +'</a></li>');
-            li.appendTo('#sidenav');
+        var handyComponents = $('#sidenav li'); 
+        $.each(handyComponents, function(i, item){
+            var name = $(item).find('a').html(),
+                id = 'handy-module-' + name;
 
             var module = $('<div class="handy-module"><h2><a href="#"></a></h2></div>');
             module.attr('id', id)
                 .appendTo('.handy-modules');
             $.ajax({
-                url: 'docs/' + name + '.html',
+                url: name + '.html',
                 dataType: 'html',
                 success: function(content) {
                     content = $(content);
                     var name = content.find('.handy-module-title').html();
                     module.find('h2 > a').html(name)
-                        .attr('href', 'docs/'+ name.toLowerCase() +'.html');
+                        .attr('href', name.toLowerCase() +'.html');
                     content.find('.nico-insert-code').each(function(i, item){
                         item = $(item);
 
