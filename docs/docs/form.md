@@ -69,13 +69,17 @@
     </div>
     <div class="ui-field-message">default message</div>
 </div>
-<div class="ui-field ui-field-error">
+<div class="ui-field-pack ui-field-pack-error">
     <div class="ui-flexbox">
-      <div class="ui-flexbox-item ui-field-input">
+      <div class="ui-flexbox-item ui-field">
+        <div class="ui-field-input">
           <input type="text" placeholder="姓" />
+        </div>
       </div>
-      <div class="ui-flexbox-item ui-field-input">
+      <div class="ui-flexbox-item ui-field ui-field-error">
+        <div class="ui-flexbox-item ui-field-input">
           <input type="text" placeholder="名" />
+        </div>
       </div>
     </div>
     <div class="ui-field-message">default message</div>
