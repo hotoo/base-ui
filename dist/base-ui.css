@@ -541,6 +541,10 @@ body .fn-hide {
   float: left;
   font-size: .875em;
 }
+.ui-field-message,
+.ui-field-message:after {
+  display: none;
+}
 .ui-field-warn .ui-field-message,
 .ui-field-error .ui-field-message {
   float: right;
@@ -556,7 +560,6 @@ body .fn-hide {
 .ui-field-warn .ui-field-message:after,
 .ui-field-error .ui-field-message:after {
   content: "";
-  display: block;
   position: absolute;
   z-index: 1;
   width: 4px;
@@ -571,11 +574,15 @@ body .fn-hide {
 .ui-field-warn .ui-field-message:after {
   background-color: #ff8634;
 }
-.ui-field-pack-error .ui-field-message,
-.ui-field-pack-error .ui-field-message:after,
 .ui-field-error .ui-field-message,
 .ui-field-error .ui-field-message:after {
   background-color: #ff3a0c;
+}
+.ui-field-warn .ui-field-message,
+.ui-field-error .ui-field-message,
+.ui-field-warn .ui-field-message:after,
+.ui-field-error .ui-field-message:after {
+  display: block;
 }
 .ui-field-warn .ui-field-input input,
 .ui-field-warn .ui-select,
