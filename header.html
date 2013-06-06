@@ -36,10 +36,10 @@
   <h1 class="handy-module-title">Header</h1>
   <div class="handy-module-content">
   <div class="nico-insert-code"><div data-role="header" class="ui-header">
-    <h1><img alt="Alipay" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" width="90" height="30"></h1>
+    <h1>支付宝</h1>
     <a title="返回" href="./" class="ui-icon icon-reverse">返回</a>
 </div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">data-role</span>=<span class="value">"header"</span> <span class="attribute">class</span>=<span class="value">"ui-header"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">h1</span>&gt;</span><span class="tag">&lt;<span class="title">img</span> <span class="attribute">alt</span>=<span class="value">"Alipay"</span> <span class="attribute">src</span>=<span class="value">"data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="</span> <span class="attribute">width</span>=<span class="value">"90"</span> <span class="attribute">height</span>=<span class="value">"30"</span>&gt;</span><span class="tag">&lt;/<span class="title">h1</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">h1</span>&gt;</span>支付宝<span class="tag">&lt;/<span class="title">h1</span>&gt;</span>
     <span class="tag">&lt;<span class="title">a</span> <span class="attribute">title</span>=<span class="value">"返回"</span> <span class="attribute">href</span>=<span class="value">"./"</span> <span class="attribute">class</span>=<span class="value">"ui-icon icon-reverse"</span>&gt;</span>返回<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div>
   </div>
@@ -47,9 +47,19 @@
 
 </div>
 <script type="text/javascript">
-window.onload = function(){
-  document.body.className = "ui-loaded";
-}
+window.addEventListener('load', function () {
+  var interval = 500, begin = Date.now(), img = new Image(), timer = setTimeout(handler, interval);
+  window.removeEventListener('load', arguments.callee);
+  img.addEventListener('load', handler, false);
+  img.src = 'https://i.alipayobjects.com/e/201305/Q9jNoeIir.gif?t=' + begin;
+ 
+  function handler() {
+    clearTimeout(timer);
+    img.removeEventListener('load', handler);
+    //响应在500ms以内算高速网络 高清（HD）标清（SD）
+    document.body.className = (document.body.className + (Date.now() - begin < interval ? ' ui-hd' : ' ui-sd')).trim();
+  }
+}, false);
 </script>
 </body>
 </html>
