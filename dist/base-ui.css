@@ -160,6 +160,27 @@ form {
 .ime-disabled {
   ime-mode: disabled;
 }
+.fn-clear:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+body .fn-hide {
+  display: none;
+}
+.fn-left,
+.fn-right {
+  display: inline;
+}
+.fn-left {
+  float: left;
+}
+.fn-right {
+  float: right;
+}
 .ui-fixed {
   position: fixed;
 }
