@@ -11,9 +11,17 @@ module.exports = function(grunt) {
             }
         },
         less: {
-            production: {
+            development: {
                 files: {
                     'dist/base-ui.css': [ 'src/base-ui.less' ]
+                }
+            },
+            production: {
+                options: {
+                    yuicompress: true
+                },
+                files: {
+                    'dist/base-ui.min.css': [ 'src/base-ui.less' ]
                 }
             }
         }

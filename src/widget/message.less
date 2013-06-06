@@ -6,11 +6,6 @@
 
 }
 
-.ui-message.smaller {
-  padding-left:36px;
-  background-size:24px auto;
-}
-
 .ui-message-icon,
 .ui-message-icon:after{
   position:absolute;
@@ -32,11 +27,11 @@
   z-index:999;
   content:"\0020";
   background-repeat:no-repeat;
-  background-size:32px auto;
 }
 
-.ui-loaded .ui-message-icon:after{
-  background-image:url("https://i.alipayobjects.com/e/201305/QCUjp21On.png");
+.ui-sd .ui-message-icon:after,
+.ui-hd .ui-message-icon:after{
+  background-image:url(https://i.alipayobjects.com/e/201306/Ss1aIdyvt.png);
 }
 
 .ui-message-info .ui-message-icon{
@@ -71,10 +66,16 @@
   background-position:0 0;
 }
 
-
 .ui-message-form {
   border:1px solid #bfbfbf;
   background-color:#ffffe1;
   .border-radius(8px);
 }
 
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+  .ui-hd .ui-message-icon:after{
+    background-image:url(https://i.alipayobjects.com/e/201306/Ss1WYBVZV.png);
+    background-size:130px auto;
+  }
+}

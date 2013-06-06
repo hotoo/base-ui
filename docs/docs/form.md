@@ -51,6 +51,7 @@
     <div class="ui-field-input">
         <input type="text" placeholder="身份证号" />
     </div>
+    <div class="ui-field-default-message">default message</div>
     <div class="ui-field-message">error message</div>
 </div>
 ````
@@ -86,7 +87,7 @@
 </div>
 ````
 
-### Input-验证失败
+### Checbox-选中
 
 ````html
 <label class="ui-checkbox">表单项复选框——选中<input type="checkbox" checked="checked" /><span class="ui-icon icon-check"></span></label>

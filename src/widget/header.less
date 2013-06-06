@@ -7,32 +7,53 @@
 }
 
 .ui-header h1 {
-  margin:6px 30% 2px;
+  margin:6px auto 5px;
   line-height:1em;
   text-align:center;
+  width: 90px;
+  height: 30px;
+  color:#fff;
+  text-indent: -9999em;
+  overflow:hidden;
 }
 
-.ui-header img, .ui-header .icon-reverse{
+.ui-header h1, .ui-header .icon-reverse{
   background-repeat:no-repeat;
 }
-.ui-loaded .ui-header img, 
-.ui-loaded .ui-header .icon-reverse{
-  background-image:url(https://i.alipayobjects.com/e/201305/LtBFRh1b3.png);
+
+.ui-sd .ui-header h1, 
+.ui-sd .ui-header .icon-reverse,
+.ui-hd .ui-header h1, 
+.ui-hd .ui-header .icon-reverse{
+  background-image:url(https://i.alipayobjects.com/e/201306/Ss1aIdyvt.png);
 }
 
-.ui-header .icon-reverse {
+.ui-header h1{
+  background-position:-32px 0;
+}
+
+.ui-header .icon-reverse{
   position:absolute;
   top:5px;
   left:5px;
   padding-left:6px;
-  width:64px;
+  width:60px;
   height:36px;
-  background-position:0 -40px;
+  background-position:-32px -32px;
   line-height:36px;
   text-align:center;
   color:#fff !important;
 }
 
 .ui-header .icon-reverse:active, .ui-header .icon-reverse:hover {
-  background-position:0 -80px;
+  background-position:-32px -68px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+  .ui-hd .ui-header h1, 
+  .ui-hd .ui-header .icon-reverse{
+    background-image:url(https://i.alipayobjects.com/e/201306/Ss1WYBVZV.png);
+    background-size:130px auto;
+  }
 }
