@@ -1,26 +1,25 @@
-.ui-field {
+.ui-field{
   margin:5px 0;
 }
 
-.ui-field:after {
+.ui-field:after{
   content:"\0020";
   display:block;
   height:0;
   clear:both
 }
 
-.ui-field label {
+.ui-field label{
   display:block;
 }
 
 .ui-field-default-message,
-.ui-field-message {
+.ui-field-message{
   float: left;
   font-size:.875em;
 }
 
 .ui-field-warn .ui-field-message,
-.ui-field-pack-error .ui-field-message,
 .ui-field-error .ui-field-message {
   float:right;
   position:relative;
@@ -32,7 +31,6 @@
 }
 
 .ui-field-warn .ui-field-message:after,
-.ui-field-pack-error .ui-field-message:after,
 .ui-field-error .ui-field-message:after {
   content:"";
   display:block;
@@ -67,4 +65,12 @@
 .ui-field-error .ui-select,
 .ui-field-error .ui-checkbox{
   border-color:#ff3a0c;
+}
+
+.ui-field-error .ui-field-item-reset input{
+  border-color:#bfbfbf;
+}
+
+.ui-field-pack .ui-field-message:after{
+  display:none;
 }

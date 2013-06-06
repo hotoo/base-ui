@@ -521,7 +521,6 @@ form {
   font-size: .875em;
 }
 .ui-field-warn .ui-field-message,
-.ui-field-pack-error .ui-field-message,
 .ui-field-error .ui-field-message {
   float: right;
   position: relative;
@@ -534,7 +533,6 @@ form {
   -ms-border-radius: 5px;
 }
 .ui-field-warn .ui-field-message:after,
-.ui-field-pack-error .ui-field-message:after,
 .ui-field-error .ui-field-message:after {
   content: "";
   display: block;
@@ -567,6 +565,12 @@ form {
 .ui-field-error .ui-select,
 .ui-field-error .ui-checkbox {
   border-color: #ff3a0c;
+}
+.ui-field-error .ui-field-item-reset input {
+  border-color: #bfbfbf;
+}
+.ui-field-pack .ui-field-message:after {
+  display: none;
 }
 .ui-field-input {
   position: relative;
@@ -654,6 +658,10 @@ form {
 }
 .ui-field-warn .ui-field-input:after {
   background-position: 0 -52px;
+}
+.ui-field-error .ui-field-item-reset .ui-field-input:before,
+.ui-field-error .ui-field-item-reset .ui-field-input:after {
+  display: none;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   .ui-hd .ui-field-input:after {
