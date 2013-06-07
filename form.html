@@ -83,7 +83,7 @@
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field-default-message"</span>&gt;</span>default message<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field-message"</span>&gt;</span>error message<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><h3 id="input-验证失败">Input-验证失败</h3><div class="nico-insert-code"><div class="ui-field ui-field-pack">
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><h3 id="input-pack">Input-pack</h3><div class="nico-insert-code"><div class="ui-field ui-field-pack">
     <div class="ui-flexbox">
       <div class="ui-flexbox-item ui-field-item ui-field-item-reset">
         <div class="ui-field-input">
@@ -91,37 +91,6 @@
         </div>
       </div>
       <div class="ui-flexbox-item ui-field-item ui-field-item-reset">
-        <div class="ui-field-input">
-          <input type="text" placeholder="名" />
-        </div>
-      </div>
-    </div>
-    <div class="ui-field-message">default message</div>
-</div>
-
-<div class="ui-field ui-field-pack ui-field-error">
-    <div class="ui-flexbox">
-      <div class="ui-flexbox-item ui-field-item">
-        <div class="ui-field-input">
-          <input type="text" placeholder="姓" />
-        </div>
-      </div>
-      <div class="ui-flexbox-item ui-field-item ui-field-item-reset">
-        <div class="ui-field-input">
-          <input type="text" placeholder="名" />
-        </div>
-      </div>
-    </div>
-    <div class="ui-field-message">default message</div>
-</div>
-<div class="ui-field ui-field-pack ui-field-error">
-    <div class="ui-flexbox">
-      <div class="ui-flexbox-item ui-field-item ui-field-item-reset">
-        <div class="ui-field-input">
-          <input type="text" placeholder="姓" />
-        </div>
-      </div>
-      <div class="ui-flexbox-item ui-field-item">
         <div class="ui-field-input">
           <input type="text" placeholder="名" />
         </div>
@@ -142,9 +111,36 @@
       <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field-message"</span>&gt;</span>default message<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-
-<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field ui-field-pack ui-field-error"</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><h3 id="input-pack-出错">Input-pack-出错</h3><div class="nico-insert-code"><div class="ui-field ui-field-pack ui-field-error">
+    <div class="ui-flexbox">
+      <div class="ui-flexbox-item ui-field-item">
+        <div class="ui-field-input">
+          <input type="text" placeholder="姓" />
+        </div>
+      </div>
+      <div class="ui-flexbox-item ui-field-item ui-field-item-reset">
+        <div class="ui-field-input">
+          <input type="text" placeholder="名" />
+        </div>
+      </div>
+    </div>
+    <div class="ui-field-message">default message</div>
+</div>
+<div class="ui-field ui-field-pack ui-field-error">
+    <div class="ui-flexbox">
+      <div class="ui-flexbox-item ui-field-item ui-field-item-reset">
+        <div class="ui-field-input">
+          <input type="text" placeholder="姓" />
+        </div>
+      </div>
+      <div class="ui-flexbox-item ui-field-item">
+        <div class="ui-field-input">
+          <input type="text" placeholder="名" />
+        </div>
+      </div>
+    </div>
+    <div class="ui-field-message">default message</div>
+</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field ui-field-pack ui-field-error"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-flexbox"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-flexbox-item ui-field-item"</span>&gt;</span>
         <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field-input"</span>&gt;</span>
@@ -173,7 +169,19 @@
       <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field-message"</span>&gt;</span>default message<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><h3 id="checbox-选中">Checbox-选中</h3><div class="nico-insert-code"><label class="ui-checkbox">表单项复选框——选中<input type="checkbox" checked="checked" /><span class="ui-icon icon-check"></span></label></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"ui-checkbox"</span>&gt;</span>表单项复选框——选中<span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">checked</span>=<span class="value">"checked"</span> /&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-icon icon-check"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">label</span>&gt;</span></code></pre></div><h3 id="checbox-未选中">Checbox-未选中</h3><div class="nico-insert-code"><label class="ui-checkbox">表单项复选框——选中<input type="checkbox" /><span class="ui-icon icon-check"></span></label></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"ui-checkbox"</span>&gt;</span>表单项复选框——选中<span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> /&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-icon icon-check"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">label</span>&gt;</span></code></pre></div><h3 id="checbox-不可用">Checbox-不可用</h3><div class="nico-insert-code"><label class="ui-checkbox ui-checkbox-disabled">表单项复选框——不可用<input type="checkbox" disabled="disabled" /><span class="ui-icon icon-check"></span></label></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"ui-checkbox ui-checkbox-disabled"</span>&gt;</span>表单项复选框——不可用<span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">disabled</span>=<span class="value">"disabled"</span> /&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-icon icon-check"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">label</span>&gt;</span></code></pre></div><h3 id="checbox-警告">Checbox-警告</h3><div class="nico-insert-code"><div class="ui-field ui-field-warn">
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><h3 id="checbox-选中">Checbox-选中</h3><div class="nico-insert-code"><div class="ui-field">
+  <label class="ui-checkbox">表单项复选框——选中<input type="checkbox" checked="checked" /><span class="ui-icon icon-check"></span></label>
+</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"ui-checkbox"</span>&gt;</span>表单项复选框——选中<span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">checked</span>=<span class="value">"checked"</span> /&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-icon icon-check"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><h3 id="checbox-未选中">Checbox-未选中</h3><div class="nico-insert-code"><div class="ui-field">
+  <label class="ui-checkbox">表单项复选框——选中<input type="checkbox" /><span class="ui-icon icon-check"></span></label>
+</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"ui-checkbox"</span>&gt;</span>表单项复选框——选中<span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> /&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-icon icon-check"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><h3 id="checbox-不可用">Checbox-不可用</h3><div class="nico-insert-code"><div class="ui-field">
+  <label class="ui-checkbox ui-checkbox-disabled">表单项复选框——不可用<input type="checkbox" disabled="disabled" /><span class="ui-icon icon-check"></span></label>
+</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"ui-checkbox ui-checkbox-disabled"</span>&gt;</span>表单项复选框——不可用<span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">disabled</span>=<span class="value">"disabled"</span> /&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-icon icon-check"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><h3 id="checbox-警告">Checbox-警告</h3><div class="nico-insert-code"><div class="ui-field ui-field-warn">
   <label class="ui-checkbox"><input type="checkbox"/>表单项复选框——出错<span class="ui-icon icon-check"></span></label>
   <div class="ui-field-message">warn message</div>
 </div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field ui-field-warn"</span>&gt;</span>
@@ -185,7 +193,23 @@
 </div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field ui-field-warn"</span>&gt;</span>
   <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"ui-checkbox"</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span>/&gt;</span>表单项复选框——出错<span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-icon icon-check"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">label</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field-message"</span>&gt;</span>warn message<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><h3 id="checbox-无框">Checbox-无框</h3><div class="nico-insert-code"><label class="ui-checkbox ui-checkbox-naked"><input type="checkbox"/>表单项复选框——无框<span class="ui-icon icon-check"></span></label></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"ui-checkbox ui-checkbox-naked"</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span>/&gt;</span>表单项复选框——无框<span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-icon icon-check"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">label</span>&gt;</span></code></pre></div><h3 id="checkbox-mini">Checkbox-mini</h3><div class="nico-insert-code"><label class="ui-checkbox ui-checkbox-mini"><input type="checkbox"><span class="ui-icon icon-check"></span>当日累积消费≤200元可免输密码</label></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"ui-checkbox ui-checkbox-mini"</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-icon icon-check"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>当日累积消费≤200元可免输密码<span class="tag">&lt;/<span class="title">label</span>&gt;</span></code></pre></div><h3 id="checkbox-simple">Checkbox-simple</h3><div class="nico-insert-code"><label class="ui-checkbox ui-checkbox-simple"><input type="checkbox"><span class="ui-icon icon-check"></span>同意《信用支付服务合同》</label></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"ui-checkbox ui-checkbox-simple"</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-icon icon-check"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>同意《信用支付服务合同》<span class="tag">&lt;/<span class="title">label</span>&gt;</span></code></pre></div><h3 id="select">Select</h3><div class="nico-insert-code"><div class="ui-field">
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><h3 id="checbox-无框">Checbox-无框</h3><div class="nico-insert-code"><div class="ui-field">
+  <label class="ui-checkbox ui-checkbox-naked"><input type="checkbox"/>表单项复选框——无框<span class="ui-icon icon-check"></span></label>
+</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"ui-checkbox ui-checkbox-naked"</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span>/&gt;</span>表单项复选框——无框<span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-icon icon-check"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><h3 id="checkbox-mini">Checkbox-mini</h3><div class="nico-insert-code"><div class="ui-field">
+  <label class="ui-checkbox ui-checkbox-mini"><input type="checkbox"><span class="ui-icon icon-check"></span>当日累积消费≤200元可免输密码</label>
+</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"ui-checkbox ui-checkbox-mini"</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-icon icon-check"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>当日累积消费≤200元可免输密码<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><h3 id="checkbox-simple">Checkbox-simple</h3><div class="nico-insert-code"><div class="ui-field">
+  <label class="ui-checkbox ui-checkbox-simple"><input type="checkbox"><span class="ui-icon icon-check"></span>同意《信用支付服务合同》</label>
+</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"ui-checkbox ui-checkbox-simple"</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-icon icon-check"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>同意《信用支付服务合同》<span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><h3 id="checkbox-simple">Checkbox-simple</h3><div class="nico-insert-code"><div class="ui-field">
+  <span class="ui-checkbox ui-checkbox-simple fn-left"><input id="agree" type="checkbox"><span class="ui-icon icon-check"></span></span><label for="agree">同意《信用支付服务合同》<a href="http://www.baidu.com">链接</a></label>
+</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-checkbox ui-checkbox-simple fn-left"</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">id</span>=<span class="value">"agree"</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"ui-icon icon-check"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"agree"</span>&gt;</span>同意《信用支付服务合同》<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://www.baidu.com"</span>&gt;</span>链接<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">label</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><h3 id="select">Select</h3><div class="nico-insert-code"><div class="ui-field">
     <div class="ui-select">
         <select>
             <option value="">下拉列表1</option>
