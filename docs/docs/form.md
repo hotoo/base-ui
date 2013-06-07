@@ -196,6 +196,16 @@
         </select>
     </div>
 </div>
+
+<div class="ui-field">
+    <div class="ui-select">
+        <span class="ui-select-text">下拉列表1 <em>优惠<em></span>
+        <select>
+            <option value="">下拉列表1</option>
+            <option value="">下拉列表2</option>
+        </select>
+    </div>
+</div>
 ````
 
 ### Select-不可用
@@ -204,6 +214,16 @@
 <div class="ui-field">
     <div class="ui-select ui-select-disabled">
         <select disabled="disabled">
+            <option value="">下拉列表1</option>
+            <option value="">下拉列表2</option>
+        </select>
+    </div>
+</div>
+
+<div class="ui-field">
+    <div class="ui-select ui-select-disabled">
+        <span class="ui-select-text">下拉列表1 <em>优惠<em></span>
+        <select>
             <option value="">下拉列表1</option>
             <option value="">下拉列表2</option>
         </select>

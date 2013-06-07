@@ -124,6 +124,14 @@ body,
 .ui-page {
   background-color: #f2f2f2;
 }
+.ui-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 input {
   line-height: 1;
 }
@@ -205,6 +213,36 @@ body .fn-hide {
 .ui-sd{}
 .ui-hd{}
 */
+.black em {
+  color: #f60;
+  font-style: normal;
+}
+.product {
+  position: relative;
+  padding: 8px 5px 4px;
+}
+.product .price {
+  font-size: 1.2em;
+  color: #f60;
+}
+h2 {
+  color: #333333;
+}
+h3 {
+  color: #808080;
+}
+.debug-context {
+  width: 98%;
+  margin: 0 10px;
+  word-wrap: break-word;
+  border: 1px solid #999;
+  padding: 5px;
+}
+#J-refresh {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
 .ui-flexbox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -828,6 +866,7 @@ body .fn-hide {
   visibility: hidden\0;
 }
 .ui-checkbox-simple a {
+  color: #333;
   text-decoration: underline;
 }
 .ui-checkbox input:checked + .icon-check {
@@ -855,17 +894,17 @@ body .fn-hide {
   -webkit-border-radius: 6px;
   -ms-border-radius: 6px;
   overflow: hidden;
+  color: #333;
 }
 .ui-select select {
   cursor: pointer;
   -webkit-appearance: none;
   width: 120%;
   height: 100%;
-  color: #333;
   border: none;
   background: transparent;
 }
-.ui-select-disabled select {
+.ui-select-disabled {
   color: #c7c7c7;
 }
 .ui-select:after {
@@ -884,6 +923,13 @@ body .fn-hide {
 }
 .ui-select-disabled:after {
   opacity: .7;
+}
+.ui-select .ui-select-text em {
+  color: #f60;
+  margin-left: 4px;
+}
+.ui-select-disabled .ui-select-text em {
+  color: #fcc;
 }
 .ui-button {
   display: inline-block;

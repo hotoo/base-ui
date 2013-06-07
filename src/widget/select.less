@@ -7,6 +7,7 @@
   background-color:#fff;
   .border-radius(6px);
   overflow:hidden;
+  color:#333;
 }
 
 .ui-select select {
@@ -14,12 +15,11 @@
   -webkit-appearance:none;
   width:120%;
   height:100%;
-  color:#333;
   border:none;
   background:transparent;
 }
 
-.ui-select-disabled select {
+.ui-select-disabled{
   color:#c7c7c7;
 }
 
@@ -38,4 +38,12 @@
 
 .ui-select-disabled:after {
   opacity:.7;
+}
+
+.ui-select .ui-select-text em{
+  color:#f60;
+  margin-left:4px;
+}
+.ui-select-disabled .ui-select-text em{
+  color:#fcc;
 }
