@@ -485,6 +485,10 @@ body .fn-hide {
 .ui-list :hover .icon-arrow-horizontal {
   border-color: #f60;
 }
+.ui-list-placeholder a,
+.ui-list-placeholder button {
+  color: #c7c7c7;
+}
 .ui-list-compact {
   border-top: 1px solid #bfbfbf;
 }
