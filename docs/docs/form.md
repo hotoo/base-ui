@@ -191,14 +191,14 @@
 <div class="ui-field">
     <div class="ui-select">
         <select>
-            <option value="">下拉列表1</option>
+            <option value="">很长很长很长很长很长很长很长很长很长很长很长很长很长下拉列表1</option>
             <option value="">下拉列表2</option>
         </select>
     </div>
 </div>
 
 <div class="ui-field">
-    <div class="ui-select">
+    <div class="ui-select ui-select-custom">
         <span class="ui-select-text">下拉列表1 <em>优惠<em></span>
         <select>
             <option value="">下拉列表1</option>
@@ -221,7 +221,7 @@
 </div>
 
 <div class="ui-field">
-    <div class="ui-select ui-select-disabled">
+    <div class="ui-select ui-select-custom ui-select-disabled">
         <span class="ui-select-text">下拉列表1 <em>优惠<em></span>
         <select>
             <option value="">下拉列表1</option>

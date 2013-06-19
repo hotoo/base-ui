@@ -23,23 +23,47 @@
   color:#c7c7c7;
 }
 
-.ui-select:after {
-  width:16px;
-  height:16px;
-  border-bottom:solid 4px #a6a6a6;
-  border-right:solid 4px #a6a6a6;
+.ui-select:before,
+.ui-select:after{
   position:absolute;
   content:"\0020";
+}
+
+.ui-select:before {
+  width: 42px;
+  height: 42px;
+  top: 0;
+  right: 0;
+  .border-radius(6px);
+  background-color: #fff;
+}
+
+.ui-select:after{
+  width:16px;
+  height:16px;
   top:10px;
   right:15px;
+  border-bottom:solid 4px #a6a6a6;
+  border-right:solid 4px #a6a6a6;
   .transform(rotate(45deg));
   background:none;
 }
 
-.ui-select-disabled:after {
+
+
+.ui-select-disabled:after{
   opacity:.7;
 }
 
+/* .ui-select-custom 需要js支持change行为 */
+.ui-select-custom select{
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:1;
+  opacity:0;
+  filter:alpha(opacity=0);
+}
 .ui-select .ui-select-text em{
   color:#f60;
   margin-left:4px;

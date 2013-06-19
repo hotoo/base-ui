@@ -144,6 +144,12 @@ form {
   padding: 5px;
   color: #808080;
 }
+h2 {
+  color: #333;
+}
+h3 {
+  color: #808080;
+}
 .center {
   text-align: center;
 }
@@ -213,10 +219,6 @@ body .fn-hide {
 .ui-sd{}
 .ui-hd{}
 */
-.black em {
-  color: #f60;
-  font-style: normal;
-}
 .product {
   position: relative;
   padding: 8px 5px 4px;
@@ -224,12 +226,6 @@ body .fn-hide {
 .product .price {
   font-size: 1.2em;
   color: #f60;
-}
-h2 {
-  color: #333333;
-}
-h3 {
-  color: #808080;
 }
 .debug-context {
   width: 98%;
@@ -907,15 +903,28 @@ h3 {
 .ui-select-disabled {
   color: #c7c7c7;
 }
+.ui-select:before,
+.ui-select:after {
+  position: absolute;
+  content: "\0020";
+}
+.ui-select:before {
+  width: 42px;
+  height: 42px;
+  top: 0;
+  right: 0;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -ms-border-radius: 6px;
+  background-color: #fff;
+}
 .ui-select:after {
   width: 16px;
   height: 16px;
-  border-bottom: solid 4px #a6a6a6;
-  border-right: solid 4px #a6a6a6;
-  position: absolute;
-  content: "\0020";
   top: 10px;
   right: 15px;
+  border-bottom: solid 4px #a6a6a6;
+  border-right: solid 4px #a6a6a6;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -923,6 +932,15 @@ h3 {
 }
 .ui-select-disabled:after {
   opacity: .7;
+}
+/* .ui-select-custom 需要js支持change行为 */
+.ui-select-custom select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  filter: alpha(opacity=0);
 }
 .ui-select .ui-select-text em {
   color: #f60;
