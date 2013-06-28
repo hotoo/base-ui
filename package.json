@@ -13,7 +13,6 @@
     "url": "https://github.com/handyjs/base-ui/issues"
   },
   "license": "MIT",
-  "output": {},
   "tag": "mobile",
   "devDependencies": {
     "grunt": "~0.4.1",

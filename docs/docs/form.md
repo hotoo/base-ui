@@ -199,7 +199,7 @@
 
 <div class="ui-field">
     <div class="ui-select ui-select-custom">
-        <span class="ui-select-text">下拉列表1 <em>优惠<em></span>
+        <span class="ui-select-text">下拉列表1 <em>优惠</em></span>
         <select>
             <option value="">下拉列表1</option>
             <option value="">下拉列表2</option>
@@ -222,7 +222,7 @@
 
 <div class="ui-field">
     <div class="ui-select ui-select-custom ui-select-disabled">
-        <span class="ui-select-text">下拉列表1 <em>优惠<em></span>
+        <span class="ui-select-text">下拉列表1 <em>优惠</em></span>
         <select>
             <option value="">下拉列表1</option>
             <option value="">下拉列表2</option>
