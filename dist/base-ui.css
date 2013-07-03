@@ -1,4 +1,7 @@
-/** handy/base/1.0.0/css/reset.css **/
+/* bufix for IE10 */
+@-ms-viewport {
+  width: 320px;
+}
 *,
 *:before,
 *:after {
@@ -226,13 +229,6 @@ body .fn-hide {
 .product .price {
   font-size: 1.2em;
   color: #f60;
-}
-.debug-context {
-  width: 98%;
-  margin: 0 10px;
-  word-wrap: break-word;
-  border: 1px solid #999;
-  padding: 5px;
 }
 #J-refresh {
   position: absolute;
@@ -853,17 +849,14 @@ body .fn-hide {
 .ui-checkbox-disabled .icon-check:after {
   border-color: #e6e6e6;
 }
-.ui-checkbox input {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 9999;
+.ui-checkbox label {
+  display: block;
   width: 100%;
   height: 100%;
+}
+.ui-checkbox input {
+  position: absolute;
   opacity: 0;
-  visibility: hidden\0;
 }
 .ui-checkbox-simple a {
   color: #333;
@@ -945,6 +938,9 @@ body .fn-hide {
   z-index: 1;
   opacity: 0;
   filter: alpha(opacity=0);
+}
+.ui-select-custom.ui-select-disabled select {
+  display: none;
 }
 .ui-select .ui-select-text em {
   color: #f60;
