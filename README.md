@@ -21,9 +21,9 @@ ___
 2. install nico for doc
 3. npm install
 4. Makefile:
-> * `make build` 生成编译之后的样式
-> * `make doc` 生成文档
-> * `make watch` 开启本地服务，用来预览文档，调试。
+  * `make build` 生成编译之后的样式
+  * `make doc` 生成文档
+  * `make watch` 开启本地服务，用来预览文档，调试。
 
 ## Demo
 
