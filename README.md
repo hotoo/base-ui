@@ -15,6 +15,16 @@ ___
 * Android 2.2+
 * Window Phone 7+
 
+## How to use
+
+1. install node
+2. install nico for doc
+3. npm install
+4. Makefile:
+> * `make build` 生成编译之后的样式
+> * `make doc` 生成文档
+> * `make watch` 开启本地服务，用来预览文档，调试。
+
 ## Demo
 
 [http://handyjs.github.io/base-ui/](http://handyjs.github.io/base-ui/)
