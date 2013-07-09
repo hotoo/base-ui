@@ -28,20 +28,10 @@
 <div class="ui-field ui-field-success">
     <div class="ui-field-input">
         <input type="text" placeholder="银行开户名" />
+        <div class="ui-icon ui-field-icon"></div>
     </div>
 </div>
 
-````
-
-### Input-警告
-
-````html
-<div class="ui-field ui-field-warn">
-    <div class="ui-field-input">
-        <input type="text" placeholder="银行开户名" />
-    </div>
-    <div class="ui-field-message">warn message</div>
-</div>
 ````
 
 ### Input-验证失败
@@ -49,127 +39,73 @@
 ````html
 <div class="ui-field ui-field-error">
     <div class="ui-field-input">
-        <input type="text" placeholder="身份证号" />
-    </div>
-    <div class="ui-field-default-message">default message</div>
-    <div class="ui-field-message">error message</div>
-</div>
-````
-
-### Input-验证失败
-
-````html
-<div class="ui-field ui-field-pack">
-    <div class="ui-flexbox">
-      <div class="ui-flexbox-item ui-field-item ui-field-item-reset">
-        <div class="ui-field-input">
-          <input type="text" placeholder="姓" />
-        </div>
-      </div>
-      <div class="ui-flexbox-item ui-field-item ui-field-item-reset">
-        <div class="ui-field-input">
-          <input type="text" placeholder="名" />
-        </div>
-      </div>
+        <input type="text" placeholder="身份证号">
+        <div class="ui-icon ui-field-icon"></div>
     </div>
     <div class="ui-field-message">default message</div>
-</div>
-
-<div class="ui-field ui-field-pack ui-field-error">
-    <div class="ui-flexbox">
-      <div class="ui-flexbox-item ui-field-item">
-        <div class="ui-field-input">
-          <input type="text" placeholder="姓" />
-        </div>
-      </div>
-      <div class="ui-flexbox-item ui-field-item ui-field-item-reset">
-        <div class="ui-field-input">
-          <input type="text" placeholder="名" />
-        </div>
-      </div>
-    </div>
-    <div class="ui-field-message">default message</div>
-</div>
-<div class="ui-field ui-field-pack ui-field-error">
-    <div class="ui-flexbox">
-      <div class="ui-flexbox-item ui-field-item ui-field-item-reset">
-        <div class="ui-field-input">
-          <input type="text" placeholder="姓" />
-        </div>
-      </div>
-      <div class="ui-flexbox-item ui-field-item">
-        <div class="ui-field-input">
-          <input type="text" placeholder="名" />
-        </div>
-      </div>
-    </div>
-    <div class="ui-field-message">default message</div>
+    <div class="ui-field-error-message">error message</div>
 </div>
 ````
 
 ### Checbox-选中
 
 ````html
-<label class="ui-checkbox">表单项复选框——选中<input type="checkbox" checked="checked" /><span class="ui-icon icon-check"></span></label>
+<div class="ui-checkbox ui-checkbox-checked">
+    <label><input type="checkbox" checked/>表单项复选框——未选中<span class="ui-icon icon-check"></span></label>
+</div>
 ````
 
 ### Checbox-未选中
 
 ````html
-<label class="ui-checkbox">表单项复选框——选中<input type="checkbox" /><span class="ui-icon icon-check"></span></label>
+<div class="ui-checkbox">
+    <label><input type="checkbox"/>表单项复选框——选中<span class="ui-icon icon-check"></span></label>
+</div>
 ````
 
 ### Checbox-不可用
 
 ````html
-<label class="ui-checkbox ui-checkbox-disabled">表单项复选框——不可用<input type="checkbox" disabled="disabled" /><span class="ui-icon icon-check"></span></label>
-````
-
-### Checbox-警告
-
-````html
-<div class="ui-field ui-field-warn">
-  <label class="ui-checkbox"><input type="checkbox"/>表单项复选框——出错<span class="ui-icon icon-check"></span></label>
-  <div class="ui-field-message">warn message</div>
-</div>
-````
-
-### Checbox-出错
-
-````html
-<div class="ui-field ui-field-warn">
-  <label class="ui-checkbox"><input type="checkbox"/>表单项复选框——出错<span class="ui-icon icon-check"></span></label>
-  <div class="ui-field-message">warn message</div>
+<div class="ui-checkbox ui-checkbox-disabled">
+    <label><input type="checkbox" disabled/>表单项复选框——不可用<span class="ui-icon icon-check"></span></label>
 </div>
 ````
 
 ### Checbox-无框
 
 ````html
-<label class="ui-checkbox ui-checkbox-naked"><input type="checkbox"/>表单项复选框——无框<span class="ui-icon icon-check"></span></label>
+<div class="ui-checkbox ui-checkbox-naked">
+    <label><input type="checkbox"/>表单项复选框——无框模式<span class="ui-icon icon-check"></span></label>
+</div>
 ````
 
 ### Checkbox-mini
 
 ````html
-<label class="ui-checkbox ui-checkbox-mini"><input type="checkbox"><span class="ui-icon icon-check"></span>当日累积消费≤200元可免输密码</label>
+<div class="ui-checkbox ui-checkbox-mini">
+    <label><input type="checkbox">当日累积消费≤200元可免输密码<span class="ui-icon icon-check"></span></label>
+</div>
 ````
 
 ### Checkbox-simple
 
 ````html
-<label class="ui-checkbox ui-checkbox-simple"><input type="checkbox"><span class="ui-icon icon-check"></span>同意《信用支付服务合同》</label>
+<div class="ui-checkbox ui-checkbox-simple">
+    <label><input type="checkbox"><span class="ui-icon icon-check"></span></label><span class="ui-checkbox-label">同意《信用支付服务合同》</span>
+</div>
 ````
 
 ### Select
 
 ````html
-<div class="ui-field">
-    <div class="ui-select">
+<div class="ui-field ui-select ui-select">
+    <div class="ui-select-input">
+        <span class="ui-select-text">下拉列表1</span>
         <select>
-            <option value="">下拉列表1</option>
-            <option value="">下拉列表2</option>
+            <option value="boc">下拉列表1</option>
+            <option value="cmb">下拉列表2</option>
         </select>
+        <span class="ui-icon icon-arrow"></span>
     </div>
 </div>
 ````
@@ -177,12 +113,14 @@
 ### Select-不可用
 
 ````html
-<div class="ui-field">
-    <div class="ui-select ui-select-disabled">
-        <select disabled="disabled">
-            <option value="">下拉列表1</option>
-            <option value="">下拉列表2</option>
+<div class="ui-field ui-select ui-select-disabled">
+    <div class="ui-select-input">
+        <span class="ui-select-text">下拉列表1</span>
+        <select>
+            <option value="boc">下拉列表1</option>
+            <option value="cmb">下拉列表2</option>
         </select>
+        <span class="ui-icon icon-arrow"></span>
     </div>
 </div>
 ````
@@ -190,13 +128,15 @@
 ### Select-出错
 
 ````html
-<div class="ui-field ui-field-error">
-    <div class="ui-select">
+<div class="ui-field ui-select ui-field-error">
+    <div class="ui-select-input">
+        <span class="ui-select-text">下拉列表1</span>
         <select>
-            <option value="">下拉列表1</option>
-            <option value="">下拉列表2</option>
+            <option value="boc">下拉列表1</option>
+            <option value="cmb">下拉列表2</option>
         </select>
+        <span class="ui-icon icon-arrow"></span>
     </div>
-    <div class="ui-field-message">error message</div>
+    <div class="ui-field-error-message">error message</div>
 </div>
 ````

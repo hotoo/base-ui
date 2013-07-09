@@ -13,14 +13,21 @@
   display:block;
 }
 
-.ui-field-default-message,
 .ui-field-message{
   float: left;
   font-size:.875em;
 }
 
-.ui-field-warn .ui-field-message,
-.ui-field-error .ui-field-message {
+.ui-field-error .ui-field-message{
+  display:none;
+}
+
+.ui-field-error-message, 
+.ui-field-error-message:after{
+  display:none;
+  background-color:#ff3a0c;
+}
+.ui-field-error-message{
   float:right;
   position:relative;
   margin-top:3px;
@@ -30,10 +37,8 @@
   .border-radius(5px);
 }
 
-.ui-field-warn .ui-field-message:after,
-.ui-field-error .ui-field-message:after {
+.ui-field-error-message:after {
   content:"";
-  display:block;
   position:absolute;
   z-index:1;
   width:4px;
@@ -43,22 +48,9 @@
   .transform(rotate(45deg));
 }
 
-.ui-field-warn .ui-field-message,
-.ui-field-warn .ui-field-message:after {
-  background-color:#ff8634;
-}
-
-.ui-field-pack-error .ui-field-message,
-.ui-field-pack-error .ui-field-message:after,
-.ui-field-error .ui-field-message,
-.ui-field-error .ui-field-message:after {
-  background-color:#ff3a0c;
-}
-
-.ui-field-warn .ui-field-input input,
-.ui-field-warn .ui-select,
-.ui-field-warn .ui-checkbox{
-  border-color:#ff8634;
+.ui-field-error .ui-field-error-message,
+.ui-field-error .ui-field-error-message:after{
+  display:block;
 }
 
 .ui-field-error .ui-field-input input,
