@@ -493,7 +493,7 @@ body .fn-hide {
 }
 .ui-list-compact a {
   color: #666;
-  line-height: 40px;
+  line-height: 24px;
   border: none;
   border-bottom: 1px solid #bfbfbf;
   background: #eeeff1;
@@ -578,6 +578,10 @@ body .fn-hide {
 .ui-field-message {
   float: left;
   font-size: .875em;
+}
+.ui-field-error .ui-field-default-message,
+.ui-field-warn .ui-field-default-message {
+  display: none;
 }
 .ui-field-message,
 .ui-field-message:after {
@@ -895,21 +899,12 @@ body .fn-hide {
   color: #333;
 }
 .ui-select select {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  opacity: 0;
   cursor: pointer;
-  width: 100%;
+  width: 120%;
   height: 100%;
   border: none;
   appearance: none;
   -webkit-appearance: none;
-}
-.ui-select .ui-select-text em {
-  color: #f60;
-  margin-left: 4px;
 }
 .ui-select:before,
 .ui-select:after {
@@ -941,18 +936,29 @@ body .fn-hide {
 .ui-select-disabled {
   color: #c7c7c7;
 }
-ui-select-disabled select {
-  display: none;
-}
 .ui-select-disabled:after {
   opacity: .7;
+}
+/* .ui-select-custom 需要js支持change行为 */
+.ui-select-custom select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+}
+.ui-select-custom.ui-select-disabled select {
+  display: none;
+}
+.ui-select .ui-select-text em {
+  color: #f60;
+  margin-left: 4px;
 }
 .ui-select-disabled .ui-select-text em {
   color: #fcc;
 }
 .ui-button {
   display: inline-block;
-  margin: 4px 0;
   padding: 2px 8px;
   width: 100%;
   text-align: center;
@@ -1068,17 +1074,13 @@ a.ui-button-disabled {
   -webkit-border-radius: 6px;
   -ms-border-radius: 6px;
 }
-.ui-captcha-button {
-  margin: 0;
+.ui-captcha-button,
+.ui-captcha-image {
+  margin: 4px 0 4px 5px;
 }
 .ui-captcha-button button {
+  margin: 0;
   height: 44px;
-}
-.ui-captcha .ui-field-input {
-  margin-right: 5px;
-}
-.ui-captcha .ui-field input {
-  padding: 10px 8px 8px;
 }
 .ui-captcha-image img {
   position: absolute;

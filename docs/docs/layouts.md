@@ -32,22 +32,20 @@
   <div class="ui-flexbox-item"><div class="demo">D</div></div>
 </div>
 <div class="ui-flexbox">
-  <div class="ui-field-input ui-flexbox-item">
+  <div class="ui-field ui-flexbox-item">
+    <div class="ui-field-input">
       <input type="text" maxlength="4" placeholder="短信验证码">
+    </div>
   </div>
-  <div class="ui-field-input ui-flexbox-item">
+  <div class="ui-field ui-flexbox-item">
+    <div class="ui-field-input">
       <input type="text" maxlength="4" placeholder="短信验证码">
+    </div>
   </div>
-  <div class="ui-field-input ui-flexbox-item">
+  <div class="ui-field ui-flexbox-item">
+    <div class="ui-field-input">
       <input type="text" maxlength="4" placeholder="短信验证码">
-  </div>
-</div>
-<div class="ui-flexbox ui-captcha">
-  <div class="ui-field-input ui-flexbox-item">
-      <input type="text" maxlength="4" placeholder="短信验证码">
-  </div>
-  <div class="ui-captcha-button">
-    <button type="button" disabled="disabled" class="ui-button ui-button-disabled">重获验证码</button>
+    </div>
   </div>
 </div>
 <div class="ui-flexbox">
