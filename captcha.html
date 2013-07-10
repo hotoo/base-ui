@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Baseui</title>
+    <link rel="icon" href="./static/css/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./static/css/normalize.css" />
+    <link rel="stylesheet" href="./static/css/solarized.css" />
+    <link rel="stylesheet" href="./static/css/site.css" />
+    <link rel="stylesheet" href="./static/css/style.css" />
+    <link rel="stylesheet" href="./static/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="./static/css/tomorrow.css" />
+    <link rel="stylesheet" href="./static/css/base-ui.css" />
+    
+<style type="text/css">
+.handy-module{
+  margin: 20px 0 50px;
+}
+.handy-module-content{
+  padding: 20px 0 50px;
+}
+.handy-module-content h3{
+  margin: 40px 0 20px;
+}
+.highlight{
+  display:none;
+}
+</style>
+
+</head>
+<body>
+<div id="body-wrapper">
+
+<article class="handy-module">
+  <h1 class="handy-module-title">Captcha</h1>
+  <div class="handy-module-content">
+  <style type="text/css">
+.demo {
+  padding:1rem;
+  color:#fff;
+  background-color:#6C97C2;
+}
+</style>
+
+<h3 id="default">Default</h3><div class="nico-insert-code"><div class="ui-flexbox ui-captcha">
+  <div class="ui-field ui-flexbox-item">
+    <div class="ui-field-input">
+      <input type="text" maxlength="4" placeholder="短信验证码">
+    </div>
+    <div class="ui-field-message">错误提示</div>
+  </div>
+  <div class="ui-captcha-button">
+    <button type="button" disabled="disabled" class="ui-button ui-button-disabled">重获验证码</button>
+  </div>
+</div>
+<div class="ui-flexbox ui-captcha">
+  <div class="ui-field ui-field-error ui-flexbox-item">
+    <div class="ui-field-input">
+      <input type="text" maxlength="4" placeholder="短信验证码">
+    </div>
+    <div class="ui-field-message">错误提示</div>
+  </div>
+  <div class="ui-captcha-button">
+    <button type="button" disabled="disabled" class="ui-button ui-button-disabled">重获验证码</button>
+  </div>
+</div>
+<div class="ui-flexbox ui-captcha">
+  <div class="ui-field ui-field-error ui-flexbox-item">
+    <div class="ui-field-input">
+      <input type="text" maxlength="4" placeholder="短信验证码">
+    </div>
+    <div class="ui-field-message">错误提示</div>
+  </div>
+  <div class="ui-captcha-image">
+    <img alt="Alipay" src="https://i.alipayobjects.com/e/201303/2U8xHkMbfp.png" width="48" height="24">
+    看不清<br>换一张
+  </div>
+</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-flexbox ui-captcha"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field ui-flexbox-item"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field-input"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">maxlength</span>=<span class="value">"4"</span> <span class="attribute">placeholder</span>=<span class="value">"短信验证码"</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field-message"</span>&gt;</span>错误提示<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-captcha-button"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">disabled</span>=<span class="value">"disabled"</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-disabled"</span>&gt;</span>重获验证码<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-flexbox ui-captcha"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field ui-field-error ui-flexbox-item"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field-input"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">maxlength</span>=<span class="value">"4"</span> <span class="attribute">placeholder</span>=<span class="value">"短信验证码"</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field-message"</span>&gt;</span>错误提示<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-captcha-button"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">disabled</span>=<span class="value">"disabled"</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-disabled"</span>&gt;</span>重获验证码<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-flexbox ui-captcha"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field ui-field-error ui-flexbox-item"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field-input"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">maxlength</span>=<span class="value">"4"</span> <span class="attribute">placeholder</span>=<span class="value">"短信验证码"</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field-message"</span>&gt;</span>错误提示<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-captcha-image"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">img</span> <span class="attribute">alt</span>=<span class="value">"Alipay"</span> <span class="attribute">src</span>=<span class="value">"https://i.alipayobjects.com/e/201303/2U8xHkMbfp.png"</span> <span class="attribute">width</span>=<span class="value">"48"</span> <span class="attribute">height</span>=<span class="value">"24"</span>&gt;</span>
+    看不清<span class="tag">&lt;<span class="title">br</span>&gt;</span>换一张
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div>
+  </div>
+</article>
+
+</div>
+<script type="text/javascript">
+window.addEventListener('load', function () {
+  var interval = 500, begin = Date.now(), img = new Image(), timer = setTimeout(handler, interval);
+  window.removeEventListener('load', arguments.callee);
+  img.addEventListener('load', handler, false);
+  img.src = 'https://i.alipayobjects.com/e/201305/Q9jNoeIir.gif?t=' + begin;
+ 
+  function handler() {
+    clearTimeout(timer);
+    img.removeEventListener('load', handler);
+    //响应在500ms以内算高速网络 高清（HD）标清（SD）
+    document.body.className = (document.body.className + (Date.now() - begin < interval ? ' ui-hd' : ' ui-sd')).trim();
+  }
+}, false);
+</script>
+</body>
+</html>

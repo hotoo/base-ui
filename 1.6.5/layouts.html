@@ -63,29 +63,44 @@
   <div class="ui-flexbox-item"><div class="demo">C</div></div>
   <div class="ui-flexbox-item"><div class="demo">D</div></div>
 </div>
-<div class="ui-flexbox">
-  <div class="ui-field ui-flexbox-item">
+<div class="ui-flexbox ui-captcha">
+  <div class="ui-field ui-field-error ui-flexbox-item">
     <div class="ui-field-input">
       <input type="text" maxlength="4" placeholder="短信验证码">
     </div>
+    <div class="ui-field-default-message">默认文案</div>
+    <div class="ui-field-error-message">错误文案</div>
   </div>
-  <div class="ui-field ui-flexbox-item">
+  <div class="ui-captcha-image">
+    <img alt="Alipay" src="https://i.alipayobjects.com/e/201303/2U8xHkMbfp.png" width="48" height="24">
+    看不清<br>换一张
+  </div>
+</div>
+<div class="ui-flexbox ui-captcha">
+  <div class="ui-field ui-field-error ui-flexbox-item">
     <div class="ui-field-input">
       <input type="text" maxlength="4" placeholder="短信验证码">
     </div>
+    <div class="ui-field-default-message">默认文案</div>
+    <div class="ui-field-error-message">错误文案</div>
   </div>
-  <div class="ui-field ui-flexbox-item">
-    <div class="ui-field-input">
-      <input type="text" maxlength="4" placeholder="短信验证码">
+  <div class="ui-captcha-button">
+    <div class="ui-button ui-button-disabled">
+      <button type="button" disabled>重获验证码</button>
     </div>
   </div>
 </div>
+
 <div class="ui-flexbox">
   <div class="ui-flexbox-item">
-    <button type="button" disabled="disabled" class="ui-button ui-button-disabled">重获验证码</button>
+    <div class="ui-button ui-button-disabled">
+      <button type="button" disabled>重获验证码</button>
+    </div>
   </div>
   <div class="ui-flexbox-item">
-    <button type="button" disabled="disabled" class="ui-button ui-button-disabled">重获验证码</button>
+    <div class="ui-button ui-button-disabled">
+      <button type="button" disabled>重获验证码</button>
+    </div>
   </div>
 </div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-flexbox"</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-flexbox-item"</span>&gt;</span><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"demo"</span>&gt;</span>A<span class="tag">&lt;/<span class="title">div</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
@@ -93,29 +108,44 @@
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-flexbox-item"</span>&gt;</span><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"demo"</span>&gt;</span>C<span class="tag">&lt;/<span class="title">div</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-flexbox-item"</span>&gt;</span><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"demo"</span>&gt;</span>D<span class="tag">&lt;/<span class="title">div</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-flexbox"</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field ui-flexbox-item"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-flexbox ui-captcha"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field ui-field-error ui-flexbox-item"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field-input"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">maxlength</span>=<span class="value">"4"</span> <span class="attribute">placeholder</span>=<span class="value">"短信验证码"</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field-default-message"</span>&gt;</span>默认文案<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field-error-message"</span>&gt;</span>错误文案<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field ui-flexbox-item"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-captcha-image"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">img</span> <span class="attribute">alt</span>=<span class="value">"Alipay"</span> <span class="attribute">src</span>=<span class="value">"https://i.alipayobjects.com/e/201303/2U8xHkMbfp.png"</span> <span class="attribute">width</span>=<span class="value">"48"</span> <span class="attribute">height</span>=<span class="value">"24"</span>&gt;</span>
+    看不清<span class="tag">&lt;<span class="title">br</span>&gt;</span>换一张
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-flexbox ui-captcha"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field ui-field-error ui-flexbox-item"</span>&gt;</span>
     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field-input"</span>&gt;</span>
       <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">maxlength</span>=<span class="value">"4"</span> <span class="attribute">placeholder</span>=<span class="value">"短信验证码"</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field-default-message"</span>&gt;</span>默认文案<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field-error-message"</span>&gt;</span>错误文案<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field ui-flexbox-item"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-field-input"</span>&gt;</span>
-      <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">maxlength</span>=<span class="value">"4"</span> <span class="attribute">placeholder</span>=<span class="value">"短信验证码"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-captcha-button"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-disabled"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">disabled</span>&gt;</span>重获验证码<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+
 <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-flexbox"</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-flexbox-item"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">disabled</span>=<span class="value">"disabled"</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-disabled"</span>&gt;</span>重获验证码<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-disabled"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">disabled</span>&gt;</span>重获验证码<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-flexbox-item"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">disabled</span>=<span class="value">"disabled"</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-disabled"</span>&gt;</span>重获验证码<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-disabled"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">disabled</span>&gt;</span>重获验证码<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div>
   </div>

@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Baseui</title>
+    <link rel="icon" href="./static/css/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./static/css/normalize.css" />
+    <link rel="stylesheet" href="./static/css/solarized.css" />
+    <link rel="stylesheet" href="./static/css/site.css" />
+    <link rel="stylesheet" href="./static/css/style.css" />
+    <link rel="stylesheet" href="./static/google-code-prettify/prettify.css" />
+    <link rel="stylesheet" href="./static/css/tomorrow.css" />
+    <link rel="stylesheet" href="./static/css/base-ui.css" />
+    
+<style type="text/css">
+.handy-module{
+  margin: 20px 0 50px;
+}
+.handy-module-content{
+  padding: 20px 0 50px;
+}
+.handy-module-content h3{
+  margin: 40px 0 20px;
+}
+.highlight{
+  display:none;
+}
+</style>
+
+</head>
+<body>
+<div id="body-wrapper">
+
+<article class="handy-module">
+  <h1 class="handy-module-title">Button</h1>
+  <div class="handy-module-content">
+  <h3 id="默认">默认</h3><div class="nico-insert-code"><div class="ui-button ui-button-normal">
+  <button type="button">默认按钮</button>
+</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-normal"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span>&gt;</span>默认按钮<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><h3 id="橙色">橙色</h3><div class="nico-insert-code"><div class="ui-button ui-button-submit">
+  <button type="button">高亮按钮</button>
+</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-submit"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span>&gt;</span>高亮按钮<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><h3 id="不可用">不可用</h3><div class="nico-insert-code"><div class="ui-button ui-button-disabled">
+  <button type="button" disabled>不可用按钮</button>
+</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ui-button ui-button-disabled"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">disabled</span>&gt;</span>不可用按钮<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div>
+  </div>
+</article>
+
+</div>
+<script type="text/javascript">
+window.addEventListener('load', function () {
+  var interval = 500, begin = Date.now(), img = new Image(), timer = setTimeout(handler, interval);
+  window.removeEventListener('load', arguments.callee);
+  img.addEventListener('load', handler, false);
+  img.src = 'https://i.alipayobjects.com/e/201305/Q9jNoeIir.gif?t=' + begin;
+ 
+  function handler() {
+    clearTimeout(timer);
+    img.removeEventListener('load', handler);
+    //响应在500ms以内算高速网络 高清（HD）标清（SD）
+    document.body.className = (document.body.className + (Date.now() - begin < interval ? ' ui-hd' : ' ui-sd')).trim();
+  }
+}, false);
+</script>
+</body>
+</html>
