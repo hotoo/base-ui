@@ -5,7 +5,7 @@
 
 ````html
 <button class="ui-button ui-button-normal" type="button">默认按钮</button>
-<input type="buttont" class="ui-button ui-button-normal" value="默认按钮" />
+<input type="button" class="ui-button ui-button-normal" value="默认按钮" />
 <a href="#" class="ui-button ui-button-normal">默认按钮</a>
 ````
 
