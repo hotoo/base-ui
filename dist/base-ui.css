@@ -240,13 +240,15 @@ body .fn-hide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: box;
-  margin-left: -8px;
 }
 .ui-flexbox .ui-flexbox-item {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   box-flex: 1;
   margin: 4px 0 4px 8px;
+}
+.ui-flexbox-item:first-child {
+  margin-left: 0;
 }
 .ui-notice {
   padding: 4px;
@@ -450,6 +452,10 @@ body .fn-hide {
 .ui-list :hover .icon-arrow-horizontal {
   border-color: #f60;
 }
+.ui-list-placeholder a,
+.ui-list-placeholder button {
+  color: #c7c7c7;
+}
 .ui-list-compact {
   border-top: 1px solid #bfbfbf;
 }
@@ -458,7 +464,7 @@ body .fn-hide {
 }
 .ui-list-compact a {
   color: #666;
-  line-height: 40px;
+  line-height: 24px;
   border: none;
   border-bottom: 1px solid #bfbfbf;
   background: #eeeff1;
@@ -539,11 +545,13 @@ body .fn-hide {
 .ui-field label {
   display: block;
 }
+.ui-field-default-message,
 .ui-field-message {
   float: left;
   font-size: .875em;
 }
-.ui-field-error .ui-field-message {
+.ui-field-error .ui-field-message,
+.ui-field-error .ui-field-default-message {
   display: none;
 }
 .ui-field-error-message,
@@ -619,8 +627,13 @@ body .fn-hide {
 .ui-field-input input:hover {
   border-color: #fa0;
 }
+.ui-field-disabled .ui-field-input input:active,
+.ui-field-disabled .ui-field-input input:hover {
+  border-color: #d9d9d9;
+}
 .ui-field-disabled label,
 .ui-field-disabled input {
+  color: #c7c7c7;
   border-color: #d9d9d9;
 }
 .ui-field-input:before,
@@ -842,21 +855,12 @@ body .fn-hide {
   color: #333;
 }
 .ui-select select {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  opacity: 0;
   cursor: pointer;
-  width: 100%;
+  width: 120%;
   height: 100%;
   border: none;
   appearance: none;
   -webkit-appearance: none;
-}
-.ui-select .ui-select-text em {
-  color: #f60;
-  margin-left: 4px;
 }
 .ui-select:before,
 .ui-select:after {
@@ -888,11 +892,23 @@ body .fn-hide {
 .ui-select-disabled {
   color: #c7c7c7;
 }
-ui-select-disabled select {
-  display: none;
-}
 .ui-select-disabled:after {
   opacity: .7;
+}
+/* .ui-select-custom 需要js支持change行为 */
+.ui-select-custom select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+}
+.ui-select-custom.ui-select-disabled select {
+  display: none;
+}
+.ui-select .ui-select-text em {
+  color: #f60;
+  margin-left: 4px;
 }
 .ui-select-disabled .ui-select-text em {
   color: #fcc;
@@ -1010,17 +1026,13 @@ a.ui-button-normal button {
   -webkit-border-radius: 6px;
   -ms-border-radius: 6px;
 }
-.ui-captcha-button {
-  margin: 0;
+.ui-captcha-button,
+.ui-captcha-image {
+  margin: 4px 0 4px 5px;
 }
 .ui-captcha-button button {
+  margin: 0;
   height: 44px;
-}
-.ui-captcha .ui-field-input {
-  margin-right: 5px;
-}
-.ui-captcha .ui-field input {
-  padding: 10px 8px 8px;
 }
 .ui-captcha-image img {
   position: absolute;

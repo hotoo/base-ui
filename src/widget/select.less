@@ -11,22 +11,12 @@
 }
 
 .ui-select select {
-  position:absolute;
-  top:0;
-  left:0;
-  z-index:1;
-  opacity:0;
   cursor:pointer;
-  width:100%;
+  width:120%;
   height:100%;
   border:none;
   appearance:none;
   -webkit-appearance:none;
-}
-
-.ui-select .ui-select-text em{
-  color:#f60;
-  margin-left:4px;
 }
 
 .ui-select:before,
@@ -59,12 +49,26 @@
   color:#c7c7c7;
 }
 
-ui-select-disabled select{
+.ui-select-disabled:after{
+  opacity:.7;
+}
+
+/* .ui-select-custom 需要js支持change行为 */
+.ui-select-custom select{
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:1;
+  opacity:0;
+}
+
+.ui-select-custom.ui-select-disabled select{
   display: none;
 }
 
-.ui-select-disabled:after{
-  opacity:.7;
+.ui-select .ui-select-text em{
+  color:#f60;
+  margin-left:4px;
 }
 
 .ui-select-disabled .ui-select-text em{
