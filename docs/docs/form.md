@@ -28,7 +28,6 @@
 <div class="ui-field ui-field-success">
     <div class="ui-field-input">
         <input type="text" placeholder="银行开户名" />
-        <div class="ui-icon ui-field-icon"></div>
     </div>
 </div>
 
@@ -40,10 +39,19 @@
 <div class="ui-field ui-field-error">
     <div class="ui-field-input">
         <input type="text" placeholder="身份证号">
-        <div class="ui-icon ui-field-icon"></div>
     </div>
     <div class="ui-field-message">default message</div>
     <div class="ui-field-error-message">error message</div>
+</div>
+````
+
+### Input-loading
+
+````html
+<div class="ui-field ui-field-loading">
+    <div class="ui-field-input">
+        <input type="text" placeholder="身份证号">
+    </div>
 </div>
 ````
 
