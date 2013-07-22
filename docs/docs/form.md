@@ -98,8 +98,8 @@
 ### Checkbox-simple
 
 ````html
-<div class="ui-checkbox ui-checkbox-simple">
-    <label><input type="checkbox"><span class="ui-icon icon-check"></span></label><span class="ui-checkbox-label">同意《信用支付服务合同》</span>
+<div class="ui-field">
+  <span class="ui-checkbox ui-checkbox-simple fn-left"><input id="agree" type="checkbox"><span class="ui-icon icon-check"></span></span><label for="agree">同意《信用支付服务合同》<a href="http://www.baidu.com">链接</a></label>
 </div>
 ````
 
