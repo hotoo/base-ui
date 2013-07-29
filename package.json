@@ -1,7 +1,7 @@
 {
   "name": "base-ui",
   "version": "2.0.0",
-  "root": "handy",
+  "family": "handy",
   "description": "base-ui for alipay",
   "homepage": "http://handyjs.github.com/base-ui",
   "author": "fool2fish, swain",
