@@ -56,6 +56,16 @@
 </div>
 ````
 
+### Input-loading
+
+````html
+<div class="ui-field ui-field-loading">
+    <div class="ui-field-input">
+        <input type="text" placeholder="身份证号">
+    </div>
+</div>
+````
+
 ### Input-pack
 
 ````html
@@ -123,7 +133,7 @@
 
 ````html
 <div class="ui-field">
-  <label class="ui-checkbox">表单项复选框——选中<input type="checkbox" /><span class="ui-icon icon-check"></span></label>
+  <label class="ui-checkbox">表单项复选框——未选中<input type="checkbox" /><span class="ui-icon icon-check"></span></label>
 </div>
 ````
 
