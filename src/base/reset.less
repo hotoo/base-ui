@@ -1,9 +1,11 @@
 /** handy/base/1.0.0/css/reset.css **/
 
 /* bufix for IE10 */
-@-ms-viewport{
-  width:320px;
-};
+@media (max-device-width: 480px) and (orientation: portrait) { 
+  @-ms-viewport{
+    width:320px;
+  }
+}
 
 *, *:before, *:after {
   -webkit-box-sizing:border-box;
