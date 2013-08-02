@@ -1,6 +1,8 @@
 /* bufix for IE10 */
-@-ms-viewport {
-  width: 320px;
+@media (max-device-width: 480px) and (orientation: portrait) {
+  @-ms-viewport {
+    width: 320px;
+  }
 }
 *,
 *:before,
