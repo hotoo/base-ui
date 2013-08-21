@@ -74,3 +74,28 @@
 .ui-select-disabled .ui-select-text em{
   color:#fcc;
 }
+
+.ui-select-text * {
+  vertical-align: middle;
+}
+ 
+.ui-select-idle em,
+.ui-select-busy em,
+.ui-select-block em {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image:url(https://i.alipayobjects.com/e/201308/x3vZlxsDt.png);
+}
+
+.ui-select-idle em { background-position: -100px -34px; }
+.ui-select-busy em { background-position: -100px -66px; }
+.ui-select-block em { background-position: -100px -98px; }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+  .ui-hd .ui-field-input:after{
+    background-image:url(https://i.alipayobjects.com/e/201308/x3vZmClDh.png);
+    background-size:106px auto;
+  }
+}

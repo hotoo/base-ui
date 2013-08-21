@@ -215,6 +215,30 @@
         </select>
     </div>
 </div>
+<div class="ui-field">
+    <div class="ui-select ui-select-custom ui-select-idle">
+        <span class="ui-select-text">下拉列表1 <em></em></span>
+        <select>
+            <option value="">下拉列表1</option>
+        </select>
+    </div>
+</div>
+<div class="ui-field">
+    <div class="ui-select ui-select-custom ui-select-busy">
+        <span class="ui-select-text">下拉列表1 <em></em></span>
+        <select>
+            <option value="">下拉列表1</option>
+        </select>
+    </div>
+</div>
+<div class="ui-field">
+    <div class="ui-select ui-select-custom ui-select-block">
+        <span class="ui-select-text">下拉列表1 <em></em></span>
+        <select>
+            <option value="">下拉列表1</option>
+        </select>
+    </div>
+</div>
 ````
 
 ### Select-不可用
