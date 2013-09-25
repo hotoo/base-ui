@@ -1,6 +1,6 @@
 {
   "name": "base-ui",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "family": "handy",
   "description": "base-ui for alipay",
   "homepage": "http://handyjs.github.com/base-ui",
@@ -14,9 +14,7 @@
   },
   "license": "MIT",
   "tag": "mobile",
-  "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-less": "~0.5.2",
-    "grunt-contrib-watch": "~0.4.3"
+  "spm": {
+    "output": ["base-ui.css"]
   }
 }

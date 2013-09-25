@@ -7,6 +7,9 @@
   height:46px;
   background-repeat:no-repeat;
   background-color:transparent;
+  -webkit-transition-duration:0.2s;
+  -ms-transition-duration:0.2s;
+  transition-duration:0.2s;
 }
 
 .ui-sd #shortcut,
@@ -19,6 +22,18 @@
 #shortcut.active {
   background-position:0 -60px;
 }
+
+#shortcut.shame{
+  -webkit-transform:translateX(-42px);
+  -ms-transform:translateX(-42px);
+  -transform:translateX(-42px);
+}
+
+#shortcut.shine{
+  -webkit-transform:translateX(0);
+  -ms-transform:translateX(0);
+  transform:translateX(0);
+} 
 
 #shortcut-panel {
   display:none;
