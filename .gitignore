@@ -2,3 +2,4 @@
 *.iml
 *.swp
 node_modules/
+docs/.cache
