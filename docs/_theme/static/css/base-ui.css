@@ -322,7 +322,7 @@ body .fn-hide {
 .ui-sd .ui-header .icon-reverse,
 .ui-hd .ui-header h1,
 .ui-hd .ui-header .icon-reverse {
-  background-image: url(https://i.alipayobjects.com/e/201308/x3vZlxsDt.png);
+  background-image: url(https://i.alipayobjects.com/e/201306/Ss1aIdyvt.png);
 }
 .ui-header h1 {
   background-position: -32px 0;
@@ -343,10 +343,38 @@ body .fn-hide {
 .ui-header .icon-reverse:hover {
   background-position: -32px -68px;
 }
+.ui-header .icon-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 60px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: #fff !important;
+  border: 1px solid #000;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -ms-border-radius: 3px;
+  box-shadow: inset 0 -1px 1px 1px rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: inset 0 -1px 1px 1px rgba(255, 255, 255, 0.2);
+  -ms-box-shadow: inset 0 -1px 1px 1px rgba(255, 255, 255, 0.2);
+  background: #000000;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#323d43), to(#000000));
+  /* Saf4+, Chrome */
+
+  background-image: -webkit-linear-gradient(#323d43, #000000);
+  /* Chrome 10+, Saf5.1+ */
+
+  background-image: -ms-linear-gradient(#323d43, #000000);
+  /* IE10 */
+
+  background-image: linear-gradient(#323d43, #000000);
+}
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   .ui-hd .ui-header h1,
   .ui-hd .ui-header .icon-reverse {
-    background-image: url(https://i.alipayobjects.com/e/201308/x3vZmClDh.png);
+    background-image: url(https://i.alipayobjects.com/e/201306/Ss1WYBVZV.png);
     background-size: 130px auto;
   }
 }
@@ -395,7 +423,7 @@ body .fn-hide {
 }
 .ui-sd .ui-message-icon:after,
 .ui-hd .ui-message-icon:after {
-  background-image: url(https://i.alipayobjects.com/e/201308/x3vZmClDh.png);
+  background-image: url(https://i.alipayobjects.com/e/201306/Ss1aIdyvt.png);
 }
 .ui-message-info .ui-message-icon {
   background-color: #2277bb;
@@ -430,7 +458,7 @@ body .fn-hide {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   .ui-hd .ui-message-icon:after {
-    background-image: url(https://i.alipayobjects.com/e/201308/x3vZlxsDt.png);
+    background-image: url(https://i.alipayobjects.com/e/201306/Ss1WYBVZV.png);
     background-size: 130px auto;
   }
 }
@@ -707,7 +735,7 @@ body .fn-hide {
 }
 .ui-sd .ui-field-input:after,
 .ui-hd .ui-field-input:after {
-  background-image: url(https://i.alipayobjects.com/e/201308/x3vZlxsDt.png);
+  background-image: url(https://i.alipayobjects.com/e/201306/Ss1aIdyvt.png);
   background-size: 106px auto;
 }
 .ui-field-success .ui-field-input:before,
@@ -746,7 +774,7 @@ body .fn-hide {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   .ui-hd .ui-field-input:after {
-    background-image: url(https://i.alipayobjects.com/e/201308/x3vZmClDh.png);
+    background-image: url(https://i.alipayobjects.com/e/201306/Ss1WYBVZV.png);
     background-size: 106px auto;
   }
 }
@@ -962,37 +990,6 @@ body .fn-hide {
 }
 .ui-select-disabled .ui-select-text em {
   color: #fcc;
-}
-.ui-select-text * {
-  vertical-align: middle;
-}
-.ui-sd .ui-select-idle em,
-.ui-sd .ui-select-busy em,
-.ui-sd .ui-select-block em,
-.ui-hd .ui-select-idle em,
-.ui-hd .ui-select-busy em,
-.ui-hd .ui-select-block em {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  background-image: url(https://i.alipayobjects.com/e/201308/x3vZlxsDt.png);
-}
-.ui-select-idle em {
-  background-position: -100px -34px;
-}
-.ui-select-busy em {
-  background-position: -100px -66px;
-}
-.ui-select-block em {
-  background-position: -100px -98px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  .ui-hd .ui-select-idle em,
-  .ui-hd .ui-select-busy em,
-  .ui-hd .ui-select-block em {
-    background-image: url(https://i.alipayobjects.com/e/201308/x3vZmClDh.png);
-    background-size: 106px auto;
-  }
 }
 .ui-button {
   display: inline-block;
