@@ -343,7 +343,7 @@ body .fn-hide {
 .ui-header .icon-reverse:hover {
   background-position: -32px -68px;
 }
-.ui-header .icon-btn {
+.ui-header .icon-normal {
   position: absolute;
   top: 5px;
   right: 5px;
