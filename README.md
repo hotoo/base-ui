@@ -13,7 +13,7 @@ ___
 
 * iOS 4.0+
 * Android 2.2+
-* Window Phone 7+
+* Window Phone 8+
 
 ## How to use
 
