@@ -1,4 +1,4 @@
-# Message 
+# Message
 
 ---
 
@@ -29,7 +29,7 @@
 ````html
 <div class="ui-message ui-message-error">
   <div class="ui-message-icon"></div>
-  <p>成功信息</p>
+  <p>失败信息</p>
 </div>
 ````
 
@@ -38,7 +38,7 @@
 ````html
 <div class="ui-message ui-message-success">
   <div class="ui-message-icon"></div>
-  <p>失败信息</p>
+  <p>成功信息</p>
 </div>
 ````
 
@@ -56,7 +56,7 @@
 ````html
 <div class="ui-message ui-message-form ui-message-error">
   <div class="ui-message-icon"></div>
-  <p>成功信息</p>
+  <p>失败信息</p>
 </div>
 ````
 
@@ -65,6 +65,6 @@
 ````html
 <div class="ui-message ui-message-form ui-message-success">
   <div class="ui-message-icon"></div>
-  <p>失败信息</p>
+  <p>成功信息</p>
 </div>
 ````
